@@ -1,0 +1,40 @@
+footer {
+  background-color: var(--header-footer-background-color);
+  width: 100%;
+  color: black;
+  font-size: 1.6rem;
+}
+
+footer .row {
+  gap: 24px;
+  padding: 24px 0;
+}
+
+h4 {
+  min-height: 40px;
+  line-height: 40px;
+  font-size: 1.8rem;
+  border-bottom: 1px dashed #ebe3db;
+}
+
+footer aside {
+  gap: 8px;
+  flex: 1 30%;
+  padding: 24px;
+  text-align: center;
+}
+
+footer aside p {
+  font-style: normal;
+}
+
+.logo .img {
+  width: 100%;
+  height: 100%;
+  max-width: 152px;
+  max-height: 152px;
+}
+
+.logo .adaptive-img--contain {
+  padding-bottom: 100%;
+}
