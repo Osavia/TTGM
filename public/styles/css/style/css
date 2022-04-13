@@ -1,0 +1,549 @@
+@charset "UTF-8";
+*,
+::after,
+::before {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  line-height: 1.15;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+main {
+  display: block;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+a {
+  background-color: transparent;
+}
+
+abbr[title] {
+  -webkit-text-decoration: underline dotted;
+  text-decoration: underline dotted;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  line-height: inherit;
+  border: 1px solid currentColor;
+}
+
+button {
+  overflow: visible;
+  text-transform: none;
+}
+
+[type=button],
+[type=reset],
+[type=submit],
+button {
+  -webkit-appearance: button;
+  padding: 1px 6px;
+}
+
+input {
+  overflow: visible;
+}
+
+input,
+textarea {
+  padding: 1px;
+}
+
+fieldset {
+  border: 1px solid currentColor;
+  margin: 0 2px;
+}
+
+legend {
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  white-space: normal;
+}
+
+progress {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+select {
+  text-transform: none;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+[type=search] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+[type=color] {
+  background: inherit;
+}
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 0.5;
+}
+
+::-webkit-file-upload-button,
+::-webkit-search-decoration {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+::-moz-focus-inner {
+  border: 0;
+}
+
+:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  color: inherit;
+  overflow: visible;
+}
+
+dl,
+ol,
+ul {
+  margin: 1em 0;
+}
+
+dl dl,
+dl ol,
+dl ul,
+ol dl,
+ol ol,
+ol ul,
+ul dl,
+ul ol,
+ul ul {
+  margin: 0;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+audio,
+video {
+  display: inline-block;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+img {
+  border: 0;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+table {
+  text-indent: 0;
+  border-color: inherit;
+}
+
+details {
+  display: block;
+}
+
+dialog {
+  background-color: inherit;
+  border: solid;
+  color: inherit;
+  display: block;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  left: 0;
+  margin: auto;
+  padding: 1em;
+  position: absolute;
+  right: 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+dialog:not([open]) {
+  display: none;
+}
+
+summary {
+  display: list-item;
+}
+
+canvas {
+  display: inline-block;
+}
+
+template {
+  display: none;
+}
+
+[hidden] {
+  display: none;
+}
+
+:root {
+  --header-height: 132px;
+  --header-footer-background-color: rgb(236, 214, 186);
+  --movingDiv-height: 32px;
+}
+
+/**********************************************************/
+/***************** GESTION DE LA STRUCTURE ****************/
+/**********************************************************/
+*:not(head, script, table, tbody, tfoot, thead, tr, td, th, p, code, span),
+::after,
+::before {
+  display: flex;
+  flex-direction: column;
+}
+
+html {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  font-size: 62.5%;
+}
+
+body {
+  flex: 1 0;
+}
+
+html,
+body {
+  overflow: auto;
+}
+
+body {
+  line-height: 1.5;
+  font-size: 2.2rem;
+  font-weight: 300;
+  background-attachment: fixed;
+}
+
+/*******************************************************/
+/***************** GESTION DU CONTAINER ****************/
+/*******************************************************/
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 32px;
+  max-width: 1400px;
+}
+
+/********************************************************/
+/***************** GESTION DU RESPONSIVE ****************/
+/********************************************************/
+@media (max-width: 760px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  body {
+    line-height: 1.5;
+    font-size: 1.8rem;
+  }
+}
+/********************************************************/
+/***************** CLASSES PRÉDÉFINIES ******************/
+/********************************************************/
+.row {
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/*********************************************************/
+/******** GESTION DES TITRES ET BALISES p/ul/a ***********/
+/*********************************************************/
+h1,
+h2,
+h3,
+h4 {
+  font-weight: bold;
+}
+
+h1 {
+  margin: 0;
+  font-size: 3rem;
+  flex: 1 0;
+}
+
+h2 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+p,
+ul {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  transition: text-shadow 0.2s ease-out;
+  display: contents;
+}
+
+a:hover {
+  text-shadow: 0 0 0.2em #848383;
+}
+
+/*****************************************************/
+/***************** GESTION DES IMAGES ****************/
+/*****************************************************/
+*[class*=adaptive-img] {
+  position: relative;
+}
+
+*[class*=adaptive-img] > span,
+*[class*=adaptive-img] > span > img {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0;
+  border: none;
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+}
+
+*[class*=adaptive-img] > span {
+  margin: 0;
+  opacity: 1;
+  width: initial;
+  height: initial;
+  overflow: hidden;
+  background: none;
+}
+
+*[class*=adaptive-img] > span > img {
+  width: 0;
+  height: 0;
+  margin: auto;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  max-height: 100%;
+}
+
+.adaptive-img--cover > span > img {
+  object-fit: cover;
+}
+
+.adaptive-img--contain > span > img {
+  object-fit: contain;
+}
+
+header {
+  background-color: var(--header-footer-background-color);
+  padding: 32px;
+  width: 100%;
+  height: var(--header-height);
+  position: fixed;
+}
+header nav {
+  align-items: center;
+}
+
+/**************************************/
+/***************** NAV ****************/
+/**************************************/
+.menu {
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  font-size: 1.5rem;
+}
+.menu a {
+  font-weight: 500;
+}
+
+.logo-header .img {
+  width: 100%;
+  height: 100%;
+  max-width: 88px;
+  max-height: 88px;
+}
+
+.logo-header .adaptive-img--contain {
+  padding-bottom: 100%;
+}
+
+/**************************************/
+/************** MOVINGDIV *************/
+/**************************************/
+.headerBar {
+  background-color: #f1eec2;
+  top: var(--header-height);
+  left: 0;
+  width: 100%;
+  height: var(--movingDiv-height);
+  position: fixed;
+}
+
+.movingDiv {
+  top: var(--header-height);
+  left: 0;
+  height: var(--movingDiv-height);
+  width: 100px;
+  position: fixed;
+  padding-top: 8px;
+}
+
+main {
+  padding-top: 180px;
+}
+
+.btn-connexion {
+  line-height: 2.5;
+  padding: 0 20px;
+  font-size: 1rem;
+  text-align: center;
+  color: #433f3f;
+}
+
+/******************************************************/
+/***************** MODALE DE CONNEXION ****************/
+/******************************************************/
+.popup {
+  transform: scale(0);
+  position: fixed;
+  top: 15%;
+  overflow: auto;
+  left: 100px;
+  width: calc(100% - 200px);
+  height: 70%;
+  background-color: #d4f1e8;
+  border-radius: 8px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  padding: 32px;
+  transition: all 0.3s ease-out;
+}
+
+.popup span {
+  padding: 32px;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.active {
+  transform: scale(1);
+}
+
+.shadow::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+footer {
+  background-color: var(--header-footer-background-color);
+  width: 100%;
+  color: black;
+  font-size: 1.6rem;
+}
+
+footer .row {
+  gap: 24px;
+  padding: 24px 0;
+}
+
+h4 {
+  min-height: 40px;
+  line-height: 40px;
+  font-size: 1.8rem;
+  border-bottom: 1px dashed #ebe3db;
+}
+
+footer aside {
+  gap: 8px;
+  flex: 1 30%;
+  padding: 24px;
+  text-align: center;
+}
+
+footer aside p {
+  font-style: normal;
+}
+
+.logo .img {
+  width: 100%;
+  height: 100%;
+  max-width: 152px;
+  max-height: 152px;
+}
+
+.logo .adaptive-img--contain {
+  padding-bottom: 100%;
+}
+
+/*# sourceMappingURL=css.map */
