@@ -13,53 +13,68 @@ class ArticleController extends Controller
         parent::__construct("./../MVC/views/actualite/actualite.php");
     }
 
-    public function index()
+    public function display()
     {
         $articleRepository = new ArticleRepository("article");
-        $articles = $articleRepository->findAll();
-        $this->renderView(["articles" => $articles]);
+        $ListArticles = $articleRepository->displayAllArticles();
+        $this->renderView(["ListArticles" => $ListArticles]);
     }
 
     public function add()
     {
-        if (isset($_SESSION["user_is_connect"]) && $_SESSION["user_is_connect"]) {
-            $this->setPath("./../MVC/views/actualite/add_article.php");
-            if (
-                isset($_POST["article_title"]) && isset($_POST["article_content"]) &&
-                !empty($_POST["article_title"]) && !empty($_POST["article_content"])
-            ) {
-                $article = new Article();
-                $article->setTitle($_POST["article_title"]);
-                $article->setContent($_POST["article_content"]);
-                $article->setPublishedDate((new DateTime("now"))->format("Y-m-d h:i:s"));
-                $articleRepository = new ArticleRepository("article");
-                $articleRepository->insert($article);
-            }
+        $this->setPath("./../MVC/views/actualite/add_article.php");
+
+        if (
+            isset($_POST["article_title"]) && isset($_POST["article_content"]) &&
+            !empty($_POST["article_title"]) && !empty($_POST["article_content"])
+        ) {
+            $article = new Article();
+            $article->setTitle($_POST["article_title"]);
+            $article->setContent($_POST["article_content"]);
+            $article->setPublishedDate((new DateTime("now"))->format("Y-m-d h:i:s"));
+            $articleRepository = new ArticleRepository("article");
+            $articleRepository->insertArticle($article);
         }
+
         $this->renderView();
     }
 
     public function update()
     {
-        if (isset($_SESSION["user_is_connect"]) && $_SESSION["user_is_connect"]) {
-            $this->setPath("../MVC/views/actualite/update_article.php");
+        $this->setPath("../MVC/views/actualite/update_article.php");
 
-            if (isset($_GET['id']) && !empty($_GET['id'])) {
+        if (isset($_GET['id']) && !empty($_GET['id'])) {
+            
 
+            if (
+                isset($_POST["article_title"]) && isset($_POST["article_content"]) &&
+                !empty($_POST["article_title"]) && !empty($_POST["article_content"])
+            ) {
+                $id = strip_tags($_GET['id']);
 
-                if (
-                    isset($_POST["article_title"]) && isset($_POST["article_content"]) &&
-                    !empty($_POST["article_title"]) && !empty($_POST["article_content"])
-                ) {
-                    $article = new Article();
-                    $article->setTitle($_POST["article_title"]);
-                    $article->setContent($_POST["article_content"]);
-                    $article->setPublishedDate((new DateTime("now"))->format("Y-m-d h:i:s"));
-                    $articleRepository = new ArticleRepository("article");
-                    $articleRepository->update($article, $_GET['id']);
-                }
+                $article = new Article();
+                $article->setTitle($_POST["article_title"]);
+                $article->setContent($_POST["article_content"]);
+                $article->setPublishedDate((new DateTime("now"))->format("Y-m-d h:i:s"));
+                $articleRepository = new ArticleRepository("article");
+               // $articleRepository->updateArticle($article, $id);
             }
+        }
+        $this->renderView();
+    }
+
+
+    public function delete()
+    {
+        if (isset($_GET['id']) && !empty($_GET['id']))
+        {
+
+            $id = strip_tags($_GET['id']);
+            $this->setPath("./../MVC/views/actualite/delete_article.php");
+            $articleRepository = new ArticleRepository("article");
+            $articleRepository->deleteArticle($id);
             $this->renderView();
+
         }
     }
 }

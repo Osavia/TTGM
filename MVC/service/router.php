@@ -30,7 +30,7 @@ switch ($page) {
         break;
     case 'news':
         $article = new ArticleController();
-        $article->index();
+        $article->display();
         break;
     case 'add_article':
         $article = new ArticleController();

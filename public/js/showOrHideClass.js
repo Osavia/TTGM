@@ -1,14 +1,15 @@
 import { ModalClass, BodyClass } from "./constants.js";
 
-const displayBtn = document.querySelector("#openModal");
-const removeBtn = document.querySelector("#close");
-const modal = document.querySelector("#popup");    
+const displayBtn = document.querySelector(".displayModal");
+const removeBtn = document.querySelector(".closePopup");
+const modal = document.querySelector(".openPopup");    
 const body = document.querySelector("body");
+
 
 const main = () => {
   displayBtn.addEventListener("click", handleClass);
   removeBtn.addEventListener("click", handleClass);
-  console.log('hola');
+  console.log(MouseEvent);
 };
 
 const handleClass = () => {
