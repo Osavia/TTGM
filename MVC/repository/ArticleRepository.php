@@ -14,7 +14,7 @@ class ArticleRepository extends Repository
 
     public function displayAllArticles(): array
     {        
-        $sql = "SELECT * FROM $this->table ;";
+        $sql = "SELECT * FROM $this->table ORDER BY published_date DESC;";
         return ($this->executeSQL($sql))->fetchAll(PDO::FETCH_CLASS, "article");
     }
     

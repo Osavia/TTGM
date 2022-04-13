@@ -5,7 +5,7 @@
     <form method="POST">
         <div>
             <label for="article_title">Titre</label>
-            <input type="text" id="article_title" name="article_title" value="test">
+            <input type="text" id="article_title" name="article_title">
         </div>
         <div>
             <label for="article_content">Description</label>

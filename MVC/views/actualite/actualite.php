@@ -27,7 +27,7 @@
 
 </div>
 
-
+<!-- Liste des articles : -->
 
 <div>
     <table>
@@ -50,22 +50,30 @@
                                 <a href="?page=update_article&id=<?= $article->getId() ?>">Modifier</a>
                             </td>
                             <td>
-                                <button class="displayModal">Supprimer</button>
-
-                                <div class="myPopup openPopup">
-                                    <div class="row">
-                                        <h2>Voulez-vous vraiment supprimer cet article : <?= $article->getTitle() ?> ?</h2>
-
-                                        <a href="?page=delete_article&id=<?= $article->getId() ?>">Oui</a>
-                                        <span class="closePopup">Non</span>
-                                    </div>
-
-                                </div>
+                                <button class="displayBtns">Supprimer</button>
                             </td>
-                        <?php } ?>
+                            <?php } ?>
                     </tr>
-            <?php }
+                        <?php }
             } ?>
         </tbody>
     </table>
+</div>
+
+
+<!-- Modale de confirmation de suppresion : -->
+
+<?php
+echo $article->getId();
+echo $article->getTitle();
+?>
+
+<div class="myPopup">
+    <div class="row">
+        <h2>Voulez-vous vraiment supprimer cet article : <?= $article->getTitle() ?> ?</h2>
+
+        <a href="?page=delete_article&id=<?= $article->getId() ?>">Oui</a>
+        <span class="closePopup">Non</span>
+    </div>
+
 </div>

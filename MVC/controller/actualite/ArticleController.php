@@ -31,7 +31,7 @@ class ArticleController extends Controller
             $article = new Article();
             $article->setTitle($_POST["article_title"]);
             $article->setContent($_POST["article_content"]);
-            $article->setPublishedDate((new DateTime("now"))->format("Y-m-d h:i:s"));
+            $article->setPublishedDate((new DateTime("now"))->format("d/m/y"));
             $articleRepository = new ArticleRepository("article");
             $articleRepository->insertArticle($article);
         }
