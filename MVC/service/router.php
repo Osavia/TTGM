@@ -4,11 +4,10 @@ require_once "./../MVC/controller/HomeController.php";
 require_once "./../MVC/controller/actualite/ArticleController.php";
 require_once "./../MVC/controller/InfoController.php";
 require_once "./../MVC/controller/AboutUsController.php";
+require_once "./../MVC/controller/BenevoleController.php";
 
 require_once "./../MVC/controller/contact/ContactController.php";
 require_once "./../MVC/controller/contact/ContactSubmitController.php";
-
-require_once "./../MVC/controller/BenevoleController.php";
 
 require_once "./../MVC/controller/session/LogInController.php";
 require_once "./../MVC/controller/session/LogOutController.php";
@@ -21,6 +20,7 @@ require_once "./../MVC/controller/error/Error404Controller.php";
 $page = NULL;
 // Vérification de l'existence de la key "page" dans $_GET
 if (array_key_exists("page", $_GET)) $page = $_GET["page"];
+// var_dump($_GET["page"]);
 
 // switch/case permettant de rediriger la requète vers le bon Controller
 switch ($page) {
@@ -36,11 +36,19 @@ switch ($page) {
         $article = new ArticleController();
         $article->add();
         break;
+    case 'update_article':
+        $article = new ArticleController();
+        $article->update();
+        break;
+    case 'delete_article':
+        $article = new ArticleController();
+        $article->delete();
+        break;
     case 'info':
         $info = new InfoController();
         $info->renderView();
         break;
-    case 'aboutus':
+    case 'about_us':
         $aboutus = new AboutUsController();
         $aboutus->renderView();
         break;
@@ -48,7 +56,7 @@ switch ($page) {
         $contact = new ContactController();
         $contact->renderView();
         break;
-    case 'contactsub':
+    case 'contact_sub':
         $contactsub = new ContactSubmitController();
         $contactsub->renderView();
         break;

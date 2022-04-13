@@ -1,7 +1,7 @@
 
 <h1>Nous contacter</h1>
 
-    <form action="?page=contactsub" method="POST">
+    <form action="?page=contact_sub" method="POST">
         <div>
             <label for="email">Email</label>
             <input type="email" placeholder="Saisissez votre mail" id="email" name="email" aria-describedby="email-help">

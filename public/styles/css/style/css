@@ -245,7 +245,7 @@ template {
 
 :root {
   --header-height: 132px;
-  --header-footer-background-color: rgb(236, 214, 186);
+  --header-footer-background-color: rgb(244, 226, 204);
   --movingDiv-height: 32px;
 }
 
@@ -324,6 +324,7 @@ h2,
 h3,
 h4 {
   font-weight: bold;
+  color: #26d3d3;
 }
 
 h1 {
@@ -401,7 +402,6 @@ a:hover {
 
 header {
   background-color: var(--header-footer-background-color);
-  padding: 32px;
   width: 100%;
   height: var(--header-height);
   position: fixed;

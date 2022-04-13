@@ -23,5 +23,5 @@
 
 <?php else : ?>
     <h4>Connexion réussie en tant qu'admin </h4>
-    <h5>Vous pouvez ajouter, consulter, modifier ou supprimer <a href="?page=actualite">les articles</a></h5>
+    <h5>Vous pouvez ajouter, consulter, modifier ou supprimer <a href="?page=news">les articles</a></h5>
 <?php endif; ?>

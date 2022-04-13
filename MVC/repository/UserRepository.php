@@ -31,14 +31,13 @@ class UserRepository extends Repository
     public function findOneByUsername(string $username): ?User
     {
         $user =  null;
-        $this->createTableIfNotExistes($this->table, self::USER_TABLE, self::USER_INSERT);
 
-        $query = "SELECT * FROM $this->table WHERE username = :username LIMIT 1 ;";
+        $sql = "SELECT * FROM $this->table WHERE username = :username LIMIT 1 ;";
         $params = [
             ":username" => $username
         ];
-        $result = $this->executeQuery($query, $params);
-        if (count($result = ($this->executeQuery($query, $params))->fetchAll(PDO::FETCH_CLASS, "user")) > 0) {
+        $result = $this->executeSQL($sql, $params);
+        if (count($result = ($this->executeSQL($sql, $params))->fetchAll(PDO::FETCH_CLASS, "user")) > 0) {
             $user = $result[0];
         }
         return $user;
