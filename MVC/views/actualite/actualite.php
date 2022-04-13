@@ -39,19 +39,29 @@
             </tr>
         </thead>
         <tbody>
-            <?php if (isset($options["articles"])) {
-                foreach ($options["articles"] as $key => $article) { ?>
+            <?php if (isset($options["ListArticles"])) {
+                foreach ($options["ListArticles"] as $key => $article) { ?>
                     <tr>
                         <td><?php echo $article->getTitle() ?></td>
                         <td><?php echo $article->getPublishedDate() ?></td>
                         <td><?php echo $article->getContent() ?></td>
                         <?php if (isset($_SESSION["user_is_connect"]) && $_SESSION["user_is_connect"]) { ?>
-                        <td>
-                            <a href="?page=update_article&id=<?= $article->getId() ?>">Modifier</a>
-                        </td>
-                        <td>
-                            <a href="?page=delete_article&id=<?= $article->getId() ?>">Supprimer</a>
-                        </td>
+                            <td>
+                                <a href="?page=update_article&id=<?= $article->getId() ?>">Modifier</a>
+                            </td>
+                            <td>
+                                <button class="displayModal">Supprimer</button>
+
+                                <div class="myPopup openPopup">
+                                    <div class="row">
+                                        <h2>Voulez-vous vraiment supprimer cet article : <?= $article->getTitle() ?> ?</h2>
+
+                                        <a href="?page=delete_article&id=<?= $article->getId() ?>">Oui</a>
+                                        <span class="closePopup">Non</span>
+                                    </div>
+
+                                </div>
+                            </td>
                         <?php } ?>
                     </tr>
             <?php }

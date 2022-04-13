@@ -325,7 +325,7 @@ h3,
 h4 {
   font-weight: bold;
   color: #26d3d3;
-  font-style: normal;
+  font-style: italic;
 }
 
 h1 {
@@ -471,7 +471,7 @@ main {
 /******************************************************/
 /***************** MODALE DE CONNEXION ****************/
 /******************************************************/
-.popup {
+.myPopup {
   transform: scale(0);
   position: fixed;
   top: 15%;
@@ -486,7 +486,7 @@ main {
   transition: all 0.3s ease-out;
 }
 
-.popup span {
+.myPopup span {
   padding: 32px;
   cursor: pointer;
   background: rgba(0, 0, 0, 0.2);

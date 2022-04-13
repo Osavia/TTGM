@@ -1,8 +1,24 @@
 <h1>Modifier cette actualité</h1>
-<p>Aloa2</p>
 
 
+<div>
+    <form method="POST">
+        <div>
+            <label for="article_title">Titre</label>
+            <input type="text" id="article_title" name="article_title" value="test">
+        </div>
+        <div>
+            <label for="article_content">Description</label>
+            <textarea id="article_content" name="article_content" value="<?php $article->$id ?>"></textarea>
+        </div>
+        <input type="submit" value="Modifier l'article">
 
-<p>Aloa</p>
+    </form>
+</div>
 
-<!-- Le footer ne s'affiche pas sur cette page -->
+<?php 
+
+var_dump($_GET['id']);
+echo $article->getTitle();
+
+?>
