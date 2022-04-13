@@ -324,8 +324,7 @@ h2,
 h3,
 h4 {
   font-weight: bold;
-  color: aqua;
-  font-style: italic;
+  color: #26d3d3;
 }
 
 h1 {
