@@ -325,6 +325,7 @@ h3,
 h4 {
   font-weight: bold;
   color: #26d3d3;
+  font-style: normal;
 }
 
 h1 {
@@ -546,4 +547,4 @@ footer aside p {
   padding-bottom: 100%;
 }
 
-/*# sourceMappingURL=css.map */
+/*# sourceMappingURL=style.css.map */
