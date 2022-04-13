@@ -45,6 +45,14 @@
                         <td><?php echo $article->getTitle() ?></td>
                         <td><?php echo $article->getPublishedDate() ?></td>
                         <td><?php echo $article->getContent() ?></td>
+                        <?php if (isset($_SESSION["user_is_connect"]) && $_SESSION["user_is_connect"]) { ?>
+                        <td>
+                            <a href="?page=update_article&id=<?= $article->getId() ?>">Modifier</a>
+                        </td>
+                        <td>
+                            <a href="?page=delete_article&id=<?= $article->getId() ?>">Supprimer</a>
+                        </td>
+                        <?php } ?>
                     </tr>
             <?php }
             } ?>

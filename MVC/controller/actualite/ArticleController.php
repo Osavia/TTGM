@@ -17,15 +17,17 @@ class ArticleController extends Controller
     {
         $articleRepository = new ArticleRepository("article");
         $articles = $articleRepository->findAll();
-        $this->renderView(["articles"=> $articles]);
+        $this->renderView(["articles" => $articles]);
     }
 
     public function add()
     {
         if (isset($_SESSION["user_is_connect"]) && $_SESSION["user_is_connect"]) {
-            $this->setPath("./../MVC/views/actualite/add_article.php");   
-            if (isset($_POST["article_title"]) && isset($_POST["article_content"]) &&
-            !empty($_POST["article_title"]) && !empty($_POST["article_content"])) {
+            $this->setPath("./../MVC/views/actualite/add_article.php");
+            if (
+                isset($_POST["article_title"]) && isset($_POST["article_content"]) &&
+                !empty($_POST["article_title"]) && !empty($_POST["article_content"])
+            ) {
                 $article = new Article();
                 $article->setTitle($_POST["article_title"]);
                 $article->setContent($_POST["article_content"]);
@@ -37,4 +39,27 @@ class ArticleController extends Controller
         $this->renderView();
     }
 
+    public function update()
+    {
+        if (isset($_SESSION["user_is_connect"]) && $_SESSION["user_is_connect"]) {
+            $this->setPath("../MVC/views/actualite/update_article.php");
+
+            if (isset($_GET['id']) && !empty($_GET['id'])) {
+
+
+                if (
+                    isset($_POST["article_title"]) && isset($_POST["article_content"]) &&
+                    !empty($_POST["article_title"]) && !empty($_POST["article_content"])
+                ) {
+                    $article = new Article();
+                    $article->setTitle($_POST["article_title"]);
+                    $article->setContent($_POST["article_content"]);
+                    $article->setPublishedDate((new DateTime("now"))->format("Y-m-d h:i:s"));
+                    $articleRepository = new ArticleRepository("article");
+                    $articleRepository->update($article, $_GET['id']);
+                }
+            }
+            $this->renderView();
+        }
+    }
 }
