@@ -61,19 +61,19 @@
 </div>
 
 
-<!-- Modale de confirmation de suppresion : -->
-
 <?php
-echo $article->getId();
-echo $article->getTitle();
+var_dump($article->getId()) ;
+var_dump($article->getTitle()) ;
 ?>
+
+<!-- Modale de confirmation de suppresion : -->
 
 <div class="myPopup">
     <div class="row">
         <h2>Voulez-vous vraiment supprimer cet article : <?= $article->getTitle() ?> ?</h2>
 
         <a href="?page=delete_article&id=<?= $article->getId() ?>">Oui</a>
-        <span class="closePopup">Non</span>
+        <span id="closePopup">Non</span>
     </div>
 
 </div>
