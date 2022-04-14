@@ -21,7 +21,7 @@ $message = $_POST['message'];
 
     <div>
         <h5>Rappel de vos informations</h5>
-        <p>Email :<?php echo ($email); ?></p>
+        <p>Email : <?php echo ($email); ?></p>
         <p>Message : <?php echo strip_tags($message); ?></p>
     </div>
 

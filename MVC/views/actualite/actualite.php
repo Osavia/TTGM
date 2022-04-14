@@ -4,7 +4,7 @@
 
     <?php if (isset($_SESSION["user_is_connect"]) && $_SESSION["user_is_connect"]) { ?>
         <div>
-            <a href="?page=add_article">Ajouter un article</a>
+            <a href="?page=create_article">Ajouter un article</a>
         </div>
     <?php } ?>
 
@@ -27,7 +27,11 @@
 
 </div>
 
+<<<<<<< HEAD
 <!-- Liste des articles : -->
+=======
+<!-- Affichage de la liste des articles : -->
+>>>>>>> dev
 
 <div>
     <table>
@@ -47,10 +51,14 @@
                         <td><?php echo $article->getContent() ?></td>
                         <?php if (isset($_SESSION["user_is_connect"]) && $_SESSION["user_is_connect"]) { ?>
                             <td>
-                                <a href="?page=update_article&id=<?= $article->getId() ?>">Modifier</a>
+                                <a href="?page=selected_article&id=<?= $article->getId() ?>" title="Modifier cet article">Modifier</a>
                             </td>
                             <td>
+<<<<<<< HEAD
                                 <button class="displayBtns">Supprimer</button>
+=======
+                                <button class="displayBtns" data-title_article="<?= $article->getTitle() ?>" data-id_article="<?= $article->getId() ?>">Supprimer</button>
+>>>>>>> dev
                             </td>
                             <?php } ?>
                     </tr>
@@ -60,6 +68,7 @@
     </table>
 </div>
 
+<<<<<<< HEAD
 
 <?php
 var_dump($article->getId()) ;
@@ -76,4 +85,18 @@ var_dump($article->getTitle()) ;
         <span id="closePopup">Non</span>
     </div>
 
+=======
+<!-- Modale de confirmation de suppresion : -->
+
+<div class="myPopup">
+    <h2>Voulez-vous vraiment supprimer cet article :
+        <span id="show_title_article"></span> numéro <span id="show_id_article"></span>?
+    </h2>
+    <div class="row" >
+        <a id="myLink" href="" title="Ceci supprimera l'article définitivement">
+            Oui
+        </a>
+        <span id="closePopup">Non</span>
+    </div>
+>>>>>>> dev
 </div>
