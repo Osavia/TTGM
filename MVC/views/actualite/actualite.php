@@ -4,7 +4,7 @@
 
     <?php if (isset($_SESSION["user_is_connect"]) && $_SESSION["user_is_connect"]) { ?>
         <div>
-            <a href="?page=add_article">Ajouter un article</a>
+            <a href="?page=create_article">Ajouter un article</a>
         </div>
     <?php } ?>
 
@@ -27,7 +27,7 @@
 
 </div>
 
-<!-- Liste des articles : -->
+<!-- Affichage de la liste des articles : -->
 
 <div>
     <table>
@@ -47,33 +47,29 @@
                         <td><?php echo $article->getContent() ?></td>
                         <?php if (isset($_SESSION["user_is_connect"]) && $_SESSION["user_is_connect"]) { ?>
                             <td>
-                                <a href="?page=update_article&id=<?= $article->getId() ?>">Modifier</a>
+                                <a href="?page=selected_article&id=<?= $article->getId() ?>" title="Modifier cet article">Modifier</a>
                             </td>
                             <td>
-                                <button class="displayBtns">Supprimer</button>
+                                <button class="displayBtns" data-title_article="<?= $article->getTitle() ?>" data-id_article="<?= $article->getId() ?>">Supprimer</button>
                             </td>
-                            <?php } ?>
+                        <?php } ?>
                     </tr>
-                        <?php }
+            <?php }
             } ?>
         </tbody>
     </table>
 </div>
 
-
 <!-- Modale de confirmation de suppresion : -->
 
-<?php
-echo $article->getId();
-echo $article->getTitle();
-?>
-
 <div class="myPopup">
-    <div class="row">
-        <h2>Voulez-vous vraiment supprimer cet article : <?= $article->getTitle() ?> ?</h2>
-
-        <a href="?page=delete_article&id=<?= $article->getId() ?>">Oui</a>
-        <span class="closePopup">Non</span>
+    <h2>Voulez-vous vraiment supprimer cet article :
+        <span id="show_title_article"></span> numéro <span id="show_id_article"></span>?
+    </h2>
+    <div class="row" >
+        <a id="myLink" href="" title="Ceci supprimera l'article définitivement">
+            Oui
+        </a>
+        <span id="closePopup">Non</span>
     </div>
-
 </div>

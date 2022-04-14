@@ -20,9 +20,9 @@ class ArticleController extends Controller
         $this->renderView(["ListArticles" => $ListArticles]);
     }
 
-    public function add()
+    public function create()
     {
-        $this->setPath("./../MVC/views/actualite/add_article.php");
+        $this->setPath("./../MVC/views/actualite/create_article.php");
 
         if (
             isset($_POST["article_title"]) && isset($_POST["article_content"]) &&
@@ -39,30 +39,30 @@ class ArticleController extends Controller
         $this->renderView();
     }
 
-    public function update()
+    public function select()
     {
-        $this->setPath("../MVC/views/actualite/update_article.php");
+        $this->setPath("../MVC/views/actualite/selected_article.php");
 
-        if (isset($_GET['id']) && !empty($_GET['id'])) {
-            
+        $articleRepository = new ArticleRepository('article');
 
-            if (
-                isset($_POST["article_title"]) && isset($_POST["article_content"]) &&
-                !empty($_POST["article_title"]) && !empty($_POST["article_content"])
-            ) {
-                $id = strip_tags($_GET['id']);
+        $article = $articleRepository->selectArticle($_GET["id"]);
+        var_dump($article[0]);
 
-                $article = new Article();
-                $article->setTitle($_POST["article_title"]);
-                $article->setContent($_POST["article_content"]);
-                $article->setPublishedDate((new DateTime("now"))->format("Y-m-d h:i:s"));
-                $articleRepository = new ArticleRepository("article");
-               // $articleRepository->updateArticle($article, $id);
-            }
-        }
-        $this->renderView();
+        $this->renderView(["article" => $article[0]]);
+        
     }
 
+    public function updateSelected()
+    {
+        $this->setPath("../MVC/views/actualite/actualite.php");
+
+        $articleRepository = new ArticleRepository('article');
+
+        $article = $articleRepository->selectArticle($_GET["id"]);
+        var_dump($article[0]);
+
+        $this->renderView(["article" => $article[0]]);
+    }
 
     public function delete()
     {

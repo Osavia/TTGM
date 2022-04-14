@@ -32,13 +32,17 @@ switch ($page) {
         $article = new ArticleController();
         $article->display();
         break;
-    case 'add_article':
+    case 'create_article':
         $article = new ArticleController();
-        $article->add();
+        $article->create();
         break;
-    case 'update_article':
+    case 'selected_article':
         $article = new ArticleController();
-        $article->update();
+        $article->select();
+        break;
+    case 'updated_article_check':
+        $article = new ArticleController();
+        $article->updateSelected();
         break;
     case 'delete_article':
         $article = new ArticleController();

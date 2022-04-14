@@ -32,7 +32,7 @@ main {
   transition: all 0.3s ease-out;
 }
 
-.myPopup span {
+#closePopup {
   padding: 32px;
   cursor: pointer;
   background: rgba(0, 0, 0, 0.2);
