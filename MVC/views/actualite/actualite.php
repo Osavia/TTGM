@@ -35,16 +35,18 @@
             <tr>
                 <th>Titre</th>
                 <th>Date de publication</th>
-                <th>Content</th>
+                <th>Description</th>
+                <th>Image</th>
             </tr>
         </thead>
         <tbody>
             <?php if (isset($options["ListArticles"])) {
                 foreach ($options["ListArticles"] as $key => $article) { ?>
                     <tr>
-                        <td><?php echo $article->getTitle() ?></td>
-                        <td><?php echo $article->getPublishedDate() ?></td>
-                        <td><?php echo $article->getContent() ?></td>
+                        <td><?php echo htmlentities($article->getTitle()) ?></td>
+                        <td><?php echo htmlentities($article->getPublishedDate()) ?></td>
+                        <td><?php echo htmlentities($article->getContent()) ?></td>
+                        <td><img src="" alt=""></td>
                         <?php if (isset($_SESSION["user_is_connect"]) && $_SESSION["user_is_connect"]) { ?>
                             <td>
                                 <a href="?page=selected_article&id=<?= $article->getId() ?>" title="Modifier cet article">Modifier</a>
@@ -59,6 +61,16 @@
         </tbody>
     </table>
 </div>
+<?php if (isset($options["ListArticles"])) {
+    foreach ($options["ListArticles"] as $key => $article) { ?>
+        <div>
+            <h4><?php echo $article->getTitle() ?></h4>
+            <p><?php echo $article->getPublishedDate() ?></p>
+            <p><?php echo $article->getContent() ?></p>
+        </div>
+<?php }
+} ?>
+
 
 <!-- Modale de confirmation de suppresion : -->
 
@@ -66,7 +78,7 @@
     <h2>Voulez-vous vraiment supprimer cet article :
         <span id="show_title_article"></span> numéro <span id="show_id_article"></span>?
     </h2>
-    <div class="row" >
+    <div class="row">
         <a id="myLink" href="" title="Ceci supprimera l'article définitivement">
             Oui
         </a>

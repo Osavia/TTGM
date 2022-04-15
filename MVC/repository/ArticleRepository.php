@@ -40,7 +40,7 @@ class ArticleRepository extends Repository
         return $query->fetchAll(PDO::FETCH_CLASS, "article");
     }
 
-    public function updateArticle(Article $article, Article $id)
+    public function updateArticle(Article $article, $id)
     {
 
         $sql = "UPDATE article SET title=:title, content=:content WHERE id = :id;";
@@ -52,6 +52,8 @@ class ArticleRepository extends Repository
         $query = $this->executeSQL($sql, $params);
         return $query->fetchAll(PDO::FETCH_CLASS, "article");
     }
+
+    // PDP FETECH CLASS me renvoi un objet de ma classe Article
 
 
 

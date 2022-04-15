@@ -34,6 +34,7 @@ class ArticleController extends Controller
             $article->setPublishedDate((new DateTime("now"))->format("d/m/y"));
             $articleRepository = new ArticleRepository("article");
             $articleRepository->insertArticle($article);
+            $this->setPath("./../MVC/views/actualite/create_article_check.php");
         }
 
         $this->renderView();
@@ -46,7 +47,7 @@ class ArticleController extends Controller
         $articleRepository = new ArticleRepository('article');
 
         $article = $articleRepository->selectArticle($_GET["id"]);
-        var_dump($article[0]);
+        // var_dump($article[0]);
 
         $this->renderView(["article" => $article[0]]);
         
@@ -54,14 +55,20 @@ class ArticleController extends Controller
 
     public function updateSelected()
     {
-        $this->setPath("../MVC/views/actualite/actualite.php");
+        $this->setPath("../MVC/views/actualite/updated_article_check.php");
+
+        $id = strip_tags($_GET['id']);
+        var_dump($id);
+        
+        $article = new Article();
+        $article->setTitle($_POST["article_title"]);
+        var_dump($_POST["article_title"]);
+        $article->setContent($_POST["article_content"]);
 
         $articleRepository = new ArticleRepository('article');
+        $article = $articleRepository->updateArticle($article, $id);
 
-        $article = $articleRepository->selectArticle($_GET["id"]);
-        var_dump($article[0]);
-
-        $this->renderView(["article" => $article[0]]);
+        $this->renderView();
     }
 
     public function delete()
