@@ -2,6 +2,9 @@
 
 require_once "./../MVC/controller/HomeController.php";
 require_once "./../MVC/controller/actualite/ArticleController.php";
+require_once "./../MVC/controller/actualite/CreateArticleController.php";
+
+
 require_once "./../MVC/controller/InfoController.php";
 require_once "./../MVC/controller/AboutUsController.php";
 require_once "./../MVC/controller/BenevoleController.php";
@@ -33,6 +36,10 @@ switch ($page) {
         $article->display();
         break;
     case 'create_article':
+        $article = new CreateArticleController();
+        $article->renderView();
+        break;
+    case 'create_article_check':
         $article = new ArticleController();
         $article->create();
         break;

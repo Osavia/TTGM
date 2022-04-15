@@ -1,30 +1,31 @@
-<h1>Ajouter une actualité</h1>
+<?php if (isset($_SESSION["user_is_connect"]) && $_SESSION["user_is_connect"]) { ?>
 
-<?php if (
-    (!isset($_POST['article_title']) || !isset($_POST['article_content']))
-    || (empty($_POST['article_title']) || empty($_POST['article_content']))
-) { ?>
+
+    <h1>Ajouter une actualité</h1>
+
+
     <div>
-        <form method="POST">
+        <form action="?page=create_article_check" method="POST">
             <div>
                 <label for="article_title">Titre</label>
-                <input type="text" id="article_title" name="article_title">
+                <input type="text" id="article_title" name="article_title" required>
             </div>
             <div>
                 <label for="article_content">Description</label>
-                <textarea id="article_content" name="article_content"></textarea>
+                <textarea id="article_content" name="article_content" required></textarea>
             </div>
+            <!-- <div>
+                <label for="image">Image</label>
+                <input type="file" id="image" name="image" />
+            </div> -->
             <input type="submit" value="Créer">
 
         </form>
     </div>
-    <?php echo ('Pour ajouter un article, merci de bien remplir les champs "Titre" et "Description".'); ?>
+
 
 <?php } else { ?>
 
-    <?php echo ('Votre article a été ajouté avec succès'); ?>
-    <div>
-        <a href="?page=create_article">Ajouter un nouvel article</a>
-    </div>
-    
+    ERREUR : VOUS DEVEZ VOUS CONNECTER
+
 <?php } ?>
