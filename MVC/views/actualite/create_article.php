@@ -5,19 +5,19 @@
 
 
     <div>
-        <form action="?page=create_article_check" method="POST">
+        <form action="?page=create_article_check" method="POST" enctype="multipart/form-data">
             <div>
-                <label for="article_title">Titre</label>
+                <label for="article_title">Titre :</label>
                 <input type="text" id="article_title" name="article_title" required>
             </div>
             <div>
-                <label for="article_content">Description</label>
+                <label for="article_content">Description :</label>
                 <textarea id="article_content" name="article_content" required></textarea>
             </div>
-            <!-- <div>
-                <label for="image">Image</label>
-                <input type="file" id="image" name="image" />
-            </div> -->
+            <div>
+                <label for="image">Image :</label>
+                <input type="file" id="image" name="image">
+            </div>
             <input type="submit" value="Créer">
 
         </form>

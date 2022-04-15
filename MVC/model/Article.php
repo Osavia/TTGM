@@ -2,30 +2,13 @@
 
 class Article
 {
-
-    /** 
-     * @var int $id 
-     */
     private int $id;
-
-    /**
-     * @var string $content
-     */
     private string $content;
-
-    /** 
-     * @var string|null $title 
-     */
+    // @var string|null $title 
     private ?string $title;
-
-    /**
-     * @var string|null $published_date
-     */
+    private string $image_path;
     private ?string $published_date;
 
-    /**
-     * Artcile constructor
-     */
     public function __construct()
     {
     }
@@ -76,6 +59,16 @@ class Article
     public function setTitle(string $title): void
     {
         $this->title = $title;
+    }
+
+    public function getImage(): string
+    {
+        return $this->image_path;
+    }
+
+    public function setImage(string $image_path): void
+    {
+        $this->image_path = $image_path;
     }
 
     /**

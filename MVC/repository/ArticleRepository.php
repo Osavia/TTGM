@@ -20,10 +20,11 @@ class ArticleRepository extends Repository
     
     public function insertArticle(Article $article)
     {
-        $sql = "INSERT INTO article(title, content, published_date) VALUE(:title, :content, :published_date);";
+        $sql = "INSERT INTO article(title, content, image_path, published_date) VALUE(:title, :content, :image_path, :published_date);";
         $params = [
             ":title"=> $article->getTitle(),
             ":content"=> $article->getContent(), 
+            ":image_path"=> $article->getImage(),
             ":published_date"=> $article->getPublishedDate()
         ];        
         return ($this->executeSQL($sql, $params));
