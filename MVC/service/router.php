@@ -35,6 +35,10 @@ switch ($page) {
         $article = new ArticleController();
         $article->display();
         break;
+    case 'viewed_article':
+        $article = new ArticleController();
+        $article->read();
+        break;
     case 'create_article':
         $article = new CreateArticleController();
         $article->renderView();

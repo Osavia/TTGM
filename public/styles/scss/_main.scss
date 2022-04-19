@@ -20,6 +20,7 @@ main {
 .myPopup {
   transform: scale(0);
   position: fixed;
+  z-index: 20;
   top: 15%;
   overflow: auto;
   left: 100px;
@@ -65,4 +66,17 @@ main {
 
 .image-actualite .adaptive-img--contain {
   padding-bottom: 100%;
+}
+
+
+.contain-all {
+  //display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  //justify-content: center;
+}
+
+.contain-card {
+  flex: 1 23%;
+  padding: 16px;
 }

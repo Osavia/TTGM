@@ -32,26 +32,27 @@ class ArticleController extends Controller
             && isset($_FILES['image'])
             && $_FILES['image']['error'] == 0
         ) {
-            
+
             // $fileInfo = pathinfo($_FILES['image']['name']);
             // $extension = $fileInfo['extension'];
             // $allowedExtensions = ['jpg', 'jpeg', 'gif', 'png'];
             // if (in_array($extension, $allowedExtensions)) {
             //     // On peut valider le fichier et le stocker définitivement
-                move_uploaded_file($_FILES['image']['tmp_name'], './images/' . basename($_FILES['image']['name']));
-                // $messageUpload = "L'envoi a bien été effectué !";
-                
-                var_dump($_FILES);
-                $article = new Article();
-                $article->setTitle($_POST["article_title"]);
-                $article->setContent($_POST["article_content"]);
-                $article->setPublishedDate((new DateTime("now"))->format("d/m/y"));
-                $article->setImage('./images/' . $_FILES['image']['name']);
-                $articleRepository = new ArticleRepository("article");
-                $articleRepository->insertArticle($article);
-                $this->setPath("./../MVC/views/actualite/create_article_check.php");
-            }
-        
+            move_uploaded_file($_FILES['image']['tmp_name'], './images/' . basename($_FILES['image']['name']));
+
+            var_dump($_FILES);
+            $article = new Article();
+            $article->setTitle($_POST["article_title"]);
+            $article->setContent($_POST["article_content"]);
+            $article->setPublishedDate((new DateTime("now"))->format("d/m/y"));
+            $article->setImage('./images/' . $_FILES['image']['name']);
+            $articleRepository = new ArticleRepository("article");
+            $articleRepository->insertArticle($article);
+            $this->setPath("./../MVC/views/actualite/create_article_check.php");
+        } else {
+            echo ('Merci de selectionner un fichier');
+        }
+
 
         $this->renderView();
     }
@@ -68,20 +69,46 @@ class ArticleController extends Controller
         $this->renderView(["article" => $article[0]]);
     }
 
+    public function read()
+    {
+        $this->setPath("../MVC/views/actualite/viewed_article.php");
+
+        $articleRepository = new ArticleRepository('article');
+        $article = $articleRepository->selectArticle($_GET["id"]);
+        $this->renderView(["article" => $article[0]]);
+    }
+
     public function updateSelected()
     {
         $this->setPath("../MVC/views/actualite/updated_article_check.php");
 
-        $id = strip_tags($_GET['id']);
-        var_dump($id);
 
-        $article = new Article();
-        $article->setTitle($_POST["article_title"]);
-        var_dump($_POST["article_title"]);
-        $article->setContent($_POST["article_content"]);
+        if (
+            isset($_POST["article_title"])
+            && isset($_POST["article_content"])
+            && !empty($_POST["article_title"])
+            && !empty($_POST["article_content"])
+        ) {
 
-        $articleRepository = new ArticleRepository('article');
-        $article = $articleRepository->updateArticle($article, $id);
+            $id = strip_tags($_GET['id']);
+
+            $article = new Article();
+            $article->setTitle($_POST["article_title"]);
+            $article->setContent($_POST["article_content"]);
+            $articleRepository = new ArticleRepository('article');
+            $article = $articleRepository->updateArticle($article, $id);
+        }
+
+        if (
+            isset($_FILES['image'])
+            && $_FILES['image']['error'] == 0
+        ) {
+            move_uploaded_file($_FILES['image']['tmp_name'], './images/' . basename($_FILES['image']['name']));
+            $article = new Article();
+            $article->setImage('./images/' . $_FILES['image']['name']);
+            $articleRepository = new ArticleRepository("article");
+            $article = $articleRepository->updateArticle($article, $id);
+        }
 
         $this->renderView();
     }
@@ -98,3 +125,25 @@ class ArticleController extends Controller
         }
     }
 }
+
+
+
+
+
+// public function updateSelected()
+//     {
+//         $this->setPath("../MVC/views/actualite/updated_article_check.php");
+
+//         $id = strip_tags($_GET['id']);
+//         var_dump($id);
+//         var_dump($_POST["article_title"]);
+
+//         $article = new Article();
+//         $article->setTitle($_POST["article_title"]);
+//         $article->setContent($_POST["article_content"]);
+
+//         $articleRepository = new ArticleRepository('article');
+//         $article = $articleRepository->updateArticle($article, $id);
+
+//         $this->renderView();
+//     }

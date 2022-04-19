@@ -6,7 +6,7 @@ class Article
     private string $content;
     // @var string|null $title 
     private ?string $title;
-    private string $image_path;
+    private ?string $image_path;
     private ?string $published_date;
 
     public function __construct()

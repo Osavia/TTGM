@@ -44,10 +44,11 @@ class ArticleRepository extends Repository
     public function updateArticle(Article $article, $id)
     {
 
-        $sql = "UPDATE article SET title=:title, content=:content WHERE id = :id;";
+        $sql = "UPDATE article SET title=:title, content=:content, image_path=:image_path WHERE id = :id;";
         $params = [
             ":id"=> $id,
             ":title"=> $article->getTitle(),
+            ":image_path"=> $article->getImage(),
             ":content"=> $article->getContent(), 
         ];        
         $query = $this->executeSQL($sql, $params);

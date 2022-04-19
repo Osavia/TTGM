@@ -306,6 +306,11 @@ body {
     line-height: 1.5;
     font-size: 1.8rem;
   }
+
+  .contain-card {
+    flex: 1 35%;
+    color: chocolate;
+  }
 }
 /********************************************************/
 /***************** CLASSES PRÉDÉFINIES ******************/
@@ -475,6 +480,7 @@ main {
 .myPopup {
   transform: scale(0);
   position: fixed;
+  z-index: 20;
   top: 15%;
   overflow: auto;
   left: 100px;
@@ -519,6 +525,16 @@ main {
 
 .image-actualite .adaptive-img--contain {
   padding-bottom: 100%;
+}
+
+.contain-all {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.contain-card {
+  flex: 1 23%;
+  padding: 16px;
 }
 
 footer {

@@ -58,6 +58,10 @@ body {
     line-height: 1.5;
     font-size: 1.8rem;
   }
+  .contain-card {
+    flex: 1 35%;
+    color: chocolate;
+  }
 
   // police d'écriture ?
 }
@@ -67,7 +71,7 @@ body {
 /********************************************************/
 
 .row {
-@include row-center;
+  @include row-center;
 }
 
 /*********************************************************/

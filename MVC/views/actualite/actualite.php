@@ -29,7 +29,7 @@
 
 <!-- Affichage de la liste des articles : -->
 
-<div>
+<!-- <div>
     <table>
         <thead>
             <tr>
@@ -43,7 +43,12 @@
             <?php if (isset($options["ListArticles"])) {
                 foreach ($options["ListArticles"] as $key => $article) { ?>
                     <tr>
-                        <td><?php echo htmlentities($article->getTitle()) ?></td>
+
+                        <td>
+                            <a href="?page=viewed_article&id=<?= $article->getId() ?>" title="Voir cette actalité">
+                                <?php echo htmlentities($article->getTitle()) ?>
+                            </a>
+                        </td>
                         <td><?php echo htmlentities($article->getPublishedDate()) ?></td>
                         <td><?php echo htmlentities($article->getContent()) ?></td>
                         <td>
@@ -57,6 +62,7 @@
                                 </div>
                             </div>
                         </td>
+
                         <?php if (isset($_SESSION["user_is_connect"]) && $_SESSION["user_is_connect"]) { ?>
                             <td>
                                 <a href="?page=selected_article&id=<?= $article->getId() ?>" title="Modifier cet article">Modifier</a>
@@ -70,27 +76,42 @@
             } ?>
         </tbody>
     </table>
-</div>
+</div> -->
 
-<?php if (isset($options["ListArticles"])) {
-    foreach ($options["ListArticles"] as $key => $article) { ?>
-        <div>
-            <h4><?php echo $article->getTitle() ?></h4>
-            <p><?php echo $article->getPublishedDate() ?></p>
-            <p><?php echo $article->getContent() ?></p>
-            <div class="image-actualite">
-                <div class="img">
-                    <div class="adaptive-img--contain">
-                        <span>
-                            <img src="<?php echo $article->getImage() ?>" alt="">
-                        </span>
+<div class="contain-all">
+
+    <?php if (isset($options["ListArticles"])) {
+        foreach ($options["ListArticles"] as $key => $article) { ?>
+            <div class="contain-card">
+                <h4>
+                    <a href="?page=viewed_article&id=<?= $article->getId() ?>" title="Voir cette actalité">
+                        <?php echo htmlentities($article->getTitle()) ?>
+                    </a>
+                </h4>
+                <p><?php echo $article->getPublishedDate() ?></p>
+                <p><?php echo $article->getContent() ?></p>
+                <div class="image-actualite">
+                    <div class="img">
+                        <div class="adaptive-img--contain">
+                            <span>
+                                <img src="<?php echo $article->getImage() ?>" alt="">
+                            </span>
+                        </div>
                     </div>
                 </div>
+                <?php if (isset($_SESSION["user_is_connect"]) && $_SESSION["user_is_connect"]) { ?>
+                    <td>
+                        <a href="?page=selected_article&id=<?= $article->getId() ?>" title="Modifier cet article">Modifier</a>
+                    </td>
+                    <td>
+                        <button class="displayBtns" data-title_article="<?= $article->getTitle() ?>" data-id_article="<?= $article->getId() ?>">Supprimer</button>
+                    </td>
+                <?php } ?>
             </div>
-        </div>
-<?php }
-} ?>
 
+    <?php }
+    } ?>
+</div>
 
 <!-- Modale de confirmation de suppresion : -->
 
