@@ -41,21 +41,35 @@ class ArticleRepository extends Repository
         return $query->fetchAll(PDO::FETCH_CLASS, "article");
     }
 
-    public function updateArticle(Article $article, $id)
+    public function updateImage(Article $article, $id)
     {
-
-        $sql = "UPDATE article SET title=:title, content=:content, image_path=:image_path WHERE id = :id;";
+        $sql = "UPDATE article SET image_path=:image_path WHERE id = :id;";
         $params = [
             ":id"=> $id,
-            ":title"=> $article->getTitle(),
             ":image_path"=> $article->getImage(),
-            ":content"=> $article->getContent(), 
-        ];        
+
+        ];     
         $query = $this->executeSQL($sql, $params);
         return $query->fetchAll(PDO::FETCH_CLASS, "article");
     }
 
-    // PDP FETECH CLASS me renvoi un objet de ma classe Article
+    public function updateArticle(Article $article, $id)
+    {
+
+        $sql = "UPDATE article SET title=:title, content=:content WHERE id = :id;";
+        $params = [
+            ":id"=> $id,
+            ":title"=> $article->getTitle(),
+            ":content"=> $article->getContent(), 
+        ];   
+        //var_dump($article->getImage());
+        //if (strlen($article->getImage()) > 0) {
+        //$params[":image_path"] = $article->getImage();
+   // }     
+        $query = $this->executeSQL($sql, $params);
+        return $query->fetchAll(PDO::FETCH_CLASS, "article");
+    }
+
 
 
 

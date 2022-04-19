@@ -1,7 +1,5 @@
 <?php if (isset($_SESSION["user_is_connect"]) && $_SESSION["user_is_connect"]) { ?>
 
-  <?php var_dump('test') ?>
-
   <h1>
     <?php echo ($options["article"]->getTitle()) ?>
   </h1>

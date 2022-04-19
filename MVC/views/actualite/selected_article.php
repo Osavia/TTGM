@@ -27,9 +27,9 @@
             <input type="file" id="image" name="image">
         </div>
 
-        // rajouter l'image (la montrer) => OK
-        // Si aucun changement => on garde l'image
-        // Si changement => on la modifie
+        <!-- rajouter l'image (la montrer) => OK
+         Si aucun changement => on garde l'image
+         Si changement => on la modifie -->
 
         <input type="hidden" name="id" value="<?php echo $options["article"]->getId() ?>">
         <button>Enregistrer</button>

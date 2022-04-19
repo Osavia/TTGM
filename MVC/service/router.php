@@ -37,7 +37,7 @@ switch ($page) {
         break;
     case 'viewed_article':
         $article = new ArticleController();
-        $article->read();
+        $article->read('viewed_article');
         break;
     case 'create_article':
         $article = new CreateArticleController();
@@ -49,7 +49,7 @@ switch ($page) {
         break;
     case 'selected_article':
         $article = new ArticleController();
-        $article->select();
+        $article->read('selected_article');
         break;
     case 'updated_article_check':
         $article = new ArticleController();

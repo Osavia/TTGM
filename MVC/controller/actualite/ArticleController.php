@@ -57,9 +57,9 @@ class ArticleController extends Controller
         $this->renderView();
     }
 
-    public function select()
+    public function read($path)
     {
-        $this->setPath("../MVC/views/actualite/selected_article.php");
+        $this->setPath('../MVC/views/actualite/' . $path . '.php');
 
         $articleRepository = new ArticleRepository('article');
 
@@ -69,46 +69,38 @@ class ArticleController extends Controller
         $this->renderView(["article" => $article[0]]);
     }
 
-    public function read()
-    {
-        $this->setPath("../MVC/views/actualite/viewed_article.php");
-
-        $articleRepository = new ArticleRepository('article');
-        $article = $articleRepository->selectArticle($_GET["id"]);
-        $this->renderView(["article" => $article[0]]);
-    }
-
     public function updateSelected()
     {
         $this->setPath("../MVC/views/actualite/updated_article_check.php");
-
-
+        
         if (
             isset($_POST["article_title"])
             && isset($_POST["article_content"])
             && !empty($_POST["article_title"])
             && !empty($_POST["article_content"])
-        ) {
-
-            $id = strip_tags($_GET['id']);
-
-            $article = new Article();
-            $article->setTitle($_POST["article_title"]);
-            $article->setContent($_POST["article_content"]);
-            $articleRepository = new ArticleRepository('article');
-            $article = $articleRepository->updateArticle($article, $id);
-        }
+            ) {
+                $id = strip_tags($_GET['id']);
+                
+                $article = new Article();
+                $article->setTitle($_POST["article_title"]);
+                $article->setContent($_POST["article_content"]);
+                $articleRepository = new ArticleRepository('article');
+                $article = $articleRepository->updateArticle($article, $id);
+            }
 
         if (
             isset($_FILES['image'])
             && $_FILES['image']['error'] == 0
+
         ) {
             move_uploaded_file($_FILES['image']['tmp_name'], './images/' . basename($_FILES['image']['name']));
             $article = new Article();
             $article->setImage('./images/' . $_FILES['image']['name']);
             $articleRepository = new ArticleRepository("article");
-            $article = $articleRepository->updateArticle($article, $id);
+            $article = $articleRepository->updateImage($article, $id);
         }
+
+        
 
         $this->renderView();
     }

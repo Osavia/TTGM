@@ -1,13 +1,21 @@
 header {
   background-color: var(--header-footer-background-color);
-  // padding: 32px;
-  width: 100%;
-  height: var(--header-height);
+  height: 100px;
   position: fixed;
   z-index: 10;
 
+  #admin {
+    align-items: flex-end;
+    font-size: small;
+    position: absolute;
+    top: 32px;
+  }
+
   nav {
+    flex-direction: row;
     align-items: center;
+    justify-content: space-between;
+    flex: 1 0;
   }
 }
 
@@ -36,6 +44,9 @@ header {
 .logo-header .adaptive-img--contain {
   padding-bottom: 100%;
 }
+
+
+
 
 /**************************************/
 /************** MOVINGDIV *************/

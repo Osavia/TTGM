@@ -9,6 +9,9 @@
     <?php } ?>
 
 
+    <!-- Affichage du bouton de connexion / deconnexion : -->
+
+
     <?php if (isset($_SESSION["user_is_connect"]) && $_SESSION["user_is_connect"]) { ?>
 
         <a href="?page=logout">
@@ -29,89 +32,41 @@
 
 <!-- Affichage de la liste des articles : -->
 
-<!-- <div>
-    <table>
-        <thead>
-            <tr>
-                <th>Titre</th>
-                <th>Date de publication</th>
-                <th>Description</th>
-                <th>Image</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php if (isset($options["ListArticles"])) {
-                foreach ($options["ListArticles"] as $key => $article) { ?>
-                    <tr>
-
-                        <td>
-                            <a href="?page=viewed_article&id=<?= $article->getId() ?>" title="Voir cette actalité">
-                                <?php echo htmlentities($article->getTitle()) ?>
-                            </a>
-                        </td>
-                        <td><?php echo htmlentities($article->getPublishedDate()) ?></td>
-                        <td><?php echo htmlentities($article->getContent()) ?></td>
-                        <td>
-                            <div class="image-actualite">
-                                <div class="img">
-                                    <div class="adaptive-img--contain">
-                                        <span>
-                                            <img src="<?php echo htmlentities($article->getImage()) ?>" alt="">
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </td>
-
-                        <?php if (isset($_SESSION["user_is_connect"]) && $_SESSION["user_is_connect"]) { ?>
-                            <td>
-                                <a href="?page=selected_article&id=<?= $article->getId() ?>" title="Modifier cet article">Modifier</a>
-                            </td>
-                            <td>
-                                <button class="displayBtns" data-title_article="<?= $article->getTitle() ?>" data-id_article="<?= $article->getId() ?>">Supprimer</button>
-                            </td>
-                            <?php } ?>
-                    </tr>
-                        <?php }
-            } ?>
-        </tbody>
-    </table>
-</div> -->
-
-<div class="contain-all">
+<ul class="grid">
 
     <?php if (isset($options["ListArticles"])) {
         foreach ($options["ListArticles"] as $key => $article) { ?>
-            <div class="contain-card">
-                <h4>
-                    <a href="?page=viewed_article&id=<?= $article->getId() ?>" title="Voir cette actalité">
+            <li>
+                <a href="?page=viewed_article&id=<?= $article->getId() ?>" title="Voir cette actalité">
+                    <h4>
                         <?php echo htmlentities($article->getTitle()) ?>
-                    </a>
-                </h4>
-                <p><?php echo $article->getPublishedDate() ?></p>
-                <p><?php echo $article->getContent() ?></p>
-                <div class="image-actualite">
-                    <div class="img">
-                        <div class="adaptive-img--contain">
-                            <span>
-                                <img src="<?php echo $article->getImage() ?>" alt="">
-                            </span>
+                    </h4>
+                    <p><?php echo $article->getPublishedDate() ?></p>
+                    <p><?php echo $article->getContent() ?></p>
+                    <div class="image-actualite">
+                        <div class="img">
+                            <div class="adaptive-img--contain">
+                                <span>
+                                    <img src="<?php echo $article->getImage() ?>" alt="">
+                                </span>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </a>
+
                 <?php if (isset($_SESSION["user_is_connect"]) && $_SESSION["user_is_connect"]) { ?>
-                    <td>
+                    <div>
                         <a href="?page=selected_article&id=<?= $article->getId() ?>" title="Modifier cet article">Modifier</a>
-                    </td>
-                    <td>
+                    </div>
+                    <div>
                         <button class="displayBtns" data-title_article="<?= $article->getTitle() ?>" data-id_article="<?= $article->getId() ?>">Supprimer</button>
-                    </td>
+                    </div>
                 <?php } ?>
-            </div>
+            </li>
 
     <?php }
     } ?>
-</div>
+</ul>
 
 <!-- Modale de confirmation de suppresion : -->
 

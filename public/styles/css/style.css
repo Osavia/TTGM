@@ -244,7 +244,7 @@ template {
 }
 
 :root {
-  --header-height: 132px;
+  --header-height: 100px;
   --header-footer-background-color: rgb(244, 226, 204);
   --movingDiv-height: 32px;
 }
@@ -297,7 +297,7 @@ body {
 /********************************************************/
 /***************** GESTION DU RESPONSIVE ****************/
 /********************************************************/
-@media (max-width: 760px) {
+@media (max-width: 860px) {
   .container {
     padding: 0 16px;
   }
@@ -305,11 +305,6 @@ body {
   body {
     line-height: 1.5;
     font-size: 1.8rem;
-  }
-
-  .contain-card {
-    flex: 1 35%;
-    color: chocolate;
   }
 }
 /********************************************************/
@@ -408,13 +403,21 @@ a:hover {
 
 header {
   background-color: var(--header-footer-background-color);
-  width: 100%;
-  height: var(--header-height);
+  height: 100px;
   position: fixed;
   z-index: 10;
 }
+header #admin {
+  align-items: flex-end;
+  font-size: small;
+  position: absolute;
+  top: 32px;
+}
 header nav {
+  flex-direction: row;
   align-items: center;
+  justify-content: space-between;
+  flex: 1 0;
 }
 
 /**************************************/
@@ -474,9 +477,9 @@ main {
   color: #433f3f;
 }
 
-/******************************************************/
-/***************** MODALE DE CONNEXION ****************/
-/******************************************************/
+/********************************************************/
+/***************** MODALE DE SUPPRESSION ****************/
+/********************************************************/
 .myPopup {
   transform: scale(0);
   position: fixed;
@@ -519,24 +522,41 @@ main {
 .image-actualite .img {
   width: 100%;
   height: 100%;
-  max-width: 152px;
-  max-height: 152px;
 }
 
 .image-actualite .adaptive-img--contain {
   padding-bottom: 100%;
 }
 
-.contain-all {
+.grid {
   flex-direction: row;
   flex-wrap: wrap;
+  margin-top: 32px;
 }
-
-.contain-card {
+.grid li {
   flex: 1 23%;
   padding: 16px;
+  list-style: none;
+}
+.grid li h4 {
+  flex: 1 0;
 }
 
+@media (max-width: 860px) {
+  .grid li {
+    flex: 1 33%;
+  }
+}
+@media (max-width: 760px) {
+  .grid li {
+    flex: 1 50%;
+  }
+}
+@media (max-width: 600px) {
+  .grid li {
+    flex: 1 100%;
+  }
+}
 footer {
   background-color: var(--header-footer-background-color);
   width: 100%;

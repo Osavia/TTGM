@@ -50,17 +50,13 @@ body {
 /***************** GESTION DU RESPONSIVE ****************/
 /********************************************************/
 
-@media (max-width: 760px) {
+@media (max-width: 860px) {
   .container {
     padding: 0 16px;
   }
   body {
     line-height: 1.5;
     font-size: 1.8rem;
-  }
-  .contain-card {
-    flex: 1 35%;
-    color: chocolate;
   }
 
   // police d'écriture ?
