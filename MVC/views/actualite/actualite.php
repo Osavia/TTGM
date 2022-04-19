@@ -70,9 +70,9 @@
                             <td>
                                 <button class="displayBtns" data-title_article="<?= $article->getTitle() ?>" data-id_article="<?= $article->getId() ?>">Supprimer</button>
                             </td>
-                        <?php } ?>
+                            <?php } ?>
                     </tr>
-            <?php }
+                        <?php }
             } ?>
         </tbody>
     </table>
