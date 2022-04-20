@@ -14,41 +14,32 @@
 
 <body>
 
-    <header class="container">
+    <header>
 
-        <div class="testAlex">
-            <nav>
+    <div class="container">
 
-                <a href="?page=home" class="logo-header">
-                    <div class="img">
-                        <div class="adaptive-img--contain">
+            <nav class="row-around">
+
+                <a href="?page=home">
+                        <div class="adaptive-img--contain logo-header">
                             <span>
                                 <img src="./images/TTGM-Logo-vert.png" alt="Logo du Train Touristique de Guîtres" />
                             </span>
                         </div>
-                    </div>
                 </a>
 
-                <div class="menu">
+                <ul class="navigation row-around">
                     <li><a href="?page=home">Accueil</a></li>
                     <li><a href="?page=news">Actualités</a></li>
                     <li><a href="?page=info">Informations pratiques</a></li>
                     <li><a href="?page=about_us">Qui sommes-nous ?</a></li>
                     <li><a href="?page=contact">Contact</a></li>
                     <li><a href="?page=benevole">DEVENIR BENEVOLE</a></li>
-                </div>
-
-                <!-- <div class="nav-mobile">
-                <button type="button" id="button-mobile">Menu</button>
-            </div> -->
+                </ul>
 
             </nav>
-            <div id="admin">
-                <?php if (isset($_SESSION["user_is_connect"]) && $_SESSION["user_is_connect"]) {
-                    echo ("Admin");
-                } ?>
+
             </div>
-        </div>
 
         <div class="headerBar">
             <div class="movingDiv">
@@ -62,14 +53,12 @@
                     <circle cx="49" cy="40" r="8" fill="#C4C4C4" />
                     <circle cx="72" cy="40" r="8" fill="#C4C4C4" />
                 </svg>
-
             </div>
         </div>
+
     </header>
 
     <main>
-
-        <div class="container">
 
             <!-- <div class="menu-mobile" id="menu-mobile">
                 <ul>
@@ -80,3 +69,10 @@
                 </ul>
             </div>
             <div class="shadow" id="shadow"></div> -->
+
+
+                        <!-- <div id="admin">
+                        <?php if (isset($_SESSION["user_is_connect"]) && $_SESSION["user_is_connect"]) {
+                    echo ("Admin");
+                } ?>
+            </div> -->

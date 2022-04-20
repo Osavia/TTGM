@@ -1,52 +1,44 @@
 header {
-  background-color: var(--header-footer-background-color);
   height: 100px;
+  background-color: aqua;
+  width: calc(100% - 15px);
+
   position: fixed;
+  top: 0;
   z-index: 10;
 
-  #admin {
-    align-items: flex-end;
-    font-size: small;
-    position: absolute;
-    top: 32px;
-  }
+  .navigation {
+    gap: 16px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 
-  nav {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    flex: 1 0;
-  }
-}
+    a {
+      height: 48px;
+      color: rgb(1, 1, 1);
+      font-size: 18px;
+      padding: 0 16px;
+      font-weight: 400;
+      text-decoration: none;
+    }
 
-/**************************************/
-/***************** NAV ****************/
-/**************************************/
-
-.menu {
-  flex-direction: row;
-  justify-content: space-around;
-  width: 100%;
-  font-size: 1.5rem;
-
-  a {
-    font-weight: 500;
   }
 }
 
-.logo-header .img {
-  width: 100%;
-  height: 100%;
-  max-width: 88px;
-  max-height: 88px;
+@media (max-width: 1100px) {
+  .navigation {
+    display: none;
+  }
 }
 
-.logo-header .adaptive-img--contain {
-  padding-bottom: 100%;
+.logo-header {
+  min-width: 88px;
+  min-height: 88px;
 }
 
-
-
+// .logo-header .adaptive-img--contain {
+//   padding-bottom: 100%;
+// }
 
 /**************************************/
 /************** MOVINGDIV *************/
@@ -56,10 +48,9 @@ header {
   background-color: rgb(241, 238, 194);
   top: var(--header-height);
   left: 0;
-  width: 100%;
+  width: calc(100% - 15px);
   height: var(--movingDiv-height);
   position: fixed;
-
 }
 
 .movingDiv {
@@ -72,3 +63,32 @@ header {
 
   // background-color: rgb(189, 245, 245);
 }
+
+
+
+// TEST
+
+// header {
+//   background-color: var(--header-footer-background-color);
+//   width: 100%;
+//   height: 100px;
+//   position: fixed;
+//   z-index: 10;
+
+//   nav {
+//     flex-direction: row;
+//     align-items: center;
+//     justify-content: space-between;
+
+//     .navigation {
+//       flex-direction: row;
+//       justify-content: space-around;
+//       width: 100%;
+//       font-size: 1.5rem;
+
+//       a {
+//         font-weight: 500;
+//       }
+//     }
+//   }
+// }

@@ -31,19 +31,24 @@ body {
   line-height: 1.5;
   font-size: 2.2rem;
   font-weight: 300;
-  // background: linear-gradient(20deg, var(--black), var(--dark-green));
-  background-attachment: fixed;
+}
+
+main {
+  flex: 1 0;
 }
 
 /*******************************************************/
 /***************** GESTION DU CONTAINER ****************/
 /*******************************************************/
 
-.container {
-  width: 100%;
+.container-auto {
   margin: 0 auto;
   padding: 0 32px;
-  max-width: 1400px;
+  max-width: 1480px;
+}
+
+.container {
+  padding: 0 32px;
 }
 
 /********************************************************/
@@ -66,8 +71,20 @@ body {
 /***************** CLASSES PRÉDÉFINIES ******************/
 /********************************************************/
 
-.row {
+.row-around {
+  @include row-around;
+}
+
+.row-between {
+  @include row-between;
+}
+
+.row-center {
   @include row-center;
+}
+
+.text-center {
+  text-align: center;
 }
 
 /*********************************************************/
@@ -79,13 +96,11 @@ h2,
 h3,
 h4 {
   font-weight: bold;
-  color: #26d3d3;
-  font-style: italic;
 }
 
 h1 {
   margin: 0;
-  font-size: 3rem;
+  font-size: 5rem;
   flex: 1 0;
 }
 
@@ -110,7 +125,7 @@ a {
 }
 
 a:hover {
-  text-shadow: 0 0 0.2em rgb(132, 131, 131);
+  text-shadow: 0 0 0.2em rgb(152, 142, 142);
 }
 
 /*****************************************************/
@@ -160,3 +175,8 @@ a:hover {
 .adaptive-img--contain > span > img {
   object-fit: contain;
 }
+
+
+// ::-webkit-scrollbar {
+//   z-index: 20;
+// }

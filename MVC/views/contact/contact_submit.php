@@ -1,4 +1,18 @@
+    <!-- Affichage du page title : -->
 
+    <div class="page-title">
+        <div class="container-auto">
+            <div class="page-path">
+                <h1>Nous contacter</h1>
+                <div class="row-center">
+                    <a href="?page=home">ACCUEIL</a>
+                    <span> / NOUS CONTACTER</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-auto">
 
 <h1>Message bien reçu !</h1>
 

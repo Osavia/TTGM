@@ -281,17 +281,23 @@ body {
   line-height: 1.5;
   font-size: 2.2rem;
   font-weight: 300;
-  background-attachment: fixed;
+}
+
+main {
+  flex: 1 0;
 }
 
 /*******************************************************/
 /***************** GESTION DU CONTAINER ****************/
 /*******************************************************/
-.container {
-  width: 100%;
+.container-auto {
   margin: 0 auto;
   padding: 0 32px;
-  max-width: 1400px;
+  max-width: 1480px;
+}
+
+.container {
+  padding: 0 32px;
 }
 
 /********************************************************/
@@ -310,10 +316,26 @@ body {
 /********************************************************/
 /***************** CLASSES PRÉDÉFINIES ******************/
 /********************************************************/
-.row {
+.row-around {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+}
+
+.row-between {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.row-center {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-center {
+  text-align: center;
 }
 
 /*********************************************************/
@@ -324,13 +346,11 @@ h2,
 h3,
 h4 {
   font-weight: bold;
-  color: #26d3d3;
-  font-style: italic;
 }
 
 h1 {
   margin: 0;
-  font-size: 3rem;
+  font-size: 5rem;
   flex: 1 0;
 }
 
@@ -351,7 +371,7 @@ a {
 }
 
 a:hover {
-  text-shadow: 0 0 0.2em #848383;
+  text-shadow: 0 0 0.2em #988e8e;
 }
 
 /*****************************************************/
@@ -402,46 +422,36 @@ a:hover {
 }
 
 header {
-  background-color: var(--header-footer-background-color);
   height: 100px;
+  background-color: aqua;
+  width: calc(100% - 15px);
   position: fixed;
+  top: 0;
   z-index: 10;
 }
-header #admin {
-  align-items: flex-end;
-  font-size: small;
-  position: absolute;
-  top: 32px;
+header .navigation {
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
-header nav {
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  flex: 1 0;
-}
-
-/**************************************/
-/***************** NAV ****************/
-/**************************************/
-.menu {
-  flex-direction: row;
-  justify-content: space-around;
-  width: 100%;
-  font-size: 1.5rem;
-}
-.menu a {
-  font-weight: 500;
+header .navigation a {
+  height: 48px;
+  color: #010101;
+  font-size: 18px;
+  padding: 0 16px;
+  font-weight: 400;
+  text-decoration: none;
 }
 
-.logo-header .img {
-  width: 100%;
-  height: 100%;
-  max-width: 88px;
-  max-height: 88px;
+@media (max-width: 1100px) {
+  .navigation {
+    display: none;
+  }
 }
-
-.logo-header .adaptive-img--contain {
-  padding-bottom: 100%;
+.logo-header {
+  min-width: 88px;
+  min-height: 88px;
 }
 
 /**************************************/
@@ -451,7 +461,7 @@ header nav {
   background-color: #f1eec2;
   top: var(--header-height);
   left: 0;
-  width: 100%;
+  width: calc(100% - 15px);
   height: var(--movingDiv-height);
   position: fixed;
 }
@@ -466,7 +476,7 @@ header nav {
 }
 
 main {
-  padding-top: 180px;
+  padding-top: 132px;
 }
 
 .btn-connexion {
@@ -520,12 +530,16 @@ main {
 /******************* IMAGE ACTUALITE ******************/
 /******************************************************/
 .image-actualite .img {
-  width: 100%;
-  height: 100%;
+  max-width: 100vw;
+  height: auto;
 }
 
 .image-actualite .adaptive-img--contain {
   padding-bottom: 100%;
+}
+
+.admin-setup {
+  margin-top: 32px;
 }
 
 .grid {
@@ -537,9 +551,23 @@ main {
   flex: 1 23%;
   padding: 16px;
   list-style: none;
+  position: relative;
+}
+.grid li .post-date {
+  position: absolute;
+  top: 5%;
+  left: 45%;
+  z-index: 2;
+  background-color: aqua;
+  color: black;
 }
 .grid li h4 {
   flex: 1 0;
+  text-align: center;
+}
+.grid li .grid-card {
+  background-color: #eff5f3;
+  box-shadow: 0 0 0 1px black;
 }
 
 @media (max-width: 860px) {
@@ -557,45 +585,63 @@ main {
     flex: 1 100%;
   }
 }
+/********************************************************/
+/******************* PAGE ACTUALITES ********************/
+/********************************************************/
+.page-title {
+  background-color: black;
+  color: white;
+  padding: 52px 0;
+  text-align: center;
+  gap: 16px;
+}
+.page-title .page-path {
+  font-size: 1.2rem;
+  color: white;
+  gap: 16px;
+}
+.page-title .page-path a {
+  color: white;
+}
+
+/********************************************************/
+/********************* PAGE VIEWED **********************/
+/********************************************************/
+.viewed-image {
+  min-height: 1200px;
+}
+
 footer {
   background-color: var(--header-footer-background-color);
   width: 100%;
   color: black;
   font-size: 1.6rem;
 }
-
-footer .row {
-  gap: 24px;
-  padding: 24px 0;
-}
-
-h4 {
-  min-height: 40px;
-  line-height: 40px;
-  font-size: 1.8rem;
-  border-bottom: 1px dashed #ebe3db;
-}
-
 footer aside {
   gap: 8px;
   flex: 1 30%;
   padding: 24px;
   text-align: center;
+  align-items: center;
 }
-
+footer aside h4 {
+  min-height: 40px;
+  line-height: 40px;
+  font-size: 1.8rem;
+}
 footer aside p {
   font-style: normal;
 }
 
-.logo .img {
-  width: 100%;
-  height: 100%;
-  max-width: 152px;
-  max-height: 152px;
+.logo-footer {
+  min-width: 152px;
+  min-height: 152px;
 }
 
-.logo .adaptive-img--contain {
-  padding-bottom: 100%;
+@media (max-width: 760px) {
+  footer .row-around {
+    flex-direction: column;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -2,10 +2,16 @@ Bienvenue sur le site du Train de Guîtres
 
 
 Méthode MVC
-
-
-Ne pas oublier le flex 1 0 au main lors de la prochaine MAJ
 Pre processeur CSS : SASS
 Responsive
 
 
+Questions :
+
+_ HEADER:
+ 1) La barre scroll qui passe derrière
+ 2) Le container qui ne fonctionne pas (margin 0 auto)
+
+
+_ FOOTER:
+ 1) Logo disparaît lors du media quer

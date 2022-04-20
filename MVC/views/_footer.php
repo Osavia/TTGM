@@ -5,17 +5,15 @@
 <footer>
 
   <div class="container">
-    <div class="row">
+    <div class="row-around">
 
       <aside>
-        <a href="?page=home" class="logo">
-          <div class="img">
-            <div class="adaptive-img--contain">
+        <a href="?page=home">
+            <div class="adaptive-img--contain logo-footer">
               <span>
                 <img src="./images/TTGM-Logo-vert.png" alt="Logo du Train Touristique de Guîtres" />
               </span>
             </div>
-          </div>
         </a>
       </aside>
 
