@@ -72,37 +72,38 @@ class ArticleController extends Controller
     public function updateSelected()
     {
         $this->setPath("../MVC/views/actualite/updated_article_check.php");
-        
+
+        $id = strip_tags($_GET['id']);
+        $articleRepository = new ArticleRepository('article');
+        $article = $articleRepository->selectArticle($id)[0];
+
         if (
             isset($_POST["article_title"])
             && isset($_POST["article_content"])
-            && !empty($_POST["article_title"])
-            && !empty($_POST["article_content"])
-            ) {
-                $id = strip_tags($_GET['id']);
-                
-                $article = new Article();
-                $article->setTitle($_POST["article_title"]);
-                $article->setContent($_POST["article_content"]);
-                $articleRepository = new ArticleRepository('article');
-                $article = $articleRepository->updateArticle($article, $id);
-            }
+        ) {
+            $article->setTitle($_POST["article_title"]);
+        }
 
+        if (
+            !empty($_POST["article_title"])
+            && !empty($_POST["article_content"])
+        ) {
+            $article->setContent($_POST["article_content"]);
+        }
+        
         if (
             isset($_FILES['image'])
             && $_FILES['image']['error'] == 0
-
-        ) {
+            ) {
+            var_dump('lol');
             move_uploaded_file($_FILES['image']['tmp_name'], './images/' . basename($_FILES['image']['name']));
-            $article = new Article();
             $article->setImage('./images/' . $_FILES['image']['name']);
-            $articleRepository = new ArticleRepository("article");
-            $article = $articleRepository->updateImage($article, $id);
         }
 
-        
 
-        $this->renderView();
+        $articleRepository->updateArticle($article, $id);
+        var_dump($article);
+        $this->renderView(["article" => $article]);
     }
 
     public function delete()

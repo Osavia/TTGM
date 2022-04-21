@@ -12,7 +12,7 @@
         </div>
     </div>
 
-    <div class="container-auto">
+    <div class="container">
 
   <h1 class="text-center">
     <?php echo ($options["article"]->getTitle()) ?>

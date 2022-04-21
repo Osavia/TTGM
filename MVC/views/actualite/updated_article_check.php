@@ -1,7 +1,12 @@
 <?php if (isset($_SESSION["user_is_connect"]) && $_SESSION["user_is_connect"]) { ?>
 
+    <div class="container">
 
     <h1>Confirmation de modification</h1>
+
+    <?php var_dump($options["article"]->getImage() ) ?>
+    <?php var_dump(["article" => $article[0]]) ?>
+    <?php var_dump($_FILES["image"]) ?>
 
     <div>
 
@@ -11,14 +16,11 @@
             <p>Description : <?php echo strip_tags($_POST['article_content']); ?></p>
         </div>
         <label > Image :</label>
-            <div class="img">
-                <div class="adaptive-img--contain">
+                <div class="adaptive-img--contain viewed-image">
                     <span>
                         <img src="<?php echo $options["article"]->getImage() ?>" alt="">
                     </span>
                 </div>
-            </div>
-        </div>
 
     </div>
 

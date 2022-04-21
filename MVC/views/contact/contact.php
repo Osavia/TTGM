@@ -16,12 +16,16 @@
 
     <form action="?page=contact_sub" method="POST" class="formulary-contact">
         <div>
-            <label for="email">Email</label>
+            <label for="email">Email :</label>
             <input type="email" placeholder="Saisissez votre mail" id="email" name="email" required aria-describedby="email-help">
             <!-- <div id="">Nous ne conserverons pas votre email.</div> -->
         </div>
         <div>
-            <label for="message">Votre message</label>
+            <label for="object">Objet :</label>
+            <input type="text" placeholder="Objet du message" id="object" name="object" required></input>
+        </div>
+        <div>
+            <label for="message">Votre message :</label>
             <textarea placeholder="Exprimez vous" id="message" name="message" required></textarea>
         </div>
         <button type="submit">Envoyer</button>

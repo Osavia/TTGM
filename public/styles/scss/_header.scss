@@ -16,7 +16,7 @@ header {
     a {
       height: 48px;
       color: rgb(1, 1, 1);
-      font-size: 18px;
+      font-size: 0.7em;
       padding: 0 16px;
       font-weight: 400;
       text-decoration: none;
@@ -25,7 +25,7 @@ header {
   }
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 880px) {
   .navigation {
     display: none;
   }

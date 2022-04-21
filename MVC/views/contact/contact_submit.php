@@ -23,6 +23,7 @@
     <div>
         <h5>Rappel de vos informations</h5>
         <p>Email : <?php echo ($_POST['email']); ?></p>
+        <p>Objet : <?php echo ($_POST['object']); ?></p>
         <p>Message : <?php echo strip_tags($_POST['message']); ?></p>
     </div>
 

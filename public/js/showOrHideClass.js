@@ -42,8 +42,7 @@ const getPHPElement = (event) => {
   // de la valeur DATA attribute récupérée au moment de l'event
   document.getElementById("show_title_article").innerHTML =
     clickedElement.dataset.title_article;
-  document.getElementById("show_id_article").innerHTML =
-    clickedElement.dataset.id_article;
+
 
   // setAttribute(nom de l'attribu, valeur)
   // permet de mettre un href dynamique à la balise btnYes
