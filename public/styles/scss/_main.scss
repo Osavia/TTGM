@@ -2,14 +2,12 @@
 /********************* ALL PAGES ************************/
 /********************************************************/
 
-main {
-  padding-top: 132px;
-}
 
 .page-title {
   background-color: black;
   color: white;
   padding: 52px 0;
+  margin-bottom: 64px;
   text-align: center;
   gap: 16px;
 
@@ -61,7 +59,7 @@ main {
   background: rgba(0, 0, 0, 0.2);
 }
 
-.active {
+.active-scale {
   transform: scale(1);
 }
 
@@ -74,6 +72,19 @@ main {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
 }
+
+// En travaux pour nav mobile
+
+// .shadow {
+//   background-color: rgba(0, 0, 0, 0.5);
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   display: none;
+//   z-index: 4;
+// }
 
 /********* DISPOSITION DES IMAGES *********/
 

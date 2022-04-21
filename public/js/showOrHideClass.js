@@ -24,7 +24,7 @@ const main = () => {
 
 const handleClass = (event) => {
   getPHPElement(event);
-  showOrHideClass(modal, ModalClass.ACTIVE);
+  showOrHideClass(modal, ModalClass.ACTIVESCALE);
   showOrHideClass(body, BodyClass.SHADOW);
 };
 

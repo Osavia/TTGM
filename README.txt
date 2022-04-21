@@ -8,10 +8,11 @@ Responsive
 
 Questions :
 
-_ HEADER:
- 1) La barre scroll qui passe derrière
- 2) Le container qui ne fonctionne pas (margin 0 auto)
+_ UPLOAD IMAGE
+=> Ne rentre pas dans le If ISSER FILES 
+
+_ DATE TIME 
+=> La date de création des articles est eronnée
 
 
-_ FOOTER:
- 1) Logo disparaît lors du media quer
+

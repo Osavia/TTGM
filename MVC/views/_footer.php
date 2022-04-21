@@ -9,11 +9,11 @@
 
       <aside>
         <a href="?page=home">
-            <div class="adaptive-img--contain logo-footer">
-              <span>
-                <img src="./images/TTGM-Logo-vert.png" alt="Logo du Train Touristique de Guîtres" />
-              </span>
-            </div>
+          <div class="adaptive-img--contain logo-footer">
+            <span>
+              <img src="./images/TTGM-Logo-vert.png" alt="Logo du Train Touristique de Guîtres" />
+            </span>
+          </div>
         </a>
       </aside>
 
@@ -35,7 +35,7 @@
           <a href="#" class=""></a>
         </div>
       </aside>
-      
+
     </div>
   </div>
 
@@ -43,6 +43,8 @@
 
 <script src="./js/moveDiv.js"></script>
 <script type="module" src="./js/showOrHideClass.js"></script>
+<!-- <script type="module" src="./js/nav-mobile.js"></script> -->
+
 
 
 </body>

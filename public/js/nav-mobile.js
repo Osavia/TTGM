@@ -1,27 +1,27 @@
-const btnMobile = document.getElementById('button-mobile');
-const menuMobile = document.getElementById('menu-mobile');
-const shadow = document.getElementById('shadow');
+import { ModalClass, BodyClass } from "./constants.js";
+
+const btnMobile = document.getElementById("button--mobile");
+const menuMobile = document.getElementById("menu--mobile");
+const body = document.querySelector("body");
 
 
 const main = () => {
+  btnMobile.addEventListener("click", handleClass);
+  body.addEventListener("click", handleClass);
+};
 
-  btnMobile.addEventListener("click", addDiv);
-  shadow.addEventListener("click", removeDiv);
-
-  }
+const handleClass = () => {
   
-  const addDiv = () => {
-    menuMobile.classList.add("active");
-    shadow.classList.add("active_shadow");
-  }
+  showOrHideClass(menuMobile, ModalClass.ACTIVETRANSFORME);
+  showOrHideClass(body, BodyClass.SHADOW);
+};
 
-  const removeDiv = () => {
-    menuMobile.classList.remove("active");
-    shadow.classList.remove("active_shadow");
-  }
+const showOrHideClass = (element, classeName) => {
+  const hasClass = element.classList.contains(classeName);
 
-  const beOrNotToBe = (element, action, classeName) => {
-    element.classList.action(classeName)
-  }
-  
-  addEventListener("load", main);
+  hasClass
+    ? element.classList.remove(classeName)
+    : element.classList.add(classeName);
+};
+
+addEventListener("load", main);
