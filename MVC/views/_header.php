@@ -49,22 +49,24 @@
                 <div class="nav--mobile">
                     <button type="button" id="button--mobile">Menu</button>
                 </div>
+                <!-- <div class="shadow-mobile" id="shadow-mobile"></div> -->
+                <div class="menu--mobile" id="menu--mobile">
+                    <span id="close--menu-mobile"></span>
+                    <ul>
+                        <li><a href="?page=home">Accueil</a></li>
+                        <li><a href="?page=news">Actualités</a></li>
+                        <li><a href="?page=info">Informations pratiques</a></li>
+                        <li><a href="?page=about_us">Qui sommes-nous ?</a></li>
+                        <li><a href="?page=contact">Contact</a></li>
+                        <li><a href="?page=benevole">DEVENIR BÉNÉVOLE</a></li>
+                    </ul>
+                </div>
 
-                
+
             </nav>
-            
-            <div class="menu--mobile" id="menu--mobile">
-                <ul>
-                    <li><a href="?page=home">Accueil</a></li>
-                    <li><a href="?page=news">Actualités</a></li>
-                    <li><a href="?page=info">Informations pratiques</a></li>
-                    <li><a href="?page=about_us">Qui sommes-nous ?</a></li>
-                    <li><a href="?page=contact">Contact</a></li>
-                    <li><a href="?page=benevole">DEVENIR BÉNÉVOLE</a></li>
-                </ul>
-            </div>
 
 
+        </div>
         <div class="movingDiv">
             <svg width="92" height="48" viewBox="0 0 92 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="1" width="35" height="39" fill="#C4C4C4" />

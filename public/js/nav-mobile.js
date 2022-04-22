@@ -1,27 +1,58 @@
+"use strict";
+
 import { ModalClass, BodyClass } from "./constants.js";
+import { showOrHideClass } from "./functions.js";
 
 const btnMobile = document.getElementById("button--mobile");
 const menuMobile = document.getElementById("menu--mobile");
-const body = document.querySelector("body");
-
+const closeMenuMobile = document.getElementById("close--menu-mobile");
 
 const main = () => {
   btnMobile.addEventListener("click", handleClass);
-  body.addEventListener("click", handleClass);
+  closeMenuMobile.addEventListener("click", handleClass);
 };
 
 const handleClass = () => {
-  
+
   showOrHideClass(menuMobile, ModalClass.ACTIVETRANSFORME);
-  showOrHideClass(body, BodyClass.SHADOW);
+  showOrHideClass(closeMenuMobile, ModalClass.ACTIVETRANSFORME);
 };
 
-const showOrHideClass = (element, classeName) => {
-  const hasClass = element.classList.contains(classeName);
+window.addEventListener("load", main);
 
-  hasClass
-    ? element.classList.remove(classeName)
-    : element.classList.add(classeName);
-};
+// const GlobalActions = {
+//   ADD_CLASS: 1,
+//   REMOVE_CLASS: 2,
+// };
 
-addEventListener("load", main);
+// const Classes = {
+//   ACTIVE: "active-transforme",
+//   SHOW: "show",
+// };
+
+// const main = () => {
+//   // const menuBtn = document.getElementById("menu");
+//   // const shadow = document.getElementById("shadow");
+//   // const navMenu = document.getElementById("nav-menu");
+//   const btnMobile = document.getElementById("button--mobile");
+//   const shadowMobile = document.getElementById("shadow-mobile");
+//   const menuMobile = document.getElementById("menu--mobile");
+
+//   btnMobile.addEventListener("click", () =>
+//     handleClick(GlobalActions.ADD_CLASS, menuMobile, shadowMobile)
+//   );
+//   shadowMobile.addEventListener("click", () =>
+//     handleClick(GlobalActions.REMOVE_CLASS, menuMobile, shadowMobile)
+//   );
+// };
+
+// const handleClick = (action, menu, shadow) => {
+//   handleClassByAction(menu, Classes.ACTIVE, action);
+//   handleClassByAction(shadow, Classes.SHOW, action);
+// };
+
+// const handleClassByAction = (element, className, action) => {
+//   action === GlobalActions.ADD_CLASS
+//     ? element.classList.add(className)
+//     : element.classList.remove(className);
+// };

@@ -41,9 +41,9 @@
 
 </footer>
 
-<script src="./js/moveDiv.js"></script>
-<script type="module" src="./js/showOrHideClass.js"></script>
-<!-- <script type="module" src="./js/nav-mobile.js"></script> -->
+<script type="module" src="./js/moving-div.js"></script>
+<script type="module" src="./js/popup-delete-article.js"></script>
+<script type="module" src="./js/nav-mobile.js"></script>
 
 
 

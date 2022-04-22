@@ -4,14 +4,9 @@ const ModalClass = {
 }
 const BodyClass = {
   SHADOW: "shadow",
+  SHADOWMOBILE: "shadow-mobile",
 }
 
-const showOrHideClass = (element, classeName) => {
-  const hasClass = element.classList.contains(classeName);
 
-  hasClass
-    ? element.classList.remove(classeName)
-    : element.classList.add(classeName);
-};
 
-export { ModalClass, BodyClass, showOrHideClass };
+export { ModalClass, BodyClass };

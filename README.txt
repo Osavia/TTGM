@@ -15,4 +15,8 @@ _ DATE TIME
 => La date de création des articles est eronnée
 
 
+A FAIRE :
 
+_ Media query responsive tailles des titres à baisser
+_ Git ignore sur les images
+_ Enlever variable POST de la page selecte (je crois)

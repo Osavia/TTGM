@@ -15,7 +15,7 @@
     <div class="row-around admin-setup">
 
         <?php if (isset($_SESSION["user_is_connect"]) && $_SESSION["user_is_connect"]) { ?>
-            <div>
+            <div class="admin-btn--create">
                 <a href="?page=create_article">Ajouter un article</a>
             </div>
         <?php } ?>
@@ -24,23 +24,20 @@
 
         <?php if (isset($_SESSION["user_is_connect"]) && $_SESSION["user_is_connect"]) { ?>
 
-            <a href="?page=logout">
-                <button>
-                    SE DECONNECTER
-                </button>
-            </a>
+            <div class="admin-btn--log">
+                <a href="?page=logout">SE DECONNECTER</a>
+            </div>
+
         <?php } else { ?>
-            <a href="?page=login">
-                <button>
-                    SE CONNECTER
-                </button>
-            </a>
+            <div class="admin-btn--log">
+                <a href="?page=login">SE CONNECTER</a>
+            </div>
+
         <?php } ?>
 
     </div>
 
     <div class="container-auto">
-
 
         <!-- Affichage de la liste des articles : -->
 
@@ -49,10 +46,10 @@
             <?php if (isset($options["ListArticles"])) {
                 foreach ($options["ListArticles"] as $key => $article) { ?>
                     <li>
-                        <article class="grid-card">
-                            <a href="?page=viewed_article&id=<?= $article->getId() ?>" title="Voir cette actualité">
+                        <a href="?page=viewed_article&id=<?= $article->getId() ?>" title="Voir cette actualité">
+                            <article class="grid-card">
 
-                                <div class="adaptive-img--contain image-actualite">
+                                <div class="adaptive-img--cover image-actualite">
                                     <span>
                                         <img src="<?php echo $article->getImage() ?>" alt="">
                                     </span>
@@ -61,16 +58,16 @@
                                 <h4>
                                     <?php echo htmlentities($article->getTitle()) ?>
                                 </h4>
-                            </a>
+                            </article>
+                        </a>
 
-                        </article>
                         <?php if (isset($_SESSION["user_is_connect"]) && $_SESSION["user_is_connect"]) { ?>
-                            <div class="admin-option">
-                                <div>
-                                    <a href="?page=selected_article&id=<?= $article->getId() ?>" title="Modifier cet article">Modifier</a>
+                            <div class="admin-option row-around">
+                                <div class="admin-btn--upload">
+                                    <a href="?page=selected_article&id=<?= $article->getId() ?>" title="Modifier cet article">MODIFIER</a>
                                 </div>
-                                <div>
-                                    <button class="displayBtns" data-title_article="<?= $article->getTitle() ?>" data-id_article="<?= $article->getId() ?>">Supprimer</button>
+                                <div class="admin-btn--delete">
+                                    <a class="displayBtns" data-title_article="<?= $article->getTitle() ?>" data-id_article="<?= $article->getId() ?>">SUPPRIMER</a>
                                 </div>
                             </div>
                         <?php } ?>
@@ -152,15 +149,19 @@
 
         <div class="myPopup">
 
-            <div>
+            <div class="delete-confirmation">
                 <h2>Voulez-vous vraiment supprimer cet article :</h2>
                 <h4 id="show_title_article"></h4>
+                <p>Attention, cette action est irréversible</p>
             </div>
 
+
             <div class="row-around">
-                <a id="myLink" href="" title="Ceci supprimera l'article définitivement">
-                    Oui
-                </a>
+                <span id="validePopup">
+                    <a id="myLink" href="" title="Ceci supprimera l'article définitivement">
+                        Oui
+                    </a>
+                </span>
                 <span id="closePopup">Non</span>
             </div>
 
