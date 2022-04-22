@@ -29,6 +29,8 @@ class ArticleController extends Controller
             && isset($_POST["article_content"])
             && !empty($_POST["article_title"])
             && !empty($_POST["article_content"])
+            && strlen($_POST["article_title"]) < 256
+            && strlen($_POST["article_content"])
             && isset($_FILES['image'])
             && $_FILES['image']['error'] == 0
         ) {
@@ -51,6 +53,7 @@ class ArticleController extends Controller
             $this->setPath("./../MVC/views/actualite/create_article_check.php");
         } else {
             echo ('Merci de selectionner un fichier');
+            // Il vaudrait mieux renvoyer le message d'erreur dans la vue
         }
 
 

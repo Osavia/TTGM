@@ -101,6 +101,7 @@ h2,
 h3,
 h4 {
   font-weight: bold;
+  color: black;
 }
 
 h1 {
@@ -122,10 +123,9 @@ ul {
 
 a {
   text-decoration: none;
-  // color: var(--turquoise);
+  color: white;
 
   transition: text-shadow 0.2s ease-out;
-
   display: contents;
 }
 

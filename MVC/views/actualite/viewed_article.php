@@ -3,7 +3,7 @@
     <div class="page-title">
         <div class="container-auto">
             <div class="page-path">
-                <h1>Blog</h1>
+                <h1>Actualité</h1>
                 <div class="row-center">
                     <a href="?page=home">ACCUEIL</a>
                     <span> / ACTUALITÉ</span>

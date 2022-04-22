@@ -1,4 +1,7 @@
+"use strict";
+
 import { ModalClass, BodyClass } from "./constants.js";
+import { showOrHideClass } from "./functions.js";
 
 // .displayBts = tous les boutons "supprimer"
 const displayBtns = document.querySelectorAll(".displayBtns");
@@ -52,19 +55,5 @@ const getPHPElement = (event) => {
   );
 };
 
-const showOrHideClass = (element, classeName) => {
-  const hasClass = element.classList.contains(classeName);
-
-  hasClass
-    ? element.classList.remove(classeName)
-    : element.classList.add(classeName);
-};
-
 window.addEventListener("load", main);
 
-// cette condition est la même sous ce format:
-// if (result) {
-//   element.classList.remove(classeName);
-// } else {
-//   element.classList.add(classeName);
-// };
