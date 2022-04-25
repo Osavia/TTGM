@@ -11,7 +11,7 @@
         <a href="?page=home">
           <div class="adaptive-img--contain logo-footer">
             <span>
-              <img src="./images/TTGM-Logo-vert.png" alt="Logo du Train Touristique de Guîtres" />
+              <img src="./images/logo/TTGM-Logo-vert.png" alt="Logo du Train Touristique de Guîtres" />
             </span>
           </div>
         </a>
@@ -44,6 +44,8 @@
 <script type="module" src="./js/moving-div.js"></script>
 <script type="module" src="./js/popup-delete-article.js"></script>
 <script type="module" src="./js/nav-mobile.js"></script>
+<script type="module" src="./js/material-detail.js"></script>
+
 
 
 

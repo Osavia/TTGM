@@ -40,14 +40,14 @@ class ArticleController extends Controller
             // $allowedExtensions = ['jpg', 'jpeg', 'gif', 'png'];
             // if (in_array($extension, $allowedExtensions)) {
             //     // On peut valider le fichier et le stocker définitivement
-            move_uploaded_file($_FILES['image']['tmp_name'], './images/' . basename($_FILES['image']['name']));
+            move_uploaded_file($_FILES['image']['tmp_name'], './images/actualite/' . basename($_FILES['image']['name']));
 
             var_dump($_FILES);
             $article = new Article();
             $article->setTitle($_POST["article_title"]);
             $article->setContent($_POST["article_content"]);
-            $article->setPublishedDate((new DateTime("now"))->format("d/m/y"));
-            $article->setImage('./images/' . $_FILES['image']['name']);
+            $article->setPublishedDate((new DateTime("now"))->format('Y-m-d H:i:s'));
+            $article->setImage('./images/actualite/' . $_FILES['image']['name']);
             $articleRepository = new ArticleRepository("article");
             $articleRepository->insertArticle($article);
             $this->setPath("./../MVC/views/actualite/create_article_check.php");
@@ -99,7 +99,7 @@ class ArticleController extends Controller
             && $_FILES['image']['error'] == 0
             ) {
             var_dump('lol');
-            move_uploaded_file($_FILES['image']['tmp_name'], './images/' . basename($_FILES['image']['name']));
+            move_uploaded_file($_FILES['image']['tmp_name'], './images/actualite/' . basename($_FILES['image']['name']));
             $article->setImage('./images/' . $_FILES['image']['name']);
         }
 
