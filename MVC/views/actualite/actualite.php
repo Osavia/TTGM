@@ -59,6 +59,71 @@
                                     <?php echo htmlentities($article->getTitle()) ?>
                                 </h4>
                             </article>
+                            <div class="post-date">
+                                <span class="post-date-day">
+                                    <?php echo (new DateTime($article->getPublishedDate()))->format("d") ?>
+                                </span>
+                                <span class="post-date-month">
+                                    <?php
+                                    $month = (new DateTime($article->getPublishedDate()))->format("m");
+
+                                    switch ($month) {
+                                        case '01':
+                                            $month = 'JAN';
+                                            echo $month;
+                                            break;
+                                        case '02':
+                                            $month = 'FÉV';
+                                            echo $month;
+                                            break;
+                                        case '03':
+                                            $month = 'MARS';
+                                            echo $month;
+                                            break;
+                                        case '04':
+                                            $month = 'AVR';
+                                            echo $month;
+                                            break;
+                                        case '05':
+                                            $month = 'MAI';
+                                            echo $month;
+                                            break;
+                                        case '06':
+                                            $month = 'JUIN';
+                                            echo $month;
+                                            break;
+                                        case '07':
+                                            $month = 'JUIL';
+                                            echo $month;
+                                            break;
+                                        case '08':
+                                            $month = 'AOÛT';
+                                            echo $month;
+                                            break;
+                                        case '09':
+                                            $month = 'SEPT';
+                                            echo $month;
+                                            break;
+                                        case '10':
+                                            $month = 'OCT';
+                                            echo $month;
+                                            break;
+                                        case '11':
+                                            $month = 'NOV';
+                                            echo $month;
+                                            break;
+                                        case '12':
+                                            $month = 'DÉC';
+                                            echo $month;
+                                            break;
+                                        default:
+                                            $month = 'ND';
+                                            echo $month;
+                                            break;
+                                    }
+                                    ?>
+                                </span>
+                            </div>
                         </a>
 
                         <?php if (isset($_SESSION["user_is_connect"]) && $_SESSION["user_is_connect"]) { ?>
@@ -72,73 +137,6 @@
                             </div>
                         <?php } ?>
 
-                        <div class="post-date">
-                            <span class="post-date-day">
-                                <?php echo (new DateTime($article->getPublishedDate()))->format("d") ?>
-                            </span>
-                            <span class="post-date-month">
-                                <?php
-
-                                $month = (new DateTime($article->getPublishedDate()))->format("m");
-
-                                switch ($month) {
-                                    case '01':
-                                        $month = 'JAN';
-                                        echo $month;
-                                        break;
-                                    case '02':
-                                        $month = 'FÉV';
-                                        echo $month;
-                                        break;
-                                    case '03':
-                                        $month = 'MARS';
-                                        echo $month;
-                                        break;
-                                    case '04':
-                                        $month = 'AVR';
-                                        echo $month;
-                                        break;
-                                    case '05':
-                                        $month = 'MAI';
-                                        echo $month;
-                                        break;
-                                    case '06':
-                                        $month = 'JUIN';
-                                        echo $month;
-                                        break;
-                                    case '07':
-                                        $month = 'JUIL';
-                                        echo $month;
-                                        break;
-                                    case '08':
-                                        $month = 'AOÛT';
-                                        echo $month;
-                                        break;
-                                    case '09':
-                                        $month = 'SEPT';
-                                        echo $month;
-                                        break;
-                                    case '10':
-                                        $month = 'OCT';
-                                        echo $month;
-                                        break;
-                                    case '11':
-                                        $month = 'NOV';
-                                        echo $month;
-                                        break;
-                                    case '12':
-                                        $month = 'DÉC';
-                                        echo $month;
-                                        break;
-                                    default:
-                                        $month = 'ND';
-                                        echo $month;
-                                        break;
-                                }
-
-                                ?>
-                            </span>
-                        </div>
                     </li>
 
             <?php }

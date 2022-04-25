@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./images/TTGM-Logo-vert.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./images/logo/TTGM-Logo-vert.png" type="image/x-icon">
     <link rel="stylesheet" href="/styles/css/style.css">
     <title>Train de Guîtres</title>
 
@@ -23,7 +23,7 @@
                 <a href="?page=home">
                     <div class="adaptive-img--contain logo-header">
                         <span>
-                            <img src="./images/TTGM-Logo-vert.png" alt="Logo du Train Touristique de Guîtres" />
+                            <img src="./images/logo/TTGM-Logo-vert.png" alt="Logo du Train Touristique de Guîtres" />
                         </span>
                     </div>
                 </a>
@@ -37,8 +37,31 @@
                     <ul class="navigation row-around">
                         <li><a href="?page=home">Accueil</a></li>
                         <li><a href="?page=news">Actualités</a></li>
-                        <li><a href="?page=info">Informations pratiques</a></li>
-                        <li><a href="?page=about_us">Qui sommes-nous ?</a></li>
+                        <li>
+                            <a href="?page=info">Informations pratiques</a>
+                            <ul class="nagivation-under">
+                                <li>
+                                    <a href="?page=info#tarifs-horaires">Calendrier</a>
+                                </li>
+                                <li>
+                                    <a href="?page=info#tarifs-horaires">Tarifs et horaires</a>
+                                </li>
+                                <li>
+                                    <a href="?page=info#nous-trouver">Nous trouver</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="?page=about_us">Qui sommes-nous ?</a>
+                            <ul class="nagivation-under">
+                                <li>
+                                    <a href="?page=about_us#association">L'association</a>
+                                </li>
+                                <li>
+                                    <a href="?page=about_us#materiel">Le matériel</a>
+                                </li>
+                            </ul>
+                        </li>
                         <li><a href="?page=contact">Contact</a></li>
                     </ul>
 
@@ -55,7 +78,16 @@
                     <ul>
                         <li><a href="?page=home">Accueil</a></li>
                         <li><a href="?page=news">Actualités</a></li>
-                        <li><a href="?page=info">Informations pratiques</a></li>
+                        <li>
+                            <a href="?page=info">Informations pratiques</a>
+                            <ul>
+                                <li>
+                                    <a href="#tarifs-horaires">Tarifs et horaires</a>
+                                </li>
+                                <li>Calendrier</li>
+                                <li>Nous trouver</li>
+                            </ul>
+                        </li>
                         <li><a href="?page=about_us">Qui sommes-nous ?</a></li>
                         <li><a href="?page=contact">Contact</a></li>
                         <li><a href="?page=benevole">DEVENIR BÉNÉVOLE</a></li>

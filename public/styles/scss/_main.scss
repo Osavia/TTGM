@@ -5,7 +5,6 @@
 .page-title {
   background-color: black;
   padding: 52px 0;
-  margin-bottom: 64px;
   text-align: center;
   gap: 16px;
 
@@ -21,14 +20,6 @@
       color: white;
     }
   }
-}
-
-.btn-connexion {
-  line-height: 2.5;
-  padding: 0 20px;
-  font-size: 1rem;
-  text-align: center;
-  color: rgb(67, 63, 63);
 }
 
 /******************************************************/
@@ -108,18 +99,30 @@
 }
 .admin-btn--create {
   background-color: rgba(9, 136, 4, 0.554);
+  a {
+    color: black;
+  }
 }
 .admin-btn--upload {
   background-color: rgba(178, 106, 13, 0.553);
   font-size: 1.5rem;
+  a {
+    color: black;
+  }
 }
 .admin-btn--delete {
   background-color: rgba(189, 10, 10, 0.54);
   font-size: 1.5rem;
   cursor: pointer;
+  a {
+    color: white;
+  }
 }
 .admin-btn--log {
   background-color: var(--header-footer-background-color);
+  a {
+    color: black;
+  }
 }
 
 .grid {
@@ -137,17 +140,10 @@
     border-radius: 4px;
     gap: 12px;
 
-    > a {
-      transition: background-color 0.25s ease-out;
-      background-color: rgb(239, 245, 243);
-
-    }
-    
-    > a:hover {
-      background-color: rgba(157, 146, 146, 0.282);
-    }
     .grid-card {
       box-shadow: 0 0 1px black;
+      transition: box-shadow 0.25s ease-out;
+      background-color: rgb(240, 240, 240);
       border-radius: 20px;
       flex: 1 0;
       gap: 28px;
@@ -166,6 +162,10 @@
         text-align: center;
         padding-bottom: 16px;
       }
+    }
+
+    .grid-card:hover {
+      box-shadow: 0 0 6px black;
     }
 
     .post-date {
@@ -227,3 +227,66 @@
   // width: auto;
   min-height: 100vh;
 }
+
+/********************************************************/
+/********************* PAGE HOME ************************/
+/********************************************************/
+
+/********************************************************/
+/********************** PAGE INFO ***********************/
+/********************************************************/
+
+/*********** NOUS TROUVER *************/
+
+// .adresse {
+
+// }
+
+.google-maps {
+  padding: 48px 0;
+
+  iframe {
+    border: 0;
+    height: 300px;
+    min-width: 90vw;
+  }
+}
+
+/********************************************************/
+/************* PAGE QUI SOMMMES-NOUS ********************/
+/********************************************************/
+
+.about_us {
+  flex-direction: row;
+  align-items: center;
+  gap: 22px;
+
+  p {
+    width: 100%;
+  }
+}
+
+.image-about {
+  height: 316px;
+  width: 100%;
+  box-shadow: 0 0 3px black;
+  background-color: beige;
+}
+
+@media (max-width: 860px) {
+  .about_us {
+    flex-direction: column;
+  }
+}
+
+details {
+  flex-direction: row;
+}
+
+/********************************************************/
+/*********************** CONTACT ************************/
+/********************************************************/
+
+/********************************************************/
+/******************* DEVENIR BÉNÉVOLE *******************/
+/********************************************************/

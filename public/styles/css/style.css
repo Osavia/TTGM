@@ -247,7 +247,7 @@ template {
   --nav-height: 128px;
   --movingDiv-height: 32px;
   --header-height: calc(var(--header-height) + var(--movingDiv-height));
-  --header-footer-background-color: rgb(244, 226, 204);
+  --header-footer-background-color: #80DBED;
 }
 
 /**********************************************************/
@@ -301,12 +301,21 @@ main {
   padding: 0 32px;
 }
 
+.main-contain {
+  gap: 42px;
+}
+
 /********************************************************/
 /***************** GESTION DU RESPONSIVE ****************/
 /********************************************************/
 @media (max-width: 860px) {
   .container {
     padding: 0 16px;
+  }
+
+  .main-contain {
+    padding-top: 22px;
+    gap: 22px;
   }
 
   body {
@@ -364,6 +373,12 @@ h1 {
 h2 {
   margin: 0;
   font-size: 2.5rem;
+  padding: 64px 0;
+}
+
+h4 {
+  margin: 0;
+  font-size: 1.7rem;
 }
 
 p,
@@ -373,13 +388,12 @@ ul {
 
 a {
   text-decoration: none;
-  color: white;
   transition: text-shadow 0.2s ease-out;
   display: contents;
 }
 
 a:hover {
-  text-shadow: 0 0 0.2em #988e8e;
+  text-shadow: 0 0 0.1em #988e8e;
 }
 
 /*****************************************************/
@@ -439,6 +453,7 @@ header {
   right: 0;
   z-index: 100;
   /************** NAVIGATION *************/
+  /************** NAVIGATION-UNDER *************/
   /************** MOVING-DIV *************/
 }
 header .header-nav {
@@ -447,23 +462,58 @@ header .header-nav {
   padding-top: 8px;
 }
 header .header-nav .navigation {
-  gap: 48px;
+  gap: 26px;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 header .header-nav .benevole {
-  background-color: beige;
+  background-color: #52A499;
   border-radius: 10px;
   padding: 0.5rem;
 }
-header .header-nav li a {
-  height: 48px;
+header .header-nav li {
+  position: relative;
+  padding: 0 8px;
+  transition: 0.3s all ease-out;
+  cursor: pointer;
+}
+header .header-nav li > a {
+  opacity: 0.75;
   color: #010101;
   font-size: 0.7em;
-  padding: 0 16px;
-  font-weight: 400;
+  font-weight: 500;
   text-decoration: none;
+}
+header .header-nav li .nagivation-under {
+  background-color: var(--header-footer-background-color);
+  transform: scale(0);
+  position: absolute;
+  left: 0px;
+  top: 100%;
+  width: 100%;
+}
+header .header-nav li:hover .nagivation-under {
+  transform: scale(1);
+  opacity: 1;
+}
+header .header-nav li:hover:after {
+  /* height: 100%; */
+  transform: scaleY(1);
+}
+header .header-nav li:after {
+  content: "";
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  background: rgba(0, 0, 0, 0.04);
+  transition: all 0.15s ease-out;
 }
 header .movingDiv {
   position: sticky;
@@ -471,6 +521,7 @@ header .movingDiv {
   height: var(--movingDiv-height);
   width: 100px;
   padding-top: 8px;
+  z-index: -2;
 }
 
 /************** NAV-MOBILE*************/
@@ -583,7 +634,6 @@ header .movingDiv {
 .page-title {
   background-color: black;
   padding: 52px 0;
-  margin-bottom: 64px;
   text-align: center;
   gap: 16px;
 }
@@ -597,14 +647,6 @@ header .movingDiv {
 }
 .page-title .page-path h1 {
   color: white;
-}
-
-.btn-connexion {
-  line-height: 2.5;
-  padding: 0 20px;
-  font-size: 1rem;
-  text-align: center;
-  color: #433f3f;
 }
 
 /******************************************************/
@@ -681,10 +723,16 @@ header .movingDiv {
 .admin-btn--create {
   background-color: rgba(9, 136, 4, 0.554);
 }
+.admin-btn--create a {
+  color: black;
+}
 
 .admin-btn--upload {
   background-color: rgba(178, 106, 13, 0.553);
   font-size: 1.5rem;
+}
+.admin-btn--upload a {
+  color: black;
 }
 
 .admin-btn--delete {
@@ -692,9 +740,15 @@ header .movingDiv {
   font-size: 1.5rem;
   cursor: pointer;
 }
+.admin-btn--delete a {
+  color: white;
+}
 
 .admin-btn--log {
   background-color: var(--header-footer-background-color);
+}
+.admin-btn--log a {
+  color: black;
 }
 
 .grid {
@@ -711,15 +765,10 @@ header .movingDiv {
   border-radius: 4px;
   gap: 12px;
 }
-.grid li > a {
-  transition: background-color 0.25s ease-out;
-  background-color: #eff5f3;
-}
-.grid li > a:hover {
-  background-color: rgba(157, 146, 146, 0.282);
-}
 .grid li .grid-card {
   box-shadow: 0 0 1px black;
+  transition: box-shadow 0.25s ease-out;
+  background-color: #f0f0f0;
   border-radius: 20px;
   flex: 1 0;
   gap: 28px;
@@ -735,6 +784,9 @@ header .movingDiv {
 .grid li .grid-card h4 {
   text-align: center;
   padding-bottom: 16px;
+}
+.grid li .grid-card:hover {
+  box-shadow: 0 0 6px black;
 }
 .grid li .post-date {
   position: absolute;
@@ -785,6 +837,56 @@ header .movingDiv {
   min-height: 100vh;
 }
 
+/********************************************************/
+/********************* PAGE HOME ************************/
+/********************************************************/
+/********************************************************/
+/********************** PAGE INFO ***********************/
+/********************************************************/
+/*********** NOUS TROUVER *************/
+.google-maps {
+  padding: 48px 0;
+}
+.google-maps iframe {
+  border: 0;
+  height: 300px;
+  min-width: 90vw;
+}
+
+/********************************************************/
+/************* PAGE QUI SOMMMES-NOUS ********************/
+/********************************************************/
+.about_us {
+  flex-direction: row;
+  align-items: center;
+  gap: 22px;
+}
+.about_us p {
+  width: 100%;
+}
+
+.image-about {
+  height: 316px;
+  width: 100%;
+  box-shadow: 0 0 3px black;
+  background-color: beige;
+}
+
+@media (max-width: 860px) {
+  .about_us {
+    flex-direction: column;
+  }
+}
+details {
+  flex-direction: row;
+}
+
+/********************************************************/
+/*********************** CONTACT ************************/
+/********************************************************/
+/********************************************************/
+/******************* DEVENIR BÉNÉVOLE *******************/
+/********************************************************/
 footer {
   background-color: var(--header-footer-background-color);
   width: 100%;

@@ -2,8 +2,7 @@
 
 abstract class Repository
 {
-
-    // Quand je passe par MAMP :
+    // Quand je passe par le serveur MAMP :
     // private const DATABASE_NAME = "mysql:host=localhost:8889;dbname=TTGM;charset=utf8";
     // private const DATABASE_USERNAME = "root";
     // private const DATABASE_PASSWORD = "root";
