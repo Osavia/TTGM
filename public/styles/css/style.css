@@ -761,17 +761,17 @@ header .movingDiv {
   max-width: 600px;
   margin: 16px;
   list-style: none;
-  position: relative;
   border-radius: 4px;
   gap: 12px;
+  position: relative;
 }
 .grid li .grid-card {
-  box-shadow: 0 0 1px black;
+  box-shadow: 0 0 2px black;
   transition: box-shadow 0.25s ease-out;
+  transition: transform 0.1s ease-out;
   background-color: #f0f0f0;
   border-radius: 20px;
   flex: 1 0;
-  gap: 28px;
 }
 .grid li .grid-card .image-actualite {
   max-width: 100vw;
@@ -783,10 +783,11 @@ header .movingDiv {
 }
 .grid li .grid-card h4 {
   text-align: center;
-  padding-bottom: 16px;
+  padding: 28px;
 }
 .grid li .grid-card:hover {
   box-shadow: 0 0 6px black;
+  transform: scale(1.05);
 }
 .grid li .post-date {
   position: absolute;
@@ -833,8 +834,15 @@ header .movingDiv {
 /********************************************************/
 /********************* PAGE VIEWED **********************/
 /********************************************************/
-.viewed-image {
-  min-height: 100vh;
+.contain-viewed-image {
+  align-items: center;
+}
+.contain-viewed-image .viewed-image {
+  height: 80vh;
+  width: 100%;
+}
+.contain-viewed-image .description-viewed-image {
+  padding: 32px;
 }
 
 /********************************************************/
@@ -849,8 +857,7 @@ header .movingDiv {
 }
 .google-maps iframe {
   border: 0;
-  height: 300px;
-  min-width: 90vw;
+  height: 400px;
 }
 
 /********************************************************/

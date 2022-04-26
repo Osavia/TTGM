@@ -100,7 +100,7 @@ class ArticleController extends Controller
             ) {
             var_dump('lol');
             move_uploaded_file($_FILES['image']['tmp_name'], './images/actualite/' . basename($_FILES['image']['name']));
-            $article->setImage('./images/' . $_FILES['image']['name']);
+            $article->setImage('./images/actualite/' . $_FILES['image']['name']);
         }
 
 

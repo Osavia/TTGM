@@ -17,6 +17,55 @@
 
         <h2 id="tarifs-horaires">Tarifs et horaires</h2>
 
+<table>
+    <thead>
+        <tr>
+            <td></td>
+            <td colspan="3">Aller/retour</td>
+            <td colspan="3">Aller simple</td>
+            <td colspan="3">PASS FAMILLE</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Adulte</td>
+            <td>Enfant (1)</td>
+            <td>Enfant (2)</td>
+            <td>Adulte</td>
+            <td>Enfant (1)</td>
+            <td>Enfant (2)</td>
+            <td></td>
+            <td></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>...</td>
+            <td>12,50 €</td>
+            <td>7,80 €</td>
+            <td>Gratuit</td>
+            <td>7,80 €</td>
+            <td>5,70 €</td>
+            <td>Gratuit</td>
+            <td>36,40 €</td>
+            <td>42,60 €</td>
+        </tr>
+        <tr>
+            <td>...</td>
+            <td>14,50 €</td>
+            <td>8,30 €</td>
+            <td>Gratuit</td>
+            <td>8,30 €</td>
+            <td>6,30 €</td>
+            <td>Gratuit</td>
+            <td>41,60 €</td>
+            <td>47,80 €</td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+
         <h2 id="calendrier">Calendrier</h2>
 
 
