@@ -2,6 +2,7 @@
 
 const movingDiv = document.querySelector(".movingDiv");
 
+
 const main = () => {
   document.body.addEventListener("scroll", onScroll);
 };

@@ -7,7 +7,7 @@
     <h1>Modifier cette actualité</h1>
     
     
-    <form action="?page=updated_article_check&id=<?= $options["article"]->getId() ?>" method="post">
+    <form action="?page=updated_article_check&id=<?= $options["article"]->getId() ?>" method="post" enctype="multipart/form-data">
         <div>
             <label for="article_title">Titre :</label>
             <input type="text" id="article_title" name="article_title" required value="<?php echo htmlentities($options["article"]->getTitle()) ?>">

@@ -14,8 +14,6 @@
 
     <div class="container-auto">
 
-
-
         <h2 id="association">L'association</h2>
 
         <div class="main-contain">
@@ -46,6 +44,19 @@
 
         </div>
 
+        <details>
+            <summary>test</summary>
+            blabla
+        </details>
+        <details>
+            <summary>test</summary>
+            blabla
+        </details>
+        <details>
+            <summary>test</summary>
+            blabla
+        </details>
+
         <h2 id="materiel">Le matériel</h2>
 
         <div class="main-contain">
@@ -54,10 +65,8 @@
 
             <ul class="grid">
 
-                <details>
+                <li class="row-around">
 
-                    <summary>
-                        <li>
                             <article class="grid-card" id="testAlex">
                                 <div class="adaptive-img--cover image-actualite">
                                     <span>
@@ -71,15 +80,15 @@
                                     <span>construite en 1924</span>
                                 </h4>
                             </article>
-                        </li>
-                    </summary>
-                    <p>
-                        Something small enough to escape casual notice.
-                    </p>
-                </details>
 
+                        <aside id="testDetail">
+                            <p>telle info</p>
+                            <p>telle info</p>
+                            <p>telle info</p>
+                            <p>telle info</p>
+                        </aside>
 
-
+                </li>
 
                 <li>
                     <article class="grid-card">

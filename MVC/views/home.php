@@ -5,35 +5,20 @@
         <?php echo ($options["dateNow"])->format('d-m-Y') ?>
     </p>
 
+    <div class="presentation">
 
-    <!-- <button id="openModal">
-        Se connecter
-    </button>
+        <h1>Les bénévoles du train touristique Guîtres-Marcenais sont heureux de vous accueillir sur leur site.</h1>
+        <p> Nous vous proposons de participer à un voyage dans le temps à l'époque des locomotives à vapeur.
 
-    <div class="popup" id="popup">
-        <div class="row">
-            <h2>Ma popup</h2>
-            <span id="close">X</span>
-        </div>
-        <p>
-            Et corporis autem repellendus debitis cum amet praesentium vel
-            laboriosam. Qui quia officia qui voluptatibus inventore ut dolore sint
-            et quia possimus. Non laboriosam recusandae non voluptatem rerum ex
-            asperiores laboriosam in dolor numquam. Et sint necessitatibus aut nihil
-            autem aut ducimus quidem aut quaerat error! Aut enim provident ut
-            consequuntur quos ad ratione similique et alias voluptatem! Aut
-            laudantium earum et enim labore id quidem nihil sit ipsa doloremque quo
-            enim maiores et fuga fuga. In internos voluptates ut nesciunt numquam
-            aut placeat reprehenderit rem possimus dolor. Non quae laboriosam ut
-            accusantium totam et amet sint vel iure voluptas vel voluptates modi aut
-            sequi voluptatum. 33 praesentium velit eos nesciunt delectus non
-            mollitia dolorem a omnis suscipit. Aut similique optio est quam
-            architecto eos quisquam incidunt eum assumenda quibusdam. Est adipisci
-            fuga qui commodi atque ex autem dolores.
         </p>
-    </div> -->
+        <p> En embarquant dans notre train, vous retrouverez les sensations d'un voyage hors du commun, pendant lequel, vous vivrez l'ambiance des voyages d'autrefois, à l'époque où tout allait moins vite, et celle où l'on profitait pleinement des paysages et des rencontres fortuites.
+        </p>
+        <p> Retrouvez l'ambiance joyeuse des trajets pittoresques et participez à la convivialité des relations humaines. Vous retrouverez, lors de ce voyage ludique votre âme d'enfant, et profiterez des ambiances sonores qui font le charme des trains à vapeur, sifflets, vapeur et bruits caractéristiques d'un train tel qu'on l'imagine qui enchanteront votre périple, menant de Guîtres à Marcenais.
+        </p>
+        <p> Rejoignez-nous vite pour ce voyage atypique !
+        </p>
 
-
+    </div>
 
     <div>
 
