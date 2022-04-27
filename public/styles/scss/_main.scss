@@ -283,7 +283,7 @@
   background-color: beige;
 }
 
-@media (max-width: 860px) {
+@media (max-width: 900px) {
   .about_us {
     flex-direction: column;
   }
@@ -296,19 +296,26 @@
 }
 
 .details h2 {
-  font-size: 40px;
+  font-size: 1.5em;
   font-weight: 600;
   line-height: 1.15;
-  letter-spacing: -0.8px;
+  letter-spacing: 8px;
   padding: 42px 0;
+  color: #333;
 }
 
 details {
   font-size: 24px;
   font-weight: 200;
-  max-width: 850px;
+  max-width: 900px;
   line-height: 36px;
   letter-spacing: -0.5px;
+}
+
+@media (max-width: 900px) {
+  details {
+    font-size: 18px;
+  }
 }
 
 .details__summary,
@@ -352,7 +359,7 @@ details[open] summary::after {
 }
 
 details[open] summary {
-  color: rgba(54, 54, 54, 0.592);
+  color: #333;
 }
 
 @keyframes details-show {
