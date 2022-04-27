@@ -28,7 +28,7 @@ body {
 }
 
 body {
-  line-height: 1.5;
+  line-height: 1.8;
   font-size: 2.2rem;
   font-weight: 300;
 }
@@ -59,7 +59,7 @@ main {
 /***************** GESTION DU RESPONSIVE ****************/
 /********************************************************/
 
-@media (max-width: 860px) {
+@media (max-width: 880px) {
   .container {
     padding: 0 16px;
   }
@@ -70,6 +70,9 @@ main {
   body {
     line-height: 1.5;
     font-size: 1.8rem;
+    h1 {
+      font-size: 4rem;
+    }
   }
 
   // police d'écriture ?
@@ -195,7 +198,6 @@ a {
 .adaptive-img--contain > span > img {
   object-fit: contain;
 }
-
 
 // ::-webkit-scrollbar {
 //   z-index: 20;
