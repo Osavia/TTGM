@@ -12,30 +12,6 @@
         </div>
     </div>
 
-    <div class="row-around admin-setup">
-
-        <?php if (isset($_SESSION["user_is_connect"]) && $_SESSION["user_is_connect"]) { ?>
-            <div class="admin-btn--create">
-                <a href="?page=create_article">Ajouter un article</a>
-            </div>
-        <?php } ?>
-
-        <!-- Affichage du bouton de connexion / deconnexion : -->
-
-        <?php if (isset($_SESSION["user_is_connect"]) && $_SESSION["user_is_connect"]) { ?>
-
-            <div class="admin-btn--log">
-                <a href="?page=logout">SE DECONNECTER</a>
-            </div>
-
-        <?php } else { ?>
-            <div class="admin-btn--log">
-                <a href="?page=login">SE CONNECTER</a>
-            </div>
-
-        <?php } ?>
-
-    </div>
 
     <div class="container-auto">
 
@@ -67,7 +43,7 @@
                                     <span class="post-date-month">
                                         <?php
                                         $month = (new DateTime($article->getPublishedDate()))->format("m");
-    
+
                                         switch ($month) {
                                             case '01':
                                                 $month = 'JAN';
@@ -127,7 +103,7 @@
                                 </div>
 
                             </article>
-                            
+
                         </a>
 
                         <?php if (isset($_SESSION["user_is_connect"]) && $_SESSION["user_is_connect"]) { ?>
@@ -166,5 +142,31 @@
                 </span>
                 <span id="closePopup">Non</span>
             </div>
+
+        </div>
+
+
+        <div class="row-around admin-setup">
+
+            <?php if (isset($_SESSION["user_is_connect"]) && $_SESSION["user_is_connect"]) { ?>
+                <div class="admin-btn--create">
+                    <a href="?page=create_article">Ajouter un article</a>
+                </div>
+            <?php } ?>
+
+            <!-- Affichage du bouton de connexion / deconnexion : -->
+
+            <?php if (isset($_SESSION["user_is_connect"]) && $_SESSION["user_is_connect"]) { ?>
+
+                <div class="admin-btn--log">
+                    <a href="?page=logout">SE DECONNECTER</a>
+                </div>
+
+            <?php } else { ?>
+                <div class="admin-btn--log">
+                    <a href="?page=login">SE CONNECTER</a>
+                </div>
+
+            <?php } ?>
 
         </div>
