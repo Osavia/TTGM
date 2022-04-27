@@ -41,7 +41,7 @@
                             <a href="?page=info">Informations pratiques</a>
                             <ul class="nagivation-under">
                                 <li>
-                                    <a href="?page=info#tarifs-horaires">Calendrier</a>
+                                    <a href="?page=info#calendrier">Calendrier</a>
                                 </li>
                                 <li>
                                     <a href="?page=info#tarifs-horaires">Tarifs et horaires</a>
@@ -76,19 +76,33 @@
                 <div class="menu--mobile" id="menu--mobile">
                     <span id="close--menu-mobile"></span>
                     <ul>
-                        <li><a href="?page=home">Accueil</a></li>
+                    <li><a href="?page=home">Accueil</a></li>
                         <li><a href="?page=news">Actualités</a></li>
                         <li>
                             <a href="?page=info">Informations pratiques</a>
-                            <ul>
+                            <ul class="nagivation-under">
                                 <li>
-                                    <a href="#tarifs-horaires">Tarifs et horaires</a>
+                                    <a href="?page=info#calendrier">Calendrier</a>
                                 </li>
-                                <li>Calendrier</li>
-                                <li>Nous trouver</li>
+                                <li>
+                                    <a href="?page=info#tarifs-horaires">Tarifs et horaires</a>
+                                </li>
+                                <li>
+                                    <a href="?page=info#nous-trouver">Nous trouver</a>
+                                </li>
                             </ul>
                         </li>
-                        <li><a href="?page=about_us">Qui sommes-nous ?</a></li>
+                        <li>
+                            <a href="?page=about_us">Qui sommes-nous ?</a>
+                            <ul class="nagivation-under">
+                                <li>
+                                    <a href="?page=about_us#association">L'association</a>
+                                </li>
+                                <li>
+                                    <a href="?page=about_us#materiel">Le matériel</a>
+                                </li>
+                            </ul>
+                        </li>
                         <li><a href="?page=contact">Contact</a></li>
                         <li><a href="?page=benevole">DEVENIR BÉNÉVOLE</a></li>
                     </ul>

@@ -100,6 +100,10 @@ main {
   flex: 1 0;
 }
 
+.ancre-correction {
+  margin-bottom: 160px;
+}
+
 /*********************************************************/
 /******** GESTION DES TITRES ET BALISES p/ul/a ***********/
 /*********************************************************/
@@ -121,7 +125,6 @@ h1 {
 h2 {
   margin: 0;
   font-size: 2.5rem;
-  padding: 64px 0;
 }
 
 h4 {
@@ -141,9 +144,9 @@ a {
   display: contents;
 }
 
-a:hover {
-  text-shadow: 0 0 0.1em rgb(152, 142, 142);
-}
+// a:hover {
+//   text-shadow: 0 0 0.1em rgb(152, 142, 142);
+// }
 
 /*****************************************************/
 /***************** GESTION DES IMAGES ****************/
