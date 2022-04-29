@@ -662,7 +662,7 @@ header .movingDiv {
 /******************************************************/
 /*********** PRESENTATION ***********/
 .presentation {
-  margin-top: 120px;
+  margin: 120px 0 60px 0;
   text-align: center;
 }
 .presentation h1 {
@@ -670,6 +670,10 @@ header .movingDiv {
 }
 .presentation p {
   color: #888;
+}
+.presentation .home-button {
+  margin-top: 42px;
+  font-weight: bold;
 }
 
 /*********** CARROUSEL ***********/

@@ -16,13 +16,15 @@
 
         <span class="ancre-correction" id="association"></span>
 
-
-
-        <div class="main-contain">
+        <section class="main-contain">
 
             <h2>L'association</h2>
 
             <p>Créée le 5 février 1972 par une poignée de passionnés, l’Association des Amis du Chemin de Fer de la Vallée de l’Isle (AACFVI), a décidé de remettre en service une ancienne ligne de chemin de fer abandonnée depuis une dizaine d’années et d’y faire circuler des trains à vocation touristique. Mais pas seulement, car elle a aussi pour but de regrouper des personnes qui s’intéressent aux chemins de fer afin de restaurer et entretenir du matériel ferroviaire et de gérer un conservatoire du patrimoine ferroviaire.</p>
+            <p>Guîtres se situe sur l’ancienne ligne de Blaye à Coutras par Saint-Mariens, mise en service par la Compagnie des Charentes en 1874, puis reprise par l’Etat. Le trafic voyageur fut supprimé en 1938, et le trafic marchandises en 1965.
+                Elle a été durant la guerre une ligne stratégique pour l’armée française, qui pouvait ainsi dévier des convois de la ligne Bordeaux-Nantes vers la ligne Bordeaux-Paris.
+                La gare est restée intacte depuis plus de 130 ans, ce qui enchante les visiteurs. Elle a conservé son guichet et ses boiseries de 1874. On achète un billet en carton, comme autrefois, qui passe dans un composteur d’époque.
+                En attendant de monter dans le train, on peut visiter un musée d’objets ferroviaires remis en valeur l’année dernière, ou flâner également sur les quais pour découvrir des wagons datant parfois du XIXe siècle classés monument historique.</p>
             <div class="about_us">
                 <div class="adaptive-img--contain image-about">
                     <span>
@@ -40,18 +42,32 @@
                     </span>
                 </div>
             </div>
-            <p>Guîtres se situe sur l’ancienne ligne de Blaye à Coutras par Saint-Mariens, mise en service par la Compagnie des Charentes en 1874, puis reprise par l’Etat. Le trafic voyageur fut supprimé en 1938, et le trafic marchandises en 1965.
-                Elle a été durant la guerre une ligne stratégique pour l’armée française, qui pouvait ainsi dévier des convois de la ligne Bordeaux-Nantes vers la ligne Bordeaux-Paris.
-                La gare est restée intacte depuis plus de 130 ans, ce qui enchante les visiteurs. Elle a conservé son guichet et ses boiseries de 1874. On achète un billet en carton, comme autrefois, qui passe dans un composteur d’époque.
-                En attendant de monter dans le train, on peut visiter un musée d’objets ferroviaires remis en valeur l’année dernière, ou flâner également sur les quais pour découvrir des wagons datant parfois du XIXe siècle classés monument historique.</p>
+            <div class="about_us">
+                <div class="adaptive-img--contain image-about">
+                    <span>
+                        <img src="./images/materiel/IMG6580.jpeg" alt="" />
+                    </span>
+                </div>
+                <p>
+                    Le train touristique emprunte la section de Marcenais, point kilométrique (PK) 5,5, à Guîtres, (PK) 19,0, de l'ancienne ligne de Cavignac à Coutras. La gare de Guîtres est le point d'accueil et la gare de départ et d'arrivée des circulations, qui font un aller-retour avec un arrêt au « Moulin de Charlot », situé au passage à niveau « TTGM n°14 ». </p>
+            </div>
+            <div class="about_us">
+                <p>
+                    Le parc se compose de matériel vapeur et diesel, de voitures voyageurs et de wagons. La plupart sont classés au titre de Monument historique.
+                    Les trains circulent du 1er mai au 31 octobre les mercredis et dimanches. Une activité vélorail a été créée en 2019.</p>
+                <div class="adaptive-img--contain image-about">
+                    <span>
+                        <img src="./images/materiel/auto-4033-020.jpeg" alt="" />
+                    </span>
+                </div>
+            </div>
 
-        </div>
+        </section>
 
         <span class="ancre-correction" id="materiel"></span>
 
+        <section class="main-contain">
 
-        <div class="main-contain">
-            
             <h2>Le matériel</h2>
 
             <h3>Matériel moteur</h3>
@@ -102,9 +118,9 @@
                             </div>
 
                             <h4>
-                                <span>Autorail</span>
+                                <span>Autorail M104</span>
                                 <span>DE-DION-BOUTON</span>
-                                <span>construite en 1938</span>
+                                <span>construit en 1938</span>
 
                             </h4>
                         </article>
@@ -120,9 +136,77 @@
                             </div>
 
                             <h4>
-                                <span>Locomotive D 4033</span>
+                                <span>Locotracteur D-4033</span>
                                 <span>GENERAL-ELECTRIC</span>
-                                <span>construite en 1944</span>
+                                <span>construit en 1944</span>
+                            </h4>
+                        </article>
+                    </a>
+                </li>
+                <li>
+                    <a href="#Moyse">
+                        <article class="grid-card">
+                            <div class="adaptive-img--cover image-actualite">
+                                <span>
+                                    <img src="./images/materiel/Moyse.jpeg" alt="">
+                                </span>
+                            </div>
+
+                            <h4>
+                                <span>Locotracteur Moyse</span>
+                                <span>020 TDE</span>
+                                <span>construit en ?</span>
+                            </h4>
+                        </article>
+                    </a>
+                </li>
+                <li>
+                    <a href="#Locofox">
+                        <article class="grid-card">
+                            <div class="adaptive-img--cover image-actualite">
+                                <span>
+                                    <img src="./images/materiel/locofox-1.jpeg" alt="">
+                                </span>
+                            </div>
+
+                            <h4>
+                                <span>Locotracteur Locofox</span>
+                                <span>COMESSA</span>
+                                <span>construit en ?</span>
+                            </h4>
+                        </article>
+                    </a>
+                </li>
+                <li>
+                    <a href="#Draisine-4M">
+                        <article class="grid-card">
+                            <div class="adaptive-img--cover image-actualite">
+                                <span>
+                                    <img src="./images/materiel/Draisine-4M.jpeg" alt="">
+                                </span>
+                            </div>
+
+                            <h4>
+                                <span>Draisine 4M</span>
+                                <span>?</span>
+                                <span>construite en ?</span>
+                            </h4>
+                        </article>
+                    </a>
+                </li>
+                <li>
+                    <a href="#Draisine-5M">
+                        <article class="grid-card">
+                            <div class="adaptive-img--cover image-actualite">
+                                <span>
+                                    <img src="./images/materiel/Draisine-5M.jpg" alt="">
+                                </span>
+                            </div>
+
+                            <h4>
+                                <span>Draisine 5M</span>
+                                <span>?</span>
+                                <span>construite en ?</span>
                             </h4>
                         </article>
                     </a>
@@ -294,7 +378,7 @@
                     <li>
                         <details>
                             <summary class="details__summary" id="DeDionBouton">
-                                DE DION BOUTON
+                                DE DION BOUTON M104
                             </summary>
                             <div class="details__content">
 
@@ -449,11 +533,327 @@
                             </div>
                         </details>
                     </li>
+                    <li>
+                        <details>
+                            <summary class="details__summary" id="Moyse">
+                                MOYSE
+                            </summary>
+                            <div class="details__content">
+
+                                <div class="details__row">
+                                    <span class="details__title">TYPE :</span>
+                                    <p>
+                                        D
+                                    </p>
+                                </div>
+
+                                <div class="details__row">
+                                    <span class="details__title">NUMERO :</span>
+                                    <p>
+                                        4033
+                                    </p>
+                                </div>
+
+                                <div class="details__row">
+                                    <span class="details__title">ANNEE DE CONSTRUCTION :</span>
+                                    <p>
+                                        1944
+                                    </p>
+                                </div>
+
+                                <div class="details__row">
+                                    <span class="details__title">CONSTRUCTEUR :</span>
+                                    <p>
+                                        GENERAL ELECTRIC </p>
+                                </div>
+
+                                <div class="details__row">
+                                    <span class="details__title">VITESSE :</span>
+                                    <p>
+                                        60 Km/h
+                                    </p>
+                                </div>
+
+                                <div class="details__row">
+                                    <span class="details__title">MASSE :</span>
+                                    <p>
+                                        73 Tonnes
+                                    </p>
+                                </div>
+
+                                <div class="details__row">
+                                    <span class="details__title">LONGUEUR :</span>
+                                    <p>
+                                        20 mètres
+                                    </p>
+                                </div>
+
+                                <div class="details__row">
+                                    <span class="details__title">MOTEUR :</span>
+                                    <p>
+                                        2 moteurs CUMINS de 250cv de 6 cylindres en ligne
+                                    </p>
+                                </div>
+
+                                <div class="details__row">
+                                    <span class="details__title">CARBURANT :</span>
+                                    <p>
+                                        GAZ-OIL
+                                    </p>
+                                </div>
+
+                                <div class="details__row">
+                                    <span class="details__title">MODE DE TRACTION :</span>
+                                    <p>
+                                        DIESEL ELECTRIQUE PUISSANCE 500 cv SOIT 368 kw
+                                    </p>
+                                </div>
+
+                            </div>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary class="details__summary" id="Locofox">
+                                LOCOFOX
+                            </summary>
+                            <div class="details__content">
+
+                                <div class="details__row">
+                                    <span class="details__title">TYPE :</span>
+                                    <p>
+                                        D
+                                    </p>
+                                </div>
+
+                                <div class="details__row">
+                                    <span class="details__title">NUMERO :</span>
+                                    <p>
+                                        4033
+                                    </p>
+                                </div>
+
+                                <div class="details__row">
+                                    <span class="details__title">ANNEE DE CONSTRUCTION :</span>
+                                    <p>
+                                        1944
+                                    </p>
+                                </div>
+
+                                <div class="details__row">
+                                    <span class="details__title">CONSTRUCTEUR :</span>
+                                    <p>
+                                        GENERAL ELECTRIC </p>
+                                </div>
+
+                                <div class="details__row">
+                                    <span class="details__title">VITESSE :</span>
+                                    <p>
+                                        60 Km/h
+                                    </p>
+                                </div>
+
+                                <div class="details__row">
+                                    <span class="details__title">MASSE :</span>
+                                    <p>
+                                        73 Tonnes
+                                    </p>
+                                </div>
+
+                                <div class="details__row">
+                                    <span class="details__title">LONGUEUR :</span>
+                                    <p>
+                                        20 mètres
+                                    </p>
+                                </div>
+
+                                <div class="details__row">
+                                    <span class="details__title">MOTEUR :</span>
+                                    <p>
+                                        2 moteurs CUMINS de 250cv de 6 cylindres en ligne
+                                    </p>
+                                </div>
+
+                                <div class="details__row">
+                                    <span class="details__title">CARBURANT :</span>
+                                    <p>
+                                        GAZ-OIL
+                                    </p>
+                                </div>
+
+                                <div class="details__row">
+                                    <span class="details__title">MODE DE TRACTION :</span>
+                                    <p>
+                                        DIESEL ELECTRIQUE PUISSANCE 500 cv SOIT 368 kw
+                                    </p>
+                                </div>
+
+                            </div>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary class="details__summary" id="Draisine-4M">
+                                M4
+                            </summary>
+                            <div class="details__content">
+
+                                <div class="details__row">
+                                    <span class="details__title">TYPE :</span>
+                                    <p>
+                                        D
+                                    </p>
+                                </div>
+
+                                <div class="details__row">
+                                    <span class="details__title">NUMERO :</span>
+                                    <p>
+                                        4033
+                                    </p>
+                                </div>
+
+                                <div class="details__row">
+                                    <span class="details__title">ANNEE DE CONSTRUCTION :</span>
+                                    <p>
+                                        1944
+                                    </p>
+                                </div>
+
+                                <div class="details__row">
+                                    <span class="details__title">CONSTRUCTEUR :</span>
+                                    <p>
+                                        GENERAL ELECTRIC </p>
+                                </div>
+
+                                <div class="details__row">
+                                    <span class="details__title">VITESSE :</span>
+                                    <p>
+                                        60 Km/h
+                                    </p>
+                                </div>
+
+                                <div class="details__row">
+                                    <span class="details__title">MASSE :</span>
+                                    <p>
+                                        73 Tonnes
+                                    </p>
+                                </div>
+
+                                <div class="details__row">
+                                    <span class="details__title">LONGUEUR :</span>
+                                    <p>
+                                        20 mètres
+                                    </p>
+                                </div>
+
+                                <div class="details__row">
+                                    <span class="details__title">MOTEUR :</span>
+                                    <p>
+                                        2 moteurs CUMINS de 250cv de 6 cylindres en ligne
+                                    </p>
+                                </div>
+
+                                <div class="details__row">
+                                    <span class="details__title">CARBURANT :</span>
+                                    <p>
+                                        GAZ-OIL
+                                    </p>
+                                </div>
+
+                                <div class="details__row">
+                                    <span class="details__title">MODE DE TRACTION :</span>
+                                    <p>
+                                        DIESEL ELECTRIQUE PUISSANCE 500 cv SOIT 368 kw
+                                    </p>
+                                </div>
+
+                            </div>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary class="details__summary" id="Draisine-5M">
+                                M5
+                            </summary>
+                            <div class="details__content">
+
+                                <div class="details__row">
+                                    <span class="details__title">TYPE :</span>
+                                    <p>
+                                        D
+                                    </p>
+                                </div>
+
+                                <div class="details__row">
+                                    <span class="details__title">NUMERO :</span>
+                                    <p>
+                                        4033
+                                    </p>
+                                </div>
+
+                                <div class="details__row">
+                                    <span class="details__title">ANNEE DE CONSTRUCTION :</span>
+                                    <p>
+                                        1944
+                                    </p>
+                                </div>
+
+                                <div class="details__row">
+                                    <span class="details__title">CONSTRUCTEUR :</span>
+                                    <p>
+                                        GENERAL ELECTRIC </p>
+                                </div>
+
+                                <div class="details__row">
+                                    <span class="details__title">VITESSE :</span>
+                                    <p>
+                                        60 Km/h
+                                    </p>
+                                </div>
+
+                                <div class="details__row">
+                                    <span class="details__title">MASSE :</span>
+                                    <p>
+                                        73 Tonnes
+                                    </p>
+                                </div>
+
+                                <div class="details__row">
+                                    <span class="details__title">LONGUEUR :</span>
+                                    <p>
+                                        20 mètres
+                                    </p>
+                                </div>
+
+                                <div class="details__row">
+                                    <span class="details__title">MOTEUR :</span>
+                                    <p>
+                                        2 moteurs CUMINS de 250cv de 6 cylindres en ligne
+                                    </p>
+                                </div>
+
+                                <div class="details__row">
+                                    <span class="details__title">CARBURANT :</span>
+                                    <p>
+                                        GAZ-OIL
+                                    </p>
+                                </div>
+
+                                <div class="details__row">
+                                    <span class="details__title">MODE DE TRACTION :</span>
+                                    <p>
+                                        DIESEL ELECTRIQUE PUISSANCE 500 cv SOIT 368 kw
+                                    </p>
+                                </div>
+
+                            </div>
+                        </details>
+                    </li>
 
                 </ul>
             </section>
 
-            <h3>Matériel voyageurs</h3>
+            <h3>Matériel voyageur</h3>
 
             <ul class="grid">
                 <li>
@@ -1012,4 +1412,43 @@
                 </ul>
             </section>
 
-        </div>
+            <h3>Matériel en attente de restauration</h3>
+
+            <ul class="grid">
+
+                <li>
+                    <article class="grid-card">
+                        <div class="adaptive-img--cover image-actualite">
+                            <span>
+                                <img src="./images/materiel/autorail-M7.jpeg" alt="">
+                            </span>
+                        </div>
+
+                        <h4>
+                            <span>Autorail M107</span>
+                            <span>DE-DION-BOUTON</span>
+                            <span>construit en 1935</span>
+
+                        </h4>
+                    </article>
+                </li>
+                <li>
+                    <article class="grid-card">
+                        <div class="adaptive-img--cover image-actualite">
+                            <span>
+                                <img src="./images/materiel/decauville.jpeg" alt="">
+                            </span>
+                        </div>
+
+                        <h4>
+                            <span>Locotracteur Decauville</span>
+                            <span>020 TE 150</span>
+                            <span>construit en 1956</span>
+                        </h4>
+                    </article>
+                </li>
+
+            </ul>
+
+
+        </section>
