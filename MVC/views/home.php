@@ -1,7 +1,8 @@
 <div class="container-auto">
 
     <!-- <p> Nous somme le
-        <?php // echo ($options["dateNow"])->format('d-m-Y') ?>
+        <?php // echo ($options["dateNow"])->format('d-m-Y') 
+        ?>
     </p> -->
 
     <section class="presentation">
@@ -14,16 +15,29 @@
         </p>
         <p> Retrouvez l'ambiance joyeuse des trajets pittoresques et participez à la convivialité des relations humaines. Vous retrouverez, lors de ce voyage ludique votre âme d'enfant, et profiterez des ambiances sonores qui font le charme des trains à vapeur, sifflets, vapeur et bruits caractéristiques d'un train tel qu'on l'imagine qui enchanteront votre périple, menant de Guîtres à Marcenais.
         </p>
-        <p> Rejoignez-nous vite pour ce voyage atypique !
-        </p>
-        <a href="#image-test">test</a>
-
+        <div class="home-button">
+            <a href="">Rejoignez-nous vite pour ce voyage atypique !</a>
+        </div>
     </section>
 
     <section class="carrousel-container">
 
         <div class="scroll-snapping" dir="ltr">
-            <div >
+            <div>
+                <div class="adaptive-img--cover carrousel-image">
+                    <span>
+                        <img src="./images/carrousel/020-circulation.jpeg" alt="" />
+                    </span>
+                </div>
+            </div>
+            <div>
+                <div class="adaptive-img--cover carrousel-image">
+                    <span>
+                        <img src="./images/carrousel/030T-verte.jpg" alt="" />
+                    </span>
+                </div>
+            </div>
+            <div>
                 <div class="adaptive-img--cover carrousel-image">
                     <span>
                         <img src="./images/carrousel/Train_touristique_Guîtres-Marcenais.jpg" alt="" />
@@ -44,7 +58,7 @@
                     </span>
                 </div>
             </div>
-            <div id="image-test">
+            <div>
                 <div class="adaptive-img--cover carrousel-image">
                     <span>
                         <img src="./images/carrousel/TTGM_-_D-4033.jpg" alt="" />

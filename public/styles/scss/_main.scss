@@ -29,8 +29,7 @@
 /*********** PRESENTATION ***********/
 
 .presentation {
-
-  margin-top: 120px;
+  margin: 120px 0 60px 0;
   text-align: center;
 
   h1 {
@@ -38,6 +37,10 @@
   }
   p {
     color: #888;
+  }
+  .home-button {
+    margin-top: 42px;
+    font-weight: bold;
   }
 }
 
