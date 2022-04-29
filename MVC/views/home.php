@@ -1,11 +1,10 @@
 <div class="container-auto">
-    <H1>HELLO WORLD</H1>
 
-    <p> Nous somme le
-        <?php echo ($options["dateNow"])->format('d-m-Y') ?>
-    </p>
+    <!-- <p> Nous somme le
+        <?php // echo ($options["dateNow"])->format('d-m-Y') ?>
+    </p> -->
 
-    <div class="presentation">
+    <section class="presentation">
 
         <h1>Les bénévoles du train touristique Guîtres-Marcenais sont heureux de vous accueillir sur leur site.</h1>
         <p> Nous vous proposons de participer à un voyage dans le temps à l'époque des locomotives à vapeur.
@@ -17,8 +16,51 @@
         </p>
         <p> Rejoignez-nous vite pour ce voyage atypique !
         </p>
+        <a href="#image-test">test</a>
 
-    </div>
+    </section>
+
+    <section class="carrousel-container">
+
+        <div class="scroll-snapping" dir="ltr">
+            <div >
+                <div class="adaptive-img--cover carrousel-image">
+                    <span>
+                        <img src="./images/carrousel/Train_touristique_Guîtres-Marcenais.jpg" alt="" />
+                    </span>
+                </div>
+            </div>
+            <div>
+                <div class="adaptive-img--cover carrousel-image">
+                    <span>
+                        <img src="./images/carrousel/020-T_Meuse_TTGM.jpeg" alt="" />
+                    </span>
+                </div>
+            </div>
+            <div>
+                <div class="adaptive-img--cover carrousel-image">
+                    <span>
+                        <img src="./images/carrousel/Railbus_TTGM.jpg" alt="" />
+                    </span>
+                </div>
+            </div>
+            <div id="image-test">
+                <div class="adaptive-img--cover carrousel-image">
+                    <span>
+                        <img src="./images/carrousel/TTGM_-_D-4033.jpg" alt="" />
+                    </span>
+                </div>
+            </div>
+            <div>
+                <div class="adaptive-img--cover carrousel-image">
+                    <span>
+                        <img src="./images/carrousel/Guitres_gare.jpg" alt="" />
+                    </span>
+                </div>
+            </div>
+        </div>
+
+    </section>
 
     <div>
 

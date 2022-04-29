@@ -374,7 +374,6 @@ h4 {
 h1 {
   margin: 0;
   font-size: 5rem;
-  flex: 1 0;
 }
 
 h2 {
@@ -658,6 +657,54 @@ header .movingDiv {
   color: white;
 }
 
+/******************************************************/
+/********************* PAGE HOME **********************/
+/******************************************************/
+/*********** PRESENTATION ***********/
+.presentation {
+  margin-top: 120px;
+  text-align: center;
+}
+.presentation h1 {
+  margin-bottom: 42px;
+}
+.presentation p {
+  color: #888;
+}
+
+/*********** CARROUSEL ***********/
+.carrousel-container {
+  height: 75vh;
+  margin: 32px 0;
+  box-shadow: 0 0 5px 2px #888;
+}
+.carrousel-container .scroll-snapping {
+  width: 100%;
+  height: 100%;
+  flex-flow: row nowrap;
+  overflow: auto;
+  scroll-snap-type: x mandatory;
+}
+.carrousel-container .scroll-snapping > div {
+  text-align: center;
+  scroll-snap-align: center;
+  flex: none;
+  width: 100%;
+  height: 100%;
+}
+.carrousel-container .scroll-snapping > div .carrousel-image {
+  height: 100%;
+}
+
+@media (max-width: 880px) {
+  .carrousel-container {
+    height: 400px;
+    margin: 16px 0;
+  }
+  .carrousel-container .adaptive-img--cover > span > img {
+    object-fit: contain;
+  }
+}
 /******************************************************/
 /******************* PAGE ACTUALITE *******************/
 /******************************************************/
