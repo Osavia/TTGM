@@ -20,6 +20,7 @@ html {
 
 body {
   flex: 1 0;
+  background: #f1f1f1;
 }
 
 html,
@@ -108,7 +109,7 @@ main {
 }
 
 /*********************************************************/
-/******** GESTION DES TITRES ET BALISES p/ul/a ***********/
+/**** GESTION DES TITRES ET BALISES p/ul/a/strong ********/
 /*********************************************************/
 
 h1,
@@ -145,6 +146,10 @@ a {
   text-decoration: none;
   transition: text-shadow 0.2s ease-out;
   display: contents;
+}
+
+strong {
+  display: inline;
 }
 
 // a:hover {
