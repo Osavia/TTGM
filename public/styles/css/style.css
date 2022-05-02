@@ -271,6 +271,7 @@ html {
 
 body {
   flex: 1 0;
+  background: #f1f1f1;
 }
 
 html,
@@ -361,7 +362,7 @@ main {
 }
 
 /*********************************************************/
-/******** GESTION DES TITRES ET BALISES p/ul/a ***********/
+/**** GESTION DES TITRES ET BALISES p/ul/a/strong ********/
 /*********************************************************/
 h1,
 h2,
@@ -395,6 +396,10 @@ a {
   text-decoration: none;
   transition: text-shadow 0.2s ease-out;
   display: contents;
+}
+
+strong {
+  display: inline;
 }
 
 /*****************************************************/
@@ -662,7 +667,7 @@ header .movingDiv {
 /******************************************************/
 /*********** PRESENTATION ***********/
 .presentation {
-  margin: 120px 0 60px 0;
+  margin: 60px 0;
   text-align: center;
 }
 .presentation h1 {
@@ -680,24 +685,20 @@ header .movingDiv {
 .carrousel-container {
   height: 75vh;
   margin: 32px 0;
-  box-shadow: 0 0 5px 2px #888;
+  box-shadow: 0 0 5px 2px #313131;
+  position: relative;
 }
-.carrousel-container .scroll-snapping {
-  width: 100%;
-  height: 100%;
-  flex-flow: row nowrap;
-  overflow: auto;
-  scroll-snap-type: x mandatory;
-}
-.carrousel-container .scroll-snapping > div {
-  text-align: center;
-  scroll-snap-align: center;
-  flex: none;
+.carrousel-container ul {
   width: 100%;
   height: 100%;
 }
-.carrousel-container .scroll-snapping > div .carrousel-image {
+.carrousel-container ul .slider-image {
   height: 100%;
+  display: none;
+}
+.carrousel-container ul .slider-image.slider-active {
+  display: block;
+  animation: transition 0.8s;
 }
 
 @media (max-width: 880px) {
@@ -705,10 +706,58 @@ header .movingDiv {
     height: 400px;
     margin: 16px 0;
   }
-  .carrousel-container .adaptive-img--cover > span > img {
-    object-fit: contain;
+}
+@keyframes transition {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
+.btn-nav {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  width: 15rem;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-nav.arrow-left {
+  left: 0;
+}
+
+.btn-nav.arrow-right {
+  right: 0;
+}
+
+.btn-nav.arrow-left:hover, .btn-nav.arrow-right:hover {
+  background-color: rgba(136, 136, 136, 0.631);
+}
+
+.btn-nav-bottom {
+  flex-direction: row;
+  position: absolute;
+  bottom: 6%;
+  left: 50%;
+  margin-left: -96px;
+}
+.btn-nav-bottom span::before {
+  cursor: pointer;
+  content: "";
+  width: 15px;
+  height: 15px;
+  margin: 8px;
+  border-radius: 100%;
+  background-color: rgba(180, 206, 206, 0.929);
+  box-shadow: 0 0 5px 2px #888;
+}
+.btn-nav-bottom span:hover {
+  transform: scale(1.2);
+}
+
 /******************************************************/
 /******************* PAGE ACTUALITE *******************/
 /******************************************************/
