@@ -394,7 +394,6 @@ ul {
 
 a {
   text-decoration: none;
-  transition: text-shadow 0.2s ease-out;
   display: contents;
 }
 
@@ -870,8 +869,7 @@ header .movingDiv {
 }
 .grid li .grid-card {
   box-shadow: 0 0 2px black;
-  transition: box-shadow 0.25s ease-out;
-  transition: transform 0.1s ease-out;
+  transition: all 0.2s ease-out;
   background-color: #f0f0f0;
   border-radius: 20px;
   flex: 1 0;
@@ -959,6 +957,49 @@ header .movingDiv {
 /********************************************************/
 /********************** PAGE INFO ***********************/
 /********************************************************/
+/*********** TARIFS *************/
+.tarif {
+  text-align: center;
+  border-collapse: collapse;
+}
+.tarif .table-season {
+  text-align: start;
+  font-weight: 800;
+}
+.tarif .table-row {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.tarif .table-price {
+  color: #888;
+}
+.tarif .table-row:hover {
+  background-color: #652479;
+  color: #ffffff;
+  transform: scale(1.02);
+}
+.tarif .table-break {
+  background-color: rgba(128, 131, 128, 0.689);
+  font-size: 1.5rem;
+  font-style: italic;
+  padding: 6px;
+  text-align: start;
+}
+.tarif .table-pass-family {
+  font-size: 1.5rem;
+}
+
+.table-info-sup {
+  font-style: italic;
+  margin-top: 16px;
+  font-size: 1.5rem;
+}
+
+caption {
+  padding: 12px;
+  caption-side: top;
+}
+
 /*********** NOUS TROUVER *************/
 .google-maps {
   padding: 48px 0;
@@ -1091,7 +1132,8 @@ details[open] > *:not(summary) {
   border-radius: 10px;
   box-shadow: 0px 0px 2px white;
 }
-.form input, .form textarea {
+.form input,
+.form textarea {
   margin-bottom: 10px;
   padding: 10px;
   border: none;

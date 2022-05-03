@@ -105,6 +105,7 @@
       border-radius: 100%;
       background-color: rgba(180, 206, 206, 0.929);
       box-shadow: 0 0 5px 2px #888;
+      
     }
     span:hover {
       transform: scale(1.2);
@@ -245,8 +246,7 @@
 
     .grid-card {
       box-shadow: 0 0 2px black;
-      transition: box-shadow 0.25s ease-out;
-      transition: transform 0.1s ease-out;
+      transition: all 0.2s ease-out;
       background-color: rgb(240, 240, 240);
       border-radius: 20px;
       flex: 1 0;
@@ -350,6 +350,58 @@
 /********************************************************/
 /********************** PAGE INFO ***********************/
 /********************************************************/
+
+/*********** TARIFS *************/
+
+
+
+.tarif {
+  text-align: center;
+  border-collapse: collapse;
+
+  .table-season {
+    text-align: start;
+    font-weight: 800;
+  }
+
+  .table-row {
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  .table-price {
+    color: #888;
+  }
+
+  .table-row:hover {
+    background-color: #652479;
+    color: #ffffff;
+    transform: scale(1.02);
+}
+
+  .table-break {
+    background-color: rgba(128, 131, 128, 0.689);
+    font-size: 1.5rem;
+    font-style: italic;
+    padding: 6px;
+    text-align: start;
+  }
+
+  .table-pass-family {
+    font-size: 1.5rem;
+  }
+}
+
+.table-info-sup {
+  font-style: italic;
+  margin-top: 16px;
+  font-size: 1.5rem;
+}
+
+caption {
+  padding: 12px;
+  caption-side: top;
+}
 
 /*********** NOUS TROUVER *************/
 
@@ -498,7 +550,8 @@ details[open] > *:not(summary) {
   border-radius: 10px;
   box-shadow: 0px 0px 2px white;
 
-  input, textarea {
+  input,
+  textarea {
     margin-bottom: 10px;
     padding: 10px;
     border: none;

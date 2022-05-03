@@ -14,61 +14,101 @@
 
     <div class="container-auto">
 
+        <span class="ancre-correction" id="reservation"></span>
+
+        <h2>Offres et réservation</h2>
+
+        <h3>Train régulier</h3>
+        <h3>Train à thème</h3>
+        <h3>Location de train</h3>
+
         <span class="ancre-correction" id="calendrier"></span>
 
         <h2>Calendrier</h2>
 
-        <span class="ancre-correction" id="tarifs-horaires"></span>
+        <p>Le train circule tous les dimanches, mercredis et jours fériés, du 1er mai au 31 octobre (hors train spéciaux à thème)</p>
+        <p>Départ en gare de Guîtres : 15h30</p>
+        <p>Retour prévu 17h30</p>
 
-        <h2>Tarifs et horaires</h2>
+        <span class="ancre-correction" id="tarifs"></span>
 
-        <table>
+        <h2>Tarifs</h2>
+
+        <p>Tarifs valables pour la saison 2022, du 1er mai au 31 octobre.</p>
+        <p> La saison haute, correspond à la période 1er juillet - 31 août.
+        </p>
+
+        <table class="tarif">
+            <!-- <span>Aller simple</span> -->
             <thead>
                 <tr>
-                    <td></td>
-                    <td colspan="3">Aller/retour</td>
-                    <td colspan="3">Aller simple</td>
-                    <td colspan="3">PASS FAMILLE</td>
+                    <td colspan="3"></td>
+                    <th colspan="2">PASS FAMILLE</th>
+                    <th colspan="2">GROUPE</th>
+
                 </tr>
                 <tr>
-                    <td></td>
-                    <td>Adulte</td>
-                    <td>Enfant (1)</td>
-                    <td>Enfant (2)</td>
-                    <td>Adulte</td>
-                    <td>Enfant (1)</td>
-                    <td>Enfant (2)</td>
-                    <td></td>
-                    <td></td>
+                    <td colspan="1"></td>
+                    <th>ADULTE</th>
+                    <th>ENFANT</th>
+                    <th class="table-pass-family">2 ADULTES + 2 ENFANTS</th>
+                    <th class="table-pass-family">2 ADULTES + 3 ENFANTS</th>
+                    <th>ADULTE</th>
+                    <th>ENFANT</th>
+
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>...</td>
-                    <td>12,50 €</td>
-                    <td>7,80 €</td>
-                    <td>Gratuit</td>
-                    <td>7,80 €</td>
-                    <td>5,70 €</td>
-                    <td>Gratuit</td>
-                    <td>36,40 €</td>
-                    <td>42,60 €</td>
+                <tr class="table-break">
+                    <td colspan="7">Aller simple</td>
                 </tr>
-                <tr>
-                    <td>...</td>
-                    <td>14,50 €</td>
-                    <td>8,30 €</td>
-                    <td>Gratuit</td>
-                    <td>8,30 €</td>
-                    <td>6,30 €</td>
-                    <td>Gratuit</td>
-                    <td>41,60 €</td>
-                    <td>47,80 €</td>
+                <tr class="table-row">
+                    <td class="table-season">SAISON BASSE</td>
+                    <td class="table-price">12,50 €</td>
+                    <td class="table-price">7,80 €</td>
+                    <td class="table-price">7,80 €</td>
+                    <td class="table-price">5,70 €</td>
+                    <td class="table-price">7,80 €</td>
+                    <td class="table-price">5,70 €</td>
+                </tr>
+                <tr class="table-row">
+                    <td class="table-season">SAISON HAUTE</td>
+                    <td class="table-price">14,50 €</td>
+                    <td class="table-price">8,30 €</td>
+                    <td class="table-price">8,30 €</td>
+                    <td class="table-price">6,30 €</td>
+                    <td class="table-price">8,30 €</td>
+                    <td class="table-price">6,30 €</td>
+
+                </tr>
+                <tr class="table-break">
+                    <td colspan="7">Aller retour</td>
+                </tr>
+                <tr class="table-row">
+                    <td class="table-season">SAISON BASSE</td>
+                    <td class="table-price">14,50 €</td>
+                    <td class="table-price">8,30 €</td>
+                    <td class="table-price">8,30 €</td>
+                    <td class="table-price">6,30 €</td>
+                    <td class="table-price">8,30 €</td>
+                    <td class="table-price">6,30 €</td>
+                </tr>
+                <tr class="table-row">
+                    <td class="table-season">SAISON HAUTE</td>
+                    <td class="table-price">14,50 €</td>
+                    <td class="table-price">8,30 €</td>
+                    <td class="table-price">8,30 €</td>
+                    <td class="table-price">6,30 €</td>
+                    <td class="table-price">8,30 €</td>
+                    <td class="table-price">6,30 €</td>
                 </tr>
             </tbody>
         </table>
 
-
+        <div class="table-info-sup">
+            <p>Enfant : de 5 à 14 ans. Gratuit pour les tous petits de moins de 5 ans</p>
+            <p>Groupe : 10 adultes minimum ou 6 enfants minimum</p>
+        </div>
 
 
 

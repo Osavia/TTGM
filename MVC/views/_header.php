@@ -41,10 +41,13 @@
                             <a href="?page=info">Informations pratiques</a>
                             <ul class="nagivation-under">
                                 <li>
+                                    <a href="?page=info#reservation">Offres / Réservation</a>
+                                </li>
+                                <li>
                                     <a href="?page=info#calendrier">Calendrier</a>
                                 </li>
                                 <li>
-                                    <a href="?page=info#tarifs-horaires">Tarifs et horaires</a>
+                                    <a href="?page=info#tarifs">Tarifs</a>
                                 </li>
                                 <li>
                                     <a href="?page=info#nous-trouver">Nous trouver</a>
@@ -76,16 +79,19 @@
                 <div class="menu--mobile" id="menu--mobile">
                     <span id="close--menu-mobile"></span>
                     <ul>
-                    <li><a href="?page=home">Accueil</a></li>
+                        <li><a href="?page=home">Accueil</a></li>
                         <li><a href="?page=news">Actualités</a></li>
                         <li>
                             <a href="?page=info">Informations pratiques</a>
                             <ul class="nagivation-under">
                                 <li>
+                                    <a href="?page=info#reservation">Offres / Réservation</a>
+                                </li>
+                                <li>
                                     <a href="?page=info#calendrier">Calendrier</a>
                                 </li>
                                 <li>
-                                    <a href="?page=info#tarifs-horaires">Tarifs et horaires</a>
+                                    <a href="?page=info#tarifs">Tarifs</a>
                                 </li>
                                 <li>
                                     <a href="?page=info#nous-trouver">Nous trouver</a>
