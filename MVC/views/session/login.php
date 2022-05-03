@@ -1,9 +1,11 @@
+<div class="container-auto">
+
 <H1>Connexion</H1>
 
 
 <?php if (!isset($_SESSION["user_is_connect"])) : ?>
 
-    <form method="POST">
+    <form method="POST" class="form">
         <div>
             <label for="username">Nom d'utilisateur</label>
             <input type="text" id="username" name="username" placeholder="Entrer votre nom d'utilisateur" aria-describedby="usernameHelp">

@@ -57,19 +57,27 @@
 
         </ul>
 
-        <div class="btn-nav-arrow">
-            <div class="btn-nav arrow-left">
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="56" height="56" viewBox="0 0 256 256" xml:space="preserve">
-                    <g transform="translate(128 128) scale(0.97 0.97)" style="">
+        <div class="btn-nav">
+            <div class="arrow-left">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="28" height="28" viewBox="0 0 256 256" xml:space="preserve">
+                    <g transform="translate(128 128) scale(0.97 0.97)">
                         <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(136,136,161); fill-rule: nonzero; opacity: 1;" transform="translate(-130.05 -130.05000000000004) scale(2.89 2.89) matrix(-1 0 0 1 90 0) ">
                             <path d="M 8.231 90 c -2.928 0 -5.747 -1.613 -7.153 -4.407 c -1.985 -3.946 -0.395 -8.755 3.552 -10.741 L 63.974 45 L 4.629 15.148 C 0.683 13.163 -0.907 8.354 1.078 4.407 C 3.063 0.46 7.869 -1.132 11.82 0.855 L 85.37 37.853 c 2.701 1.359 4.405 4.123 4.405 7.147 s -1.704 5.788 -4.405 7.146 L 11.82 89.144 C 10.666 89.724 9.439 90 8.231 90 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
                         </g>
                     </g>
                 </svg>
             </div>
-            <div class="btn-nav arrow-right">
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="56" height="56" viewBox="0 0 256 256" xml:space="preserve">
-                    <g transform="translate(128 128) scale(0.97 0.97)" style="">
+            <div class="btn-nav-bottom">
+                <span data-item="0" class="btn-bottom"></span>
+                <span data-item="1" class="btn-bottom"></span>
+                <span data-item="2" class="btn-bottom"></span>
+                <span data-item="3" class="btn-bottom"></span>
+                <span data-item="4" class="btn-bottom"></span>
+                <span data-item="5" class="btn-bottom"></span>
+            </div>
+            <div class="arrow-right">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="28" height="28" viewBox="0 0 256 256" xml:space="preserve">
+                    <g transform="translate(128 128) scale(0.97 0.97)">
                         <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(136,136,161); fill-rule: nonzero; opacity: 1;" transform="translate(-130.05 -130.05000000000004) scale(2.89 2.89)">
                             <path d="M 8.231 90 c -2.928 0 -5.747 -1.613 -7.153 -4.407 c -1.985 -3.946 -0.395 -8.755 3.552 -10.741 L 63.974 45 L 4.629 15.148 C 0.683 13.163 -0.907 8.354 1.078 4.407 C 3.063 0.46 7.869 -1.132 11.82 0.855 L 85.37 37.853 c 2.701 1.359 4.405 4.123 4.405 7.147 s -1.704 5.788 -4.405 7.146 L 11.82 89.144 C 10.666 89.724 9.439 90 8.231 90 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
                         </g>
@@ -78,14 +86,6 @@
             </div>
         </div>
 
-        <div class="btn-nav-bottom">
-            <span data-item="0" class="btn-bottom"></span>
-            <span data-item="1" class="btn-bottom"></span>
-            <span data-item="2" class="btn-bottom"></span>
-            <span data-item="3" class="btn-bottom"></span>
-            <span data-item="4" class="btn-bottom"></span>
-            <span data-item="5" class="btn-bottom"></span>
-        </div>
 
     </section>
 
@@ -364,7 +364,7 @@
         sapiente?
 
     </div>
-    <div id="tarifs-horaires">
+    <div>
 
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, asperiores praesentium eos perferendis mollitia
         placeat, id doloribus dolore corporis nostrum provident modi rerum, dicta suscipit! Porro id omnis laboriosam

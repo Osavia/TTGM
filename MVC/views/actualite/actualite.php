@@ -128,8 +128,8 @@
         <div class="myPopup">
 
             <div class="delete-confirmation">
-                <h2>Voulez-vous vraiment supprimer cet article :</h2>
-                <h4 id="show_title_article"></h4>
+                <p>Voulez-vous vraiment supprimer cet article :</p>
+                <span id="show_title_article"></span>
                 <p>Attention, cette action est irréversible</p>
             </div>
 

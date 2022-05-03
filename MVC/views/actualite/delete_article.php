@@ -1,5 +1,6 @@
 <?php if (isset($_SESSION["user_is_connect"]) && $_SESSION["user_is_connect"]) { ?>
 
+<div class="container-auto">
 
   <h1>Article supprimé !</h1>
 
