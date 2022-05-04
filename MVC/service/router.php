@@ -20,7 +20,7 @@ require_once "./../MVC/controller/error/Error404Controller.php";
 // récupération  du paramètre "page" dans la variable d'environnement $_GET 
 
 // initialisation et déclaration de la variable $page  
-$page = NULL;
+$page = 'home';
 // Vérification de l'existence de la key "page" dans $_GET
 if (array_key_exists("page", $_GET)) $page = $_GET["page"];
 // var_dump($_GET["page"]);

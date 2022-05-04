@@ -90,7 +90,9 @@
     </section>
 
 
-
+    <p>Dès le départ, votre train franchira le PN 15 (Passage à Niveau), quelle satisfaction de voir les voitures qui doivent s'arrêter pour vous laisser passer ! Peu après, la voie s'enfoncera dans la verdoyante forêt gabaye, avec passages aux anciennes gares de Maransin, Lapouyade et Tizac de Lapouyade (cette dernière a gardé sa plaque murale). Le voyage se poursuit à allure de sénateur, avant d'atteindre la halte du Moulin de Charlot.
+                    Vous rejoindrez à pied (10mn) le site de ce moulin situé sur la Saye, lieu fréquenté de pique-nique et de départ de randonnées. Possibilité (non garantie) d'achat de crêpes et boissons (notre association n'est pas gestionnaire de l'endroit). La rame vide poursuivra son cheminement vers l'ancienne gare de Marcenais où la locomotive se placera en queue, se retrouvant ainsi en tête pour le trajet retour. Arrêt de la rame retour à la halte du Moulin pour y reprendre les voyageurs, puis direction Guîtres, votre point de départ.</p>
+            
 
     <div>
 

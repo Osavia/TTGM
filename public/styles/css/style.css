@@ -244,10 +244,8 @@ template {
 }
 
 :root {
-  --nav-height: 128px;
   --movingDiv-height: 32px;
-  --header-height: calc(var(--header-height) + var(--movingDiv-height));
-  --header-footer-background-color: #80DBED;
+  --header-footer-background-color: #80dbed;
 }
 
 /**********************************************************/
@@ -302,8 +300,8 @@ main {
   padding: 0 32px;
 }
 
-.main-contain {
-  gap: 42px;
+section {
+  gap: 26px;
 }
 
 /********************************************************/
@@ -314,9 +312,9 @@ main {
     padding: 0 16px;
   }
 
-  .main-contain {
-    padding-top: 22px;
-    gap: 22px;
+  section {
+    gap: 16px;
+    padding-top: 10px;
   }
 
   body {
@@ -358,7 +356,7 @@ main {
 }
 
 .ancre-correction {
-  margin-bottom: 160px;
+  margin-top: 110px;
 }
 
 /*********************************************************/
@@ -379,7 +377,13 @@ h1 {
 
 h2 {
   margin: 0;
+  padding: 32px 0;
   font-size: 2.5rem;
+}
+
+h3 {
+  margin: 0;
+  font-size: 2rem;
 }
 
 h4 {
@@ -449,7 +453,6 @@ strong {
 }
 
 header {
-  height: var(--header-height);
   background-color: var(--header-footer-background-color);
   box-shadow: 0 4px 4px -4px black;
   position: sticky;
@@ -957,35 +960,109 @@ header .movingDiv {
 /********************************************************/
 /********************** PAGE INFO ***********************/
 /********************************************************/
+/*********** OFFRES *************/
+.introduction {
+  color: #888;
+  gap: 16px;
+}
+.introduction > div {
+  height: 500px;
+  width: 100%;
+}
+
+h3 {
+  margin: 16px 0;
+}
+
+.offre-regulier-train {
+  margin: 32px 0;
+  gap: 32px;
+}
+.offre-regulier-train h4 {
+  text-align: center;
+}
+.offre-regulier-train .offre-regulier-train-info {
+  flex-direction: row;
+  gap: 42px;
+}
+.offre-regulier-train .offre-regulier-train-info .offre-image {
+  height: 350px;
+  width: 50%;
+  box-shadow: 0 0 8px black;
+}
+.offre-regulier-train .offre-regulier-train-info .train-info {
+  justify-content: space-between;
+  width: 50%;
+}
+.offre-regulier-train .offre-regulier-train-info .train-info .train-info-sup {
+  background-color: #a0abeb71;
+  border-radius: 10px;
+  width: 100%;
+  padding: 0 16px;
+  box-shadow: 0 0 3px black;
+}
+.offre-regulier-train .offre-regulier-train-info .train-info .train-info-sup div {
+  flex-direction: row;
+}
+.offre-regulier-train .offre-regulier-train-info .train-info .train-info-sup div > p {
+  flex: 1 0;
+}
+.offre-regulier-train .offre-regulier-train-info .train-info button {
+  align-items: flex-end;
+}
+
+@media (max-width: 880px) {
+  .offre-regulier-train .offre-regulier-train-info {
+    flex-direction: column;
+  }
+  .offre-regulier-train .offre-regulier-train-info .offre-image {
+    width: 100%;
+  }
+  .offre-regulier-train .offre-regulier-train-info .train-info {
+    width: 100%;
+    gap: 32px;
+  }
+}
 /*********** TARIFS *************/
-.tarif {
+thead,
+tbody {
   text-align: center;
   border-collapse: collapse;
 }
-.tarif .table-season {
+thead th,
+tbody th {
+  padding: 16px;
+}
+
+.table-season {
   text-align: start;
   font-weight: 800;
 }
-.tarif .table-row {
+
+.table-row {
   transition: all 0.3s ease;
   cursor: pointer;
 }
-.tarif .table-price {
+
+.table-price {
   color: #888;
 }
-.tarif .table-row:hover {
+
+.table-row:hover {
   background-color: #652479;
   color: #ffffff;
   transform: scale(1.02);
 }
-.tarif .table-break {
+
+.table-break {
   background-color: rgba(128, 131, 128, 0.689);
   font-size: 1.5rem;
   font-style: italic;
   padding: 6px;
   text-align: start;
 }
-.tarif .table-pass-family {
+
+.table-pass {
   font-size: 1.5rem;
 }
 
@@ -1000,6 +1077,35 @@ caption {
   caption-side: top;
 }
 
+.tarif-mobile {
+  display: none;
+  width: 100%;
+  gap: 42px;
+}
+.tarif-mobile p {
+  font-weight: 600;
+  margin: 16px;
+}
+.tarif-mobile td:first-child {
+  text-align: start;
+  width: 60%;
+}
+.tarif-mobile td:last-child {
+  width: 20%;
+}
+.tarif-mobile th {
+  margin: 0 16px;
+}
+
+@media (max-width: 880px) {
+  .tarif {
+    display: none;
+  }
+
+  .tarif-mobile {
+    display: block;
+  }
+}
 /*********** NOUS TROUVER *************/
 .google-maps {
   padding: 48px 0;
@@ -1028,7 +1134,12 @@ caption {
   background-color: beige;
 }
 
-@media (max-width: 900px) {
+.image-about:hover::after {
+  content: "";
+  background-color: #333;
+}
+
+@media (max-width: 880px) {
   .about_us {
     flex-direction: column;
   }
@@ -1055,7 +1166,7 @@ details {
   letter-spacing: -0.5px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 880px) {
   details {
     font-size: 18px;
   }
@@ -1124,7 +1235,7 @@ details[open] > *:not(summary) {
 /************************ FORM **************************/
 /********************************************************/
 .form {
-  width: 600px;
+  width: 60vw;
   padding: 20px;
   margin: 42px 0;
   background-color: rgba(153, 148, 148, 0.15);

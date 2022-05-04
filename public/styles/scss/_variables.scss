@@ -1,13 +1,9 @@
 :root {
+  // HEADER
 
-// HEADER
+  // --nav-height: 128px;
+  --movingDiv-height: 32px;
 
---nav-height: 128px;
---movingDiv-height: 32px;
---header-height: calc(var(--header-height) + var(--movingDiv-height));
-
-// --header-footer-background-color: rgb(244, 226, 204);
---header-footer-background-color: #80DBED;
-
-
+  // --header-footer-background-color: rgb(244, 226, 204);
+  --header-footer-background-color: #80dbed;
 }
