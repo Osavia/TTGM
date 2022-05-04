@@ -105,7 +105,6 @@
       border-radius: 100%;
       background-color: rgba(180, 206, 206, 0.929);
       box-shadow: 0 0 5px 2px #888;
-      
     }
     span:hover {
       transform: scale(1.2);
@@ -351,45 +350,122 @@
 /********************** PAGE INFO ***********************/
 /********************************************************/
 
+/*********** OFFRES *************/
+
+.introduction {
+  color: #888;
+  gap: 16px;
+
+  > div {
+    height: 500px;
+    width: 100%;
+  }
+}
+
+h3 {
+  margin: 16px 0;
+}
+
+.offre-regulier-train {
+  margin: 32px 0;
+  gap: 32px;
+
+  h4 {
+    text-align: center;
+  }
+
+  .offre-regulier-train-info {
+    flex-direction: row;
+    gap: 42px;
+
+    .offre-image {
+      height: 350px;
+      width: 50%;
+      box-shadow: 0 0 8px black;
+    }
+
+    .train-info {
+      justify-content: space-between;
+      width: 50%;
+
+      .train-info-sup {
+        background-color: #a0abeb71;
+        border-radius: 10px;
+        width: 100%;
+        padding: 0 16px;
+        box-shadow: 0 0 3px black;
+
+        div {
+          flex-direction: row;
+          > p {
+            flex: 1 0;
+          }
+        }
+      }
+
+      button {
+        align-items: flex-end;
+      }
+    }
+  }
+}
+
+@media (max-width: 880px) {
+  .offre-regulier-train .offre-regulier-train-info {
+    flex-direction: column;
+
+    .offre-image {
+      width: 100%;
+    }
+    .train-info {
+      width: 100%;
+      gap: 32px;
+    }
+  }
+}
+
 /*********** TARIFS *************/
 
-
-
-.tarif {
+thead,
+tbody {
   text-align: center;
   border-collapse: collapse;
 
-  .table-season {
-    text-align: start;
-    font-weight: 800;
+  th {
+    padding: 16px;
   }
-
-  .table-row {
-    transition: all 0.3s ease;
-    cursor: pointer;
-  }
-
-  .table-price {
-    color: #888;
-  }
-
-  .table-row:hover {
-    background-color: #652479;
-    color: #ffffff;
-    transform: scale(1.02);
 }
 
-  .table-break {
-    background-color: rgba(128, 131, 128, 0.689);
-    font-size: 1.5rem;
-    font-style: italic;
-    padding: 6px;
-    text-align: start;
-  }
+.table-season {
+  text-align: start;
+  font-weight: 800;
+}
 
-  .table-pass-family {
-    font-size: 1.5rem;
-  }
+.table-row {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.table-price {
+  color: #888;
+}
+
+.table-row:hover {
+  background-color: #652479;
+  color: #ffffff;
+  transform: scale(1.02);
+}
+
+.table-break {
+  background-color: rgba(128, 131, 128, 0.689);
+  font-size: 1.5rem;
+  font-style: italic;
+  padding: 6px;
+  text-align: start;
+}
+
+.table-pass {
+  font-size: 1.5rem;
 }
 
 .table-info-sup {
@@ -401,6 +477,37 @@
 caption {
   padding: 12px;
   caption-side: top;
+}
+
+.tarif-mobile {
+  display: none;
+  width: 100%;
+  gap: 42px;
+
+  p {
+    font-weight: 600;
+    margin: 16px;
+  }
+
+  td:first-child {
+    text-align: start;
+    width: 60%;
+  }
+  td:last-child {
+    width: 20%;
+  }
+  th {
+    margin: 0 16px;
+  }
+}
+
+@media (max-width: 880px) {
+  .tarif {
+    display: none;
+  }
+  .tarif-mobile {
+    display: block;
+  }
 }
 
 /*********** NOUS TROUVER *************/
@@ -439,7 +546,12 @@ caption {
   background-color: beige;
 }
 
-@media (max-width: 900px) {
+.image-about:hover::after {
+  content: "";
+  background-color: #333;
+}
+
+@media (max-width: 880px) {
   .about_us {
     flex-direction: column;
   }
@@ -468,7 +580,7 @@ details {
   letter-spacing: -0.5px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 880px) {
   details {
     font-size: 18px;
   }
@@ -542,7 +654,7 @@ details[open] > *:not(summary) {
 /********************************************************/
 
 .form {
-  width: 600px;
+  width: 60vw;
   padding: 20px;
   margin: 42px 0;
   background-color: rgba(153, 148, 148, 0.15);

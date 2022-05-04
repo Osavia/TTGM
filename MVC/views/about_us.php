@@ -14,10 +14,9 @@
 
     <div class="container-auto">
 
-        <span class="ancre-correction" id="association"></span>
+        <section id="association">
 
-        <section class="main-contain">
-
+            <span class="ancre-correction"></span>
             <h2>L'association</h2>
 
             <p>Créée le 5 février 1972 par une poignée de passionnés, <strong>l’Association des Amis du Chemin de Fer de la Vallée de l’Isle</strong> (AACFVI), a décidé de remettre en service une ancienne ligne de chemin de fer abandonnée depuis une dizaine d’années et d’y faire circuler des trains à vocation touristique. Mais pas seulement, car elle a aussi pour but de regrouper des personnes qui s’intéressent aux chemins de fer afin de restaurer et entretenir du matériel ferroviaire et de gérer un conservatoire du patrimoine ferroviaire.</p>
@@ -64,10 +63,10 @@
 
         </section>
 
-        <span class="ancre-correction" id="materiel"></span>
 
-        <section class="main-contain">
+        <section id="materiel">
 
+            <span class="ancre-correction"></span>
             <h2>Le matériel</h2>
 
             <h3>Matériel moteur</h3>
