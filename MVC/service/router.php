@@ -3,18 +3,13 @@
 require_once "./../MVC/controller/HomeController.php";
 require_once "./../MVC/controller/actualite/ArticleController.php";
 require_once "./../MVC/controller/actualite/CreateArticleController.php";
-
-
 require_once "./../MVC/controller/InfoController.php";
 require_once "./../MVC/controller/AboutUsController.php";
 require_once "./../MVC/controller/BenevoleController.php";
-
 require_once "./../MVC/controller/contact/ContactController.php";
 require_once "./../MVC/controller/contact/ContactSubmitController.php";
-
 require_once "./../MVC/controller/session/LogInController.php";
 require_once "./../MVC/controller/session/LogOutController.php";
-
 require_once "./../MVC/controller/error/Error404Controller.php";
 
 // récupération  du paramètre "page" dans la variable d'environnement $_GET 
@@ -23,13 +18,12 @@ require_once "./../MVC/controller/error/Error404Controller.php";
 $page = 'home';
 // Vérification de l'existence de la key "page" dans $_GET
 if (array_key_exists("page", $_GET)) $page = $_GET["page"];
-// var_dump($_GET["page"]);
 
 // switch/case permettant de rediriger la requète vers le bon Controller
 switch ($page) {
     case 'home':
         $home = new HomeController();
-        $home->dateNow();
+        $home->renderView();
         break;
     case 'news':
         $article = new ArticleController();

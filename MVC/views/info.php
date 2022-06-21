@@ -20,11 +20,7 @@
             <div class="introduction">
                 <p>Dès votre entrée en gare de Guîtres, vous serez dépaysé à la vue du guichet en état d'origine datant de la construction de la gare en 1874 . Le composteur de billets émerveillera les enfants, puis vous passerez par la "Boutique Gabaye" pour un souvenir et par le petit musée avant de vous retrouver sur le quai n°1. Vous pourrez y admirer d'anciens signaux, dont l'imposant "Lartigue", ainsi que la façade utilitaire de la gare avec les portes surmontées de leur usage, dont "Chef de Gare".
                     Vous vous installerez dans l'une des voitures, selon votre choix dans une voiture totalement découverte, ou une voiture ouverte avec toit, ou encore des voitures centenaires "Palavas" au banquettes de bois et aux fenêtres à ouverture "à l'ancienne".</p>
-                <!-- <div class="adaptive-img--cover">
-                    <span>
-                        <img src="./images/materiel/020-en-gare.jpeg" alt="" />
-                    </span>
-                </div> -->
+
             </div>
 
             <div class="offre-regulier">
@@ -36,7 +32,7 @@
                     <div class="offre-regulier-train-info">
                         <div class="adaptive-img--cover offre-image">
                             <span>
-                                <img src="./images/materiel/030T-PN1.jpeg" alt="" />
+                                <img src="./images/materiel/030T-PN1.jpeg" alt="Train à vapeur" />
                             </span>
                         </div>
                         <div class="train-info">
@@ -74,7 +70,7 @@
                         </div>
                         <div class="adaptive-img--cover offre-image">
                             <span>
-                                <img src="./images/carrousel/TTGM_-_D-4033.jpg" alt="" />
+                                <img src="./images/carrousel/TTGM_-_D-4033.jpg" alt="Train diesel D-4033" />
                             </span>
                         </div>
                     </div>
@@ -84,7 +80,7 @@
                     <div class="offre-regulier-train-info">
                         <div class="adaptive-img--cover offre-image">
                             <span>
-                                <img src="./images/carrousel/Railbus_TTGM.jpg" alt="" />
+                                <img src="./images/carrousel/Railbus_TTGM.jpg" alt="Train autorail DE-DION-BOUTON" />
                             </span>
                         </div>
                         <div class="train-info">
@@ -116,7 +112,7 @@
                     <div class="offre-regulier-train-info">
                         <div class="adaptive-img--cover offre-image">
                             <span>
-                                <img src="./images/materiel/030T-PN1.jpeg" alt="" />
+                                <img src="./images/materiel/030T-PN1.jpeg" alt="Le train du patrimoine" />
                             </span>
                         </div>
                         <div class="train-info">
@@ -167,7 +163,7 @@
                         </div>
                         <div class="adaptive-img--cover offre-image">
                             <span>
-                                <img src="./images/carrousel/TTGM_-_D-4033.jpg" alt="" />
+                                <img src="./images/carrousel/TTGM_-_D-4033.jpg" alt="Le train d'Halloween" />
                             </span>
                         </div>
                     </div>
@@ -177,7 +173,7 @@
                     <div class="offre-regulier-train-info">
                         <div class="adaptive-img--cover offre-image">
                             <span>
-                                <img src="./images/carrousel/Railbus_TTGM.jpg" alt="" />
+                                <img src="./images/carrousel/Railbus_TTGM.jpg" alt="Le train du Père Noël" />
                             </span>
                         </div>
                         <div class="train-info">
@@ -231,7 +227,6 @@
             </p>
 
             <table class="tarif">
-                <!-- <span>Aller simple</span> -->
                 <thead>
                     <tr>
                         <td colspan="3"></td>
@@ -411,9 +406,9 @@
             <h2>Venir à la gare</h2>
 
             <div class="adresse">
-                <p> Téléphone : 02 54 40 23 22
+                <p> Téléphone : 05 05 05 05 05 
                 </p>
-                <p> Email : traindubasberry@gmail.com
+                <p> Email : traindeguitres@gmail.com
                 </p>
                 <p> Adresse : Gare de Guîtres
                     13 Avenue de la Gare, 33230 Guitres, France, FRANCE
@@ -428,12 +423,16 @@
                 En train
                 A 7 km de la gare de Coutras
 
-
                 Parking gratuit en face de la gare, de l'autre côté de la route. Attention pas de parking sur le parvis devant la gare svp. Parking supplémentaire au-delà du passage à niveau.
             </div>
 
-            <div class="google-maps">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1409.6794997758375!2d-0.19666176431982707!3d45.037936295365476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48001c4cd87480d5%3A0x74313ab822827f25!2sV%C3%A9lorail%20du%20pays%20Gabay%20et%20Train%20Touristique%20Guitres%20-%20Marcenais!5e0!3m2!1sfr!2sfr!4v1650878086432!5m2!1sfr!2sfr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-
         </section>
+
+    </div>
+
+    <div class="google-maps">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1409.6794997758375!2d-0.19666176431982707!3d45.037936295365476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48001c4cd87480d5%3A0x74313ab822827f25!2sV%C3%A9lorail%20du%20pays%20Gabay%20et%20Train%20Touristique%20Guitres%20-%20Marcenais!5e0!3m2!1sfr!2sfr!4v1650878086432!5m2!1sfr!2sfr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+
+    <div class="container-auto">

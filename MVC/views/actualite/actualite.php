@@ -28,7 +28,7 @@
 
                                 <div class="adaptive-img--cover image-actualite">
                                     <span>
-                                        <img src="<?php echo $article->getImage() ?>" alt="">
+                                        <img src="<?php echo $article->getImage() ?>" alt="Actualité du train">
                                     </span>
                                 </div>
 

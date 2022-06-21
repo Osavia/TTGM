@@ -1,7 +1,6 @@
 <?php
 require_once './../MVC/controller/Controller.php';
 
-// classe fille LinkController de la classe mére controller permettant de gérer la logique métier
 class LogOutController extends Controller
 {
 

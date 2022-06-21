@@ -10,11 +10,4 @@ class HomeController extends Controller
     {
         parent::__construct("./../MVC/views/home.php");
     }
-
-    // méthode de rendue renvoyant un array avec la date du jour
-    public function dateNow()
-    {
-        $this->renderView(["dateNow" => new DateTime("now")]);
-    }
-
 }

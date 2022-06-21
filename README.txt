@@ -6,11 +6,6 @@ Pre processeur CSS : SASS
 Responsive
 
 
-Questions :
-
-_ DATE TIME 
-=> La date de création des articles est eronnée
-
 
 A FAIRE :
 

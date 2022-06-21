@@ -18,16 +18,12 @@
         </div>
         <label > Image :</label>
         <div class="viewed-image">
-                <img src="<?php echo $options["article"]->getImage() ?>" alt="">
+                <img src="<?php echo $options["article"]->getImage() ?>" alt="Actualité du train">
         </div>
         <div>
             <label for="image">Si vous souhaitez modifier votre image :</label>
             <input type="file" id="image" name="image">
         </div>
-        
-        <!-- rajouter l'image (la montrer) => OK
-        Si aucun changement => on garde l'image OK
-        Si changement => on la modifie -->
         
         <input type="hidden" name="id" value="<?php echo $options["article"]->getId() ?>">
         <button>Enregistrer</button>

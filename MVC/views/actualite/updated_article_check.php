@@ -13,7 +13,7 @@
             <label> Image :</label>
             <div class="adaptive-img--contain viewed-image">
                 <span>
-                    <img src="<?php echo $options["article"]->getImage() ?>" alt="">
+                    <img src="<?php echo $options["article"]->getImage() ?>" alt="Actualité du train">
                 </span>
             </div>
         </div>

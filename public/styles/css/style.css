@@ -245,7 +245,7 @@ template {
 
 :root {
   --movingDiv-height: 32px;
-  --header-footer-background-color: #80dbed;
+  --header-footer-background-color: rgb(147, 204, 192);
 }
 
 /**********************************************************/
@@ -476,9 +476,12 @@ header .header-nav .navigation {
   list-style: none;
 }
 header .header-nav .benevole {
-  background-color: #52a499;
+  background-color: #07617a;
   border-radius: 10px;
   padding: 0.5rem;
+}
+header .header-nav .benevole > li a {
+  color: whitesmoke;
 }
 header .header-nav li {
   position: relative;
@@ -488,7 +491,7 @@ header .header-nav li {
 }
 header .header-nav li > a {
   opacity: 0.75;
-  color: #010101;
+  color: #07617a;
   font-size: 0.7em;
   font-weight: 500;
   text-decoration: none;
@@ -506,7 +509,6 @@ header .header-nav li:hover .nagivation-under {
   opacity: 1;
 }
 header .header-nav li:hover:after {
-  /* height: 100%; */
   transform: scaleY(1);
 }
 header .header-nav li:after {
@@ -528,7 +530,6 @@ header .movingDiv {
   left: 0;
   height: var(--movingDiv-height);
   width: 100px;
-  padding-top: 8px;
   z-index: -2;
 }
 
@@ -682,6 +683,9 @@ header .movingDiv {
   margin-top: 42px;
   font-weight: bold;
 }
+.presentation .home-button > a {
+  color: #07617a;
+}
 
 /*********** CARROUSEL ***********/
 .carrousel-container {
@@ -745,6 +749,70 @@ header .movingDiv {
 .btn-nav .arrow-left:hover,
 .btn-nav .arrow-right:hover {
   transform: scaleY(1.2);
+}
+
+/*********** HOME CARD ***********/
+.home-card {
+  flex-direction: row;
+  align-items: center;
+  gap: 22px;
+}
+.home-card .description {
+  width: 100%;
+}
+.home-card .description h2 {
+  padding-top: 0;
+  color: #07617a;
+}
+.home-card .description p {
+  color: #888;
+  font-size: 1.6rem;
+  margin-bottom: 22px;
+}
+
+.home-card-img {
+  height: 650px;
+  width: 100%;
+}
+
+.home-cards {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+}
+.home-cards div {
+  padding: 16px;
+  border-radius: 2rem;
+  background-color: #93ccbe;
+}
+.home-cards div .home-cards-1 {
+  font-size: 3rem;
+  color: #f8b367;
+}
+.home-cards div .home-cards-2 {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.home-cards div .home-cards-3 {
+  font-size: 1.2rem;
+  color: #07617a;
+}
+
+@media (max-width: 880px) {
+  .home-card {
+    flex-direction: column;
+  }
+
+  .home-card-img {
+    height: 400px;
+  }
+
+  .home-cards {
+    flex-direction: column;
+  }
+}
+.lorem {
+  margin-top: 32px;
 }
 
 /******************************************************/
@@ -920,6 +988,10 @@ header .movingDiv {
   font-size: 12px;
 }
 
+.grid-correction {
+  max-width: 280px !important;
+}
+
 @media (max-width: 960px) {
   .grid li {
     flex: 1 29%;
@@ -954,9 +1026,6 @@ header .movingDiv {
   padding: 32px;
 }
 
-/********************************************************/
-/********************* PAGE HOME ************************/
-/********************************************************/
 /********************************************************/
 /********************** PAGE INFO ***********************/
 /********************************************************/
@@ -1049,7 +1118,7 @@ tbody th {
 }
 
 .table-row:hover {
-  background-color: #652479;
+  background-color: #07617a;
   color: #ffffff;
   transform: scale(1.02);
 }
@@ -1134,11 +1203,6 @@ caption {
   background-color: beige;
 }
 
-.image-about:hover::after {
-  content: "";
-  background-color: #333;
-}
-
 @media (max-width: 880px) {
   .about_us {
     flex-direction: column;
@@ -1212,7 +1276,7 @@ details[open] summary::after {
 }
 
 details[open] summary {
-  color: #333;
+  color: #07617a;
 }
 
 @keyframes details-show {
@@ -1227,12 +1291,6 @@ details[open] > *:not(summary) {
 
 /********************************************************/
 /*********************** CONTACT ************************/
-/********************************************************/
-/********************************************************/
-/******************* DEVENIR BÉNÉVOLE *******************/
-/********************************************************/
-/********************************************************/
-/************************ FORM **************************/
 /********************************************************/
 .form {
   width: 60vw;
@@ -1254,12 +1312,15 @@ details[open] > *:not(summary) {
   color: white;
   cursor: pointer;
   border: none;
-  background-color: #3f51b5;
+  background-color: #07617a;
   padding: 10px;
   margin-top: 42px;
   border-radius: 5px;
 }
 
+/********************************************************/
+/******************* DEVENIR BÉNÉVOLE *******************/
+/********************************************************/
 footer {
   background-color: var(--header-footer-background-color);
   width: 100%;

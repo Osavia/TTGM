@@ -3,7 +3,6 @@ require_once './../MVC/controller/Controller.php';
 require_once './../MVC/repository/ArticleRepository.php';
 require_once './../MVC/model/Article.php';
 
-// classe fille LinkController de la classe mére controller permettant de gérer la logique métier
 class ArticleController extends Controller
 {
 
@@ -39,10 +38,9 @@ class ArticleController extends Controller
             // $extension = $fileInfo['extension'];
             // $allowedExtensions = ['jpg', 'jpeg', 'gif', 'png'];
             // if (in_array($extension, $allowedExtensions)) {
-            //     // On peut valider le fichier et le stocker définitivement
+            // On peut valider le fichier et le stocker définitivement
             move_uploaded_file($_FILES['image']['tmp_name'], './images/actualite/' . basename($_FILES['image']['name']));
 
-            var_dump($_FILES);
             $article = new Article();
             $article->setTitle($_POST["article_title"]);
             $article->setContent($_POST["article_content"]);
@@ -53,9 +51,7 @@ class ArticleController extends Controller
             $this->setPath("./../MVC/views/actualite/create_article_check.php");
         } else {
             echo ('Merci de selectionner un fichier');
-            // Il vaudrait mieux renvoyer le message d'erreur dans la vue
         }
-
 
         $this->renderView();
     }
@@ -67,7 +63,6 @@ class ArticleController extends Controller
         $articleRepository = new ArticleRepository('article');
 
         $article = $articleRepository->selectArticle($_GET["id"]);
-        // var_dump($article[0]);
 
         $this->renderView(["article" => $article[0]]);
     }
@@ -98,7 +93,6 @@ class ArticleController extends Controller
             isset($_FILES['image'])
             && $_FILES['image']['error'] == 0
             ) {
-            var_dump('lol');
             move_uploaded_file($_FILES['image']['tmp_name'], './images/actualite/' . basename($_FILES['image']['name']));
             $article->setImage('./images/actualite/' . $_FILES['image']['name']);
         }
@@ -121,25 +115,3 @@ class ArticleController extends Controller
         }
     }
 }
-
-
-
-
-
-// public function updateSelected()
-//     {
-//         $this->setPath("../MVC/views/actualite/updated_article_check.php");
-
-//         $id = strip_tags($_GET['id']);
-//         var_dump($id);
-//         var_dump($_POST["article_title"]);
-
-//         $article = new Article();
-//         $article->setTitle($_POST["article_title"]);
-//         $article->setContent($_POST["article_content"]);
-
-//         $articleRepository = new ArticleRepository('article');
-//         $article = $articleRepository->updateArticle($article, $id);
-
-//         $this->renderView();
-//     }

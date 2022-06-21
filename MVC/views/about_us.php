@@ -27,7 +27,7 @@
             <div class="about_us">
                 <div class="adaptive-img--contain image-about">
                     <span>
-                        <img src="./images/materiel/draisine_bleue.jpeg" alt="" />
+                        <img src="./images/materiel/draisine_bleue.jpeg" alt="Train de draisine" />
                     </span>
                 </div>
                 <p> A sa création, l’association ne dispose que d’un train de draisines dont la première circulation a eu lieu le 15 août 1973. L’histoire de notre association démarre.</p>
@@ -37,14 +37,14 @@
                     L’association est basée dans l’ancienne gare de Guîtres mise à disposition par la ville, petite localité située au nord du département de la Gironde, à une cinquantaine de kilomètres de Bordeaux et à 15 km de Libourne, non loin de la gare de Coutras.</p>
                 <div class="adaptive-img--contain image-about">
                     <span>
-                        <img src="./images/materiel/gare_ancienne.png" alt="" />
+                        <img src="./images/materiel/gare_ancienne.png" alt="Ancienne gare" />
                     </span>
                 </div>
             </div>
             <div class="about_us">
                 <div class="adaptive-img--contain image-about">
                     <span>
-                        <img src="./images/materiel/IMG6580.jpeg" alt="" />
+                        <img src="./images/materiel/IMG6580.jpeg" alt="Le train de guîtres" />
                     </span>
                 </div>
                 <p>
@@ -56,7 +56,7 @@
                     Les trains circulent du 1er mai au 31 octobre les mercredis et dimanches. Une activité vélorail a été créée en 2019.</p>
                 <div class="adaptive-img--contain image-about">
                     <span>
-                        <img src="./images/materiel/auto-4033-020.jpeg" alt="" />
+                        <img src="./images/materiel/auto-4033-020.jpeg" alt="Matériel roulant" />
                     </span>
                 </div>
             </div>
@@ -77,7 +77,7 @@
                         <article class="grid-card">
                             <div class="adaptive-img--cover image-actualite">
                                 <span>
-                                    <img src="./images/materiel/020t-1.jpeg" alt="">
+                                    <img src="./images/materiel/020t-1.jpeg" alt="020T">
                                 </span>
                             </div>
 
@@ -94,7 +94,7 @@
                         <article class="grid-card">
                             <div class="adaptive-img--cover image-actualite">
                                 <span>
-                                    <img src="./images/materiel/030t.jpeg" alt="">
+                                    <img src="./images/materiel/030t.jpeg" alt="030T">
                                 </span>
                             </div>
 
@@ -112,7 +112,7 @@
                         <article class="grid-card">
                             <div class="adaptive-img--cover image-actualite">
                                 <span>
-                                    <img src="./images/materiel/IMGP2531.jpeg" alt="">
+                                    <img src="./images/materiel/IMGP2531.jpeg" alt="DeDionBouton">
                                 </span>
                             </div>
 
@@ -130,7 +130,7 @@
                         <article class="grid-card">
                             <div class="adaptive-img--cover image-actualite">
                                 <span>
-                                    <img src="./images/materiel/4033_en_gare.jpeg" alt="">
+                                    <img src="./images/materiel/4033_en_gare.jpeg" alt="D-4033">
                                 </span>
                             </div>
 
@@ -147,7 +147,7 @@
                         <article class="grid-card">
                             <div class="adaptive-img--cover image-actualite">
                                 <span>
-                                    <img src="./images/materiel/Moyse.jpeg" alt="">
+                                    <img src="./images/materiel/Moyse.jpeg" alt="Moyse">
                                 </span>
                             </div>
 
@@ -164,7 +164,7 @@
                         <article class="grid-card">
                             <div class="adaptive-img--cover image-actualite">
                                 <span>
-                                    <img src="./images/materiel/locofox-1.jpeg" alt="">
+                                    <img src="./images/materiel/locofox-1.jpeg" alt="Locofox">
                                 </span>
                             </div>
 
@@ -181,7 +181,7 @@
                         <article class="grid-card">
                             <div class="adaptive-img--cover image-actualite">
                                 <span>
-                                    <img src="./images/materiel/Draisine-4M.jpeg" alt="">
+                                    <img src="./images/materiel/Draisine-4M.jpeg" alt="Draisine-4M">
                                 </span>
                             </div>
 
@@ -198,7 +198,7 @@
                         <article class="grid-card">
                             <div class="adaptive-img--cover image-actualite">
                                 <span>
-                                    <img src="./images/materiel/Draisine-5M.jpg" alt="">
+                                    <img src="./images/materiel/Draisine-5M.jpg" alt="Draisine-5M">
                                 </span>
                             </div>
 
@@ -861,7 +861,7 @@
                         <article class="grid-card">
                             <div class="adaptive-img--cover image-actualite">
                                 <span>
-                                    <img src="./images/materiel/PALAVAS_101.jpeg" alt="">
+                                    <img src="./images/materiel/PALAVAS_101.jpeg" alt="Palavas-101">
                                 </span>
                             </div>
 
@@ -878,7 +878,7 @@
                         <article class="grid-card">
                             <div class="adaptive-img--cover image-actualite">
                                 <span>
-                                    <img src="./images/materiel/PALAVAS_106.jpeg" alt="">
+                                    <img src="./images/materiel/PALAVAS_106.jpeg" alt="Palavas-106">
                                 </span>
                             </div>
 
@@ -895,7 +895,7 @@
                         <article class="grid-card">
                             <div class="adaptive-img--cover image-actualite">
                                 <span>
-                                    <img src="./images/materiel/PALAVAS_115.jpeg" alt="">
+                                    <img src="./images/materiel/PALAVAS_115.jpeg" alt="Palavas-115">
                                 </span>
                             </div>
 
@@ -912,7 +912,7 @@
                         <article class="grid-card">
                             <div class="adaptive-img--cover image-actualite">
                                 <span>
-                                    <img src="./images/materiel/PALAVAS_222-3.jpeg" alt="">
+                                    <img src="./images/materiel/PALAVAS_222-3.jpeg" alt="Palavas-222">
                                 </span>
                             </div>
 
@@ -930,7 +930,7 @@
                         <article class="grid-card">
                             <div class="adaptive-img--cover image-actualite">
                                 <span>
-                                    <img src="./images/materiel/PALAVAS_225.jpeg" alt="">
+                                    <img src="./images/materiel/PALAVAS_225.jpeg" alt="Palavas-225">
                                 </span>
                             </div>
 
@@ -948,7 +948,7 @@
                         <article class="grid-card">
                             <div class="adaptive-img--cover image-actualite">
                                 <span>
-                                    <img src="./images/materiel/BALADEUSE.jpeg" alt="">
+                                    <img src="./images/materiel/BALADEUSE.jpeg" alt="Baladeuse">
                                 </span>
                             </div>
 
@@ -964,7 +964,7 @@
                         <article class="grid-card">
                             <div class="adaptive-img--cover image-actualite">
                                 <span>
-                                    <img src="./images/materiel/SEUDRE-3.jpeg" alt="">
+                                    <img src="./images/materiel/SEUDRE-3.jpeg" alt="Baladeuse-Seudre">
                                 </span>
                             </div>
 
@@ -981,7 +981,7 @@
                         <article class="grid-card">
                             <div class="adaptive-img--cover image-actualite">
                                 <span>
-                                    <img src="./images/materiel/FOURGON.jpeg" alt="">
+                                    <img src="./images/materiel/FOURGON.jpeg" alt="Fourgon">
                                 </span>
                             </div>
 
@@ -1415,11 +1415,11 @@
 
             <ul class="grid">
 
-                <li>
+                <li class="grid-correction">
                     <article class="grid-card">
                         <div class="adaptive-img--cover image-actualite">
                             <span>
-                                <img src="./images/materiel/autorail-M7.jpeg" alt="">
+                                <img src="./images/materiel/autorail-M7.jpeg" alt="Autorail M107">
                             </span>
                         </div>
 
@@ -1431,11 +1431,11 @@
                         </h4>
                     </article>
                 </li>
-                <li>
+                <li class="grid-correction">
                     <article class="grid-card">
                         <div class="adaptive-img--cover image-actualite">
                             <span>
-                                <img src="./images/materiel/decauville.jpeg" alt="">
+                                <img src="./images/materiel/decauville.jpeg" alt="Locotracteur Decauville">
                             </span>
                         </div>
 

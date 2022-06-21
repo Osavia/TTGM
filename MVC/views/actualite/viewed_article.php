@@ -30,7 +30,7 @@
       <div class="container contain-viewed-image">
         <div class="adaptive-img--contain viewed-image">
           <span>
-            <img src="<?php echo $options["article"]->getImage() ?>" alt="">
+            <img src="<?php echo $options["article"]->getImage() ?>" alt="Actualité du train">
           </span>
         </div>
 

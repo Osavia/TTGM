@@ -17,7 +17,7 @@ abstract class Controller
     }
     
     // méthode qui renvoie le fichier de template correspondant selon le chemin donné avec une variable options[]
-    public function renderView(array $options = ["error404" => "Page not found: l'URL demandé n'est pas attribué"])
+    public function renderView(array $options = ["error404" => "Page not found: l'URL demandée n'est pas attribuée"])
     {
         // var_dump($this->path);
 
